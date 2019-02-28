@@ -1,0 +1,48 @@
+<div id=D__ID>
+    <section>
+       <div id=toolbar__ID class="navbar navbar-default">
+        	<form class="form-inline">
+                <button type=button id=start__ID class='btn btn-secondary'>Start</button>
+                <button type=button id=stop__ID class='btn btn-secondary'>Stop</button>
+        	</form>
+		</div>
+        <img id=img__ID />
+    </section>
+    <script>
+        function F__ID(){
+            //-------------------------------------
+            var img_array=[
+            {src:'__BASE__/woolcock-imr/windfarm-lab/images/Set1/Practice/Set1Slide1.jpg',time:5000},
+            {src:'__BASE__/woolcock-imr/windfarm-lab/images/Set1/Practice/Set1Slide2.jpg',time:5000},
+            {src:'__BASE__/woolcock-imr/windfarm-lab/images/Set1/Practice/Set1Slide3.jpg',time:5000},
+            {src:'__BASE__/woolcock-imr/windfarm-lab/images/Set1/Practice/Set1Slide4.jpg',time:5000},
+            ]
+            //----------------------------------
+            var I=-1;
+            var N=img_array.length;
+            $('#D__ID').on('load',function(){
+                I=-1;
+            })
+            $('#start__ID').on('click',function(){
+                if(I<0){
+                    I=0;
+                    set_img();
+                }
+                else{
+                    I=0
+                }
+            })
+            $('#stop__ID').on('click',function(){
+                I=-1;
+            })
+            var set_img=function(){
+                if(I>=0 && I<=3){ //total 163 images
+                    var new_I=I+1;
+                    $("#img__ID").attr("src",img_array[new_I-1].src);
+                    setTimeout(set_img, img_array[new_I-1].time);
+                    I++;
+                }
+            }
+        }
+    </script>
+</div>
