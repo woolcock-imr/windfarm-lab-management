@@ -2,6 +2,7 @@
     var modules={
         "panel-main-windfarm-lab":    	{url:"$A/modules/p/panel-windfarm-lab/panel-main.html",router:1},
         "panel-child-windfarm-lab":    	{url:"$A/modules/p/panel-windfarm-lab/panel-child.html"},    
+        "panel-reports-windfarm-lab":   {url:"$A/modules/p/panel-windfarm-lab/panel-reports.html"},
         "participant-data":             {url:"$A/modules/p/participant-data-windfarm-lab.html",Table:"20008848",form_module:"participant-form",router:1,
                                             child_panel:"panel-child-windfarm-lab",
                                             questionnaire_setup:"online-questionnaire-setup-windfarm-lab",
