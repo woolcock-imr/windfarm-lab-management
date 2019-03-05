@@ -9,6 +9,7 @@
             //-------------------------------------
             var fields="Record_ID,Registration_ID,Randomisation_Number,Randomised_by,Screening_Number,Subject_Initials,Gender,DOB,_Data_Entry,_Setup,_Quest,_Login_ID";
             m.fields="_Form,"+fields+",Submit_date,Submitted_by,_Delete";
+            m.fields_e="Participant_ID|UID,Registration_ID,Randomisation_Number,Randomised_by,Screening_Number,Subject_Initials,Gender,DOB"
             //-------------------------------------
             var login_setup_tid=$vm.module_list[m.questionnaire_setup].Table;
             var online_questionnaire=$vm.public_url_$B;

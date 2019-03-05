@@ -24,7 +24,7 @@ m.set_req=function(){
 }
 //-------------------------------------
 m.set_req_export=function(i1,i2){
-    m.fields_e=m.form_fields;
+    //m.fields_e=m.form_fields;
     var sql="with participant as (select ParticipantUID=UID from [FORM-"+participant_pid+"] )";
     sql+=",task as (select ID,UID,PUID,S3,Information,DateTime,Author from [FORM-"+m.Table+"-@S1])";
     sql+=",records as (select ID,ParticipantUID,Information,DateTime,Author,RowNum=row_number() over (order by ID DESC) from participant left join task on PUID=ParticipantUID)";
