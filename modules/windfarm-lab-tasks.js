@@ -510,7 +510,7 @@
 
         //additional panels
       "panel-neurotology":         { url: "$A/modules/p/panel-windfarm-lab/panel-neurotology.html", Table:"1903221208"},
-      "panel-neurocog-vas":         { url: "$A/modules/p/panel-windfarm-lab/panel-neurocog-vas.html", Table:"1903221209"},
+      "panel-test-export":         { url: "$A/modules/p/panel-windfarm-lab/panel-test-export.html", Table:"1903221209"},
 
 
       //exportpages
