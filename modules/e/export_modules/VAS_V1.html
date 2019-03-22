@@ -82,7 +82,7 @@
                     sql+=" union select Task='Visit 1 Day 4 07:30',Information from [TABLE-20009274] where puid=@I1";
                     m.req={cmd:'read',qid:m.qid,sql:sql,i1:i1}
                 }
-                m.set_req_export(); m.request_data();
+                m.set_req_export();
                 m.export_records();
             })
             m.fields="Participant,Task,HEADACHES,RINGING,ITCH,BLUR,DIZZY,HEART,VERTIGO,NAUSEA,TIREDNESS,FAINT,SLEEPINESS,CONCENTRATING,MEMORY,FATIGUE,IRRITABILITY,MUSCLE,DISRUPTEDSLEEP,AWAKEN,ANXIETY";
