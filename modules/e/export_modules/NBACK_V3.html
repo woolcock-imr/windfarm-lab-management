@@ -1,0 +1,49 @@
+<section>
+    <div id=toolbar__ID>
+		Participant ID <input type=text id=uid__ID>
+        <a id=aquery__ID >Query</a>
+        <a id=export__ID >Export</a>
+    	<span class=tab__ID></span>Visit 3_ N-Back (2-Back)
+    </div>
+    <div id=table__ID>
+        <table id=grid__ID></table>
+    </div>
+</section>
+
+<script>
+function F__ID(){
+    //------------------------
+    VmInclude:__COMPONENT__/grid/grid.v3.js
+	//-------------------------------------
+	_fields="Participant,Task,Total Number Correct|NTCR,Total Number Incorrect|NTIC,Total Numbers Missed|NMIS";
+	$('#aquery__ID').on('click',function(){_set_req(); _request_data();})
+	//-------------------------------------
+	_set_req=_set_req_export=function(){
+		//-----------------
+
+  	var sql=" select Task='Visit 3 Day 1 11:30',Information from [TABLE-20009534] where puid=@I1";
+		sql+=" union select Task='Visit 3 Day 1 15:30',Information from [TABLE-20008788] where puid=@I1";
+    sql+=" union select Task='Visit 3 Day 1 19:30',Information from [TABLE-20008789] where puid=@I1";
+    sql+=" union select Task='Visit 3 Day 2 07:30',Information from [TABLE-20008800] where puid=@I1";
+    sql+=" union select Task='Visit 3 Day 2 11:30',Information from [TABLE-20008801] where puid=@I1";
+    sql+=" union select Task='Visit 3 Day 2 15:30',Information from [TABLE-20008806] where puid=@I1";
+    sql+=" union select Task='Visit 3 Day 2 19:30',Information from [TABLE-20008807] where puid=@I1";
+    sql+=" union select Task='Visit 3 Day 3 07:30',Information from [TABLE-20008819] where puid=@I1";
+    sql+=" union select Task='Visit 3 Day 3 11:30',Information from [TABLE-20008820] where puid=@I1";
+    sql+=" union select Task='Visit 3 Day 3 15:30',Information from [TABLE-20008825] where puid=@I1";
+    sql+=" union select Task='Visit 3 Day 3 19:30',Information from [TABLE-20008826] where puid=@I1";
+    sql+=" union select Task='Visit 3 Day 4 07:30',Information from [TABLE-20008838] where puid=@I1";
+
+    var i1=$('#uid__ID').val();
+		if(i1==''){
+			alert('No participant was entered')
+			return;
+		}
+	    _req={cmd:'query_records',sql:sql,i1:i1}
+	}
+	//-------------------------------------
+}
+</script>
+<style>
+    VmInclude:__PARTS__/grid/grid.css
+</style>

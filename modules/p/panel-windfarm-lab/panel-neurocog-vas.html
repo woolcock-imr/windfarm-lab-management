@@ -1,0 +1,114 @@
+<section id=panel__ID>
+<div class='nav__ID'>
+<span>DATA EXPORT</span>
+<br>
+			<span>Visit 1 Export</span>
+			<ul>
+			<li> <a href=?/VAS_V1>Visual Analogue Scale Visit 1</li>
+			<li> <a href=?/NAS_V1>Noise Annoyance Scale Visit 1</li>
+			<li> <a href=?/NBACK_V1>N-Back Visit 1</li>
+			<li> <a href=?/TOL_V1>Tower of London Visit 1</li>
+			<li> <a href=?/PVT_V1>Psychomotor Vigilance Task (PVT) Visit 1</li>
+			</ul>
+			</div>
+<div class='nav__ID'>
+
+		<span>Visit 2 Export</span>
+			<ul>
+			<li> <a href=?/VAS_V2>Visual Analogue Scale Visit 2</li>
+			<li> <a href=?/NAS_V2>Noise Annoyance Scale Visit 2</li>
+			<li> <a href=?/NBACK_V2>N-Back Visit 2</li>
+			<li> <a href=?/TOL_V2>Tower of London Visit 2</li>
+			<li> <a href=?/PVT_V2>Psychomotor Vigilance Task (PVT) Visit 2</li>
+		</ul>
+</div>
+<div class='nav__ID'>
+		<span>Visit 3 Export</span>
+			<ul>
+			<li> <a href=?/VAS_V3>Visual Analogue Scale Visit 3</li>
+			<li> <a href=?/NAS_V3>Noise Annoyance Scale Visit 3</li>
+			<li> <a href=?/NBACK_V3>N-Back Visit 3</li>
+			<li> <a href=?/TOL_V3>Tower of London Visit 3</li>
+			<li> <a href=?/PVT_V3>Psychomotor Vigilance Task (PVT) Visit 3</li>
+		</ul>
+</div>
+
+</section>
+
+<script>
+	function F__ID() {
+		//--------------------------------------------------------
+		var prefix = $vm.module_list[$vm.vm['__ID'].name].prefix;
+		$('#panel__ID li').on('click', function () {
+			var m = $(this).attr('module');
+			if (m != undefined) {
+				if ($vm.module_list[prefix + m] == undefined) {
+					alert(prefix + m + " is not in the module list.");
+					return;
+				}
+				$vm.module_list[prefix + m].alert = '1';
+				$vm.nav_load_module(prefix + m);
+			}
+		})
+		//--------------------------------------------------------
+	}
+</script>
+
+<style>
+		#toolbar__ID{
+		background-color:#ccc;
+		padding-left:10px;
+		margin-bottom:0px;
+		overflow:hidden'
+	}
+		#toolbar__ID .form-inline > * {
+				margin-right:5px;
+		}
+	@media screen and (max-width:768px){
+		#toolbar__ID{
+			padding: 3px 10px;
+		}
+		#toolbar__ID div{
+			padding-left:3px;
+		}
+	}
+		#D__ID{
+		background-color:#fff;
+		height:100%;
+		overflow: auto;
+		animation: vm_module_fadein 1.0s;
+	}
+		#panel__ID{
+		padding:10px 0 0 20px;
+				font-size:14px;
+	}
+	#panel__ID a {
+		text-decoration: none;
+	}
+	#panel__ID a:link {
+		color:#555;
+	}
+	#panel__ID a:visited {
+		color:#555;
+	}
+	#panel__ID a:hover {
+		color:red;
+	}
+	#panel__ID a:active {
+		color:#555;
+	}
+		.nav__ID{
+			padding:6px 26px 6px 6px;
+			float:left;
+	}
+	.nav__ID span{
+	color:#283f55;
+	font-weight: bold;
+	margin:3px 10px;
+	}
+	@media screen and (max-width:768px){
+		#panel__ID{
+			padding:10px 0 0 10px;
+		}
+	}
+</style>
