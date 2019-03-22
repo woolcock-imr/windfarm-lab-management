@@ -1,49 +1,96 @@
-<section>
-    <div id=toolbar__ID>
-		Participant ID <input type=text id=uid__ID>
-        <a id=aquery__ID >Query</a>
-        <a id=export__ID >Export</a>
-    	<span class=tab__ID></span>Visit 2_ Psychomotor Vigilance Task (PVT)
-    </div>
-    <div id=table__ID>
-        <table id=grid__ID></table>
-    </div>
-</section>
+<div id-D__ID>
+    <section>
+        <div id=toolbar__ID>
+            <input id=uid__ID type="text" placeholder="Record ID" class="form-control" style="width: 150px; display:inline-block;">
 
-<script>
-function F__ID(){
-    //------------------------
-    VmInclude:__COMPONENT__/grid/grid.v3.js
-	//-------------------------------------
-	_fields="Participant,Task,Mean Reaction Time(ms)|PVT_MeanRT,Number of Lapses|PVT_Lapses,Mean Reaction Time for slowest 10% (ms)|PVT_MeanSRT,False Start|PVT_FalseStartsCorrKey";
-	$('#aquery__ID').on('click',function(){_set_req(); _request_data();})
-	//-------------------------------------
-	_set_req=_set_req_export=function(){
-		//-----------------
+            <button id=query2__ID  type=button class='btn btn-secondary' title='Query'>Query</button>
+            <button id=export2__ID  type=button class='btn btn-secondary' title='Export'>Export</button>
+            <span class=tab__ID></span>Visit 2 - PVT
+        </div>
+        <div id=table__ID>
+            <table id=grid__ID></table>
+        </div>
+    </section>
+    <style>
+        #toolbar__ID{
+            background-color:#ccc;
+            padding:5px 0px 5px 20px;
+            margin-bottom:0px;
+            overflow:hidden
+        }
+        #toolbar__ID *{
+            margin-right:3px;
+        }
+        @media screen and (max-width:768px){
+            #toolbar__ID{
+                padding: 3px 0;
+            }
+            #toolbar__ID div{
+                padding-left:3px;
+            }
+            #row_1__ID{
+                padding-bottom: 3px;
+            }
+        }
+    </style>
+    <script>
+        function F__ID(){
+            //------------------------
+            VmInclude:__COMPONENT__/g/grid.01.js
+            //-------------------------------------
+            $('#query2__ID').on('click',function(){
+                var i1=$('#uid__ID').val();
+                if(i1==''){
+                    alert('No participant was entered')
+                    return;
+                }
+                m.set_req=function(){
+                var sql=" select Task='Visit 2 Day 1 11:30',Information from [TABLE-20009527] where puid=@I1";
+            		sql+=" union select Task='Visit 2 Day 1 15:30',Information from [TABLE-20008727] where puid=@I1";
+                sql+=" union select Task='Visit 2 Day 1 19:30',Information from [TABLE-20009226] where puid=@I1";
+                sql+=" union select Task='Visit 2 Day 2 07:30',Information from [TABLE-20008739] where puid=@I1";
+                sql+=" union select Task='Visit 2 Day 2 11:30',Information from [TABLE-20008741] where puid=@I1";
+                sql+=" union select Task='Visit 2 Day 2 15:30',Information from [TABLE-20008745] where puid=@I1";
+                sql+=" union select Task='Visit 2 Day 2 19:30',Information from [TABLE-20009234] where puid=@I1";
+                sql+=" union select Task='Visit 2 Day 3 07:30',Information from [TABLE-20008758] where puid=@I1";
+                sql+=" union select Task='Visit 2 Day 3 11:30',Information from [TABLE-20008764] where puid=@I1";
+                sql+=" union select Task='Visit 2 Day 3 15:30',Information from [TABLE-20009239] where puid=@I1";
+                sql+=" union select Task='Visit 2 Day 3 19:30',Information from [TABLE-20009243] where puid=@I1";
+                sql+=" union select Task='Visit 2 Day 4 07:30',Information from [TABLE-20008777] where puid=@I1";
 
-  	var sql=" select Task='Visit 2 Day 1 11:30',Information from [TABLE-20009527] where puid=@I1";
-		sql+=" union select Task='Visit 2 Day 1 15:30',Information from [TABLE-20008727] where puid=@I1";
-    sql+=" union select Task='Visit 2 Day 1 19:30',Information from [TABLE-20009226] where puid=@I1";
-    sql+=" union select Task='Visit 2 Day 2 07:30',Information from [TABLE-20008739] where puid=@I1";
-    sql+=" union select Task='Visit 2 Day 2 11:30',Information from [TABLE-20008741] where puid=@I1";
-    sql+=" union select Task='Visit 2 Day 2 15:30',Information from [TABLE-20008745] where puid=@I1";
-    sql+=" union select Task='Visit 2 Day 2 19:30',Information from [TABLE-20009234] where puid=@I1";
-    sql+=" union select Task='Visit 2 Day 3 07:30',Information from [TABLE-20008758] where puid=@I1";
-    sql+=" union select Task='Visit 2 Day 3 11:30',Information from [TABLE-20008764] where puid=@I1";
-    sql+=" union select Task='Visit 2 Day 3 15:30',Information from [TABLE-20009239] where puid=@I1";
-    sql+=" union select Task='Visit 2 Day 3 19:30',Information from [TABLE-20009243] where puid=@I1";
-    sql+=" union select Task='Visit 2 Day 4 07:30',Information from [TABLE-20008777] where puid=@I1";
+                                   m.req={cmd:'read',qid:m.qid,sql:sql,i1:i1}
+                }
+                m.set_req(); m.request_data();
+            })
+            $('#export2__ID').on('click',function(){
+                var i1=$('#uid__ID').val();
+                if(i1==''){
+                    alert('No participant was entered')
+                    return;
+                }
+                m.set_req_export=function(){
+                var sql=" select Task='Visit 2 Day 1 11:30',Information from [TABLE-20009527] where puid=@I1";
+            		sql+=" union select Task='Visit 2 Day 1 15:30',Information from [TABLE-20008727] where puid=@I1";
+                sql+=" union select Task='Visit 2 Day 1 19:30',Information from [TABLE-20009226] where puid=@I1";
+                sql+=" union select Task='Visit 2 Day 2 07:30',Information from [TABLE-20008739] where puid=@I1";
+                sql+=" union select Task='Visit 2 Day 2 11:30',Information from [TABLE-20008741] where puid=@I1";
+                sql+=" union select Task='Visit 2 Day 2 15:30',Information from [TABLE-20008745] where puid=@I1";
+                sql+=" union select Task='Visit 2 Day 2 19:30',Information from [TABLE-20009234] where puid=@I1";
+                sql+=" union select Task='Visit 2 Day 3 07:30',Information from [TABLE-20008758] where puid=@I1";
+                sql+=" union select Task='Visit 2 Day 3 11:30',Information from [TABLE-20008764] where puid=@I1";
+                sql+=" union select Task='Visit 2 Day 3 15:30',Information from [TABLE-20009239] where puid=@I1";
+                sql+=" union select Task='Visit 2 Day 3 19:30',Information from [TABLE-20009243] where puid=@I1";
+                sql+=" union select Task='Visit 2 Day 4 07:30',Information from [TABLE-20008777] where puid=@I1";
 
-    var i1=$('#uid__ID').val();
-		if(i1==''){
-			alert('No participant was entered')
-			return;
-		}
-	    _req={cmd:'query_records',sql:sql,i1:i1}
-	}
-	//-------------------------------------
-}
-</script>
-<style>
-    VmInclude:__PARTS__/grid/grid.css
-</style>
+                    m.req={cmd:'read',qid:m.qid,sql:sql,i1:i1}
+                }
+                m.set_req(); m.request_data();
+                m.export_records();
+            })
+            m.fields="Participant,Task,Mean Reaction Time(ms)|PVT_MeanRT,Number of Lapses|PVT_Lapses,Mean Reaction Time for slowest 10% (ms)|PVT_MeanSRT,False Start|PVT_FalseStartsCorrKey";
+        }
+    </script>
+    <style>
+        VmInclude:__COMPONENT__/g/grid.01.css
+    </style>
+</div>
