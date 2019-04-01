@@ -1,0 +1,48 @@
+<section>
+    <div id=toolbar__ID>
+        <a id=back__ID>Back</a>
+        <a id=aquery__ID >Query</a>
+        <a id=export__ID >Export</a>
+    	<span class=tab__ID></span> Consort Numbers
+        <span class=tab__ID></span>
+    </div>
+    <div id=table__ID>
+        <table id=grid__ID></table>
+    </div>
+</section>
+<script>
+function F__ID(){
+    //------------------------
+    VmInclude:__PARTS__/grid/grid.js
+    VmInclude:__PARTS__/style/ease-in-out.js
+    //------------------------
+	_fields="Name|Name,Number Completed|Number";
+	//-------------------------------------
+	$('#aquery__ID').on('click',function(){_set_req(); _request_data();})
+	//-------------------------------------
+	_set_req=_set_req_export=function(){
+		//-----------------
+		var sql="with tb as (select S=@('Screening_Number'), ID,UID from [TABLE-20008858] Where UID >29) "; //participant
+		sql+=",screening_insomnia as (select PUID from [TABLE-20009064])";
+		sql+=",eligbility  as (select e_PUID=PUID from [TABLE-20009190])";
+
+
+		sql+=" select sort=1,Name='Registered online',Number=count(ID) from tb where S<>'TEST' and S<>'DUPLICATE' and S<>' ' "
+		sql+=" union select sort=2,Name='Started Questionnaire',Number=count(ID) from [TABLE-20009060] where PUID>29 "
+    sql+=" union select sort=2,Name='Started Questionnaire',Number=count(ID) from [TABLE-20009060] where PUID>29 "
+
+    sql+=" union select sort=3,Name='Excluded from 1st stage of Screening',Number=(select count(ID) from tb join screening_insomnia on UID=PUID)-(select count(ID) from tb join screening_insomnia on UID=PUID join eligbility on UID=e_PUID)"
+		sql+=" union select sort=4,Name='Passed 1st part of Online Screening',Number=count(ID) from [TABLE-20009190] Where PUID >29 "
+
+		sql+=" union select sort=5,Name='Completed the Questionnaire',Number=count(ID) from [TABLE-20008713]Where PUID >29 "
+
+
+		//-----------------
+	    _req={cmd:'query_records',sql:sql}
+	}
+	//-------------------------------------
+}
+</script>
+<style>
+    VmInclude:__PARTS__/grid/grid.css
+</style>

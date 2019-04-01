@@ -6,17 +6,17 @@
         <!-- header and manu -->
         <div id=c_header>
             <div class=vm-mobile>
-                <span id=vm-mobile_title class=vm-mobile-title>Woolcock</span>
+                <span id=vm-mobile_title class=vm-mobile-title> Windfarm Lab Data Management </span>
                 <a id="vm-hamburger_button" class=vm-hamburger-button onclick="$vm.toggle()"><i class="fa fa-bars"></i></a>
             </div>
             <div class=vm-desk-logo>
                 <div id=vm-logo-image></div>
             </div>
             <div menu id="vm-menu">
-                <a href="?/home"><i class="fa fa-home"></i> Home</a>
-                <a href="?/panel-main-windfarm-lab"><i class="fa fa-th"></i> Windfarm-Lab</a>
-                <a href="?/panel-permission"><i class="fa fa-lock"></i> Permissions</a>
+                <!----a href="?/home"><i class="fa fa-home"></i> Home</a-->
+                <a href="?/panel-main-windfarm-lab"><i class="fa fa-th"></i> Windfarm Lab Study Management</a>
                 <a href="?/panel-reports-windfarm-lab"><i class="fas fa-file"></i> Reports</a>
+                <a href="?/panel-permission"><i class="fa fa-lock"></i> Permissions</a>
                 <a id=vm_signin onclick="$vm.signin();"><i class="fa fa-user"></i> Sign In</a>
                 <a class=vm-hide id=vm_signout onclick=$vm.signout()><i class="fa fa-user"></i> Sign Out</a>
             </div>
@@ -38,7 +38,7 @@
         if(window.location.toString().indexOf('db=dev')!=-1) $VmAPI.api_base="https://cbs.wappsystem.com/dev/";
         //------------------------------------
         //Set your default web page title and footer text
-        $vm.default_title="Woolcock";
+        $vm.default_title="Windfarm Lab";
         $('#text_0').html("Copyright &copy; "+(new Date()).getFullYear()+", Woolcock Institute of Medical Research");
         //------------------------------------
         $('#c_header').contents().appendTo('#header');

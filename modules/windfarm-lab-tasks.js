@@ -167,6 +167,16 @@
         "v1-n3-sleepscoring":       { url: '$A/modules/..../' },
         "v1-n3-rea-report":         { url: '$A/modules/..../' },
         "v1-n3-researchreport":     { url: '$A/modules/..../' },
+        "v1-pulsewaveanalysis": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-data.html', Table:"20009510",form_module:"v1-pwa-form"},
+        "v1-pwa-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-form.html', Table:"20009510"},
+        "v1-pulsewavevelocity": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveavelocity-data.html', Table: "20009513",form_module:"v1-pwv_form"},
+        "v1-pwv-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveavelocity-form.html', Table: "20009513"},
+        "v1-endopat": { url: '$A/modules/w/windfarm-lab-tasks/endothelialft-data.html', Table: "20008721",form_module:"v1-endopat-form"},
+        "v1-endopat-form": { url: '$A/modules/w/windfarm-lab-tasks/endothelialft-form.html', Table: "20008721" },
+
+
+
+
 
         //Visit 2
 
@@ -313,9 +323,7 @@
         "v2-n3-rea-report": { url: '$A/modules/..../' },
         "v2-n3-researchreport": { url: '$A/modules/..../' },
 
-        //Pulse Wave Velocity and Pulse Wave Analysis Upload
-
-
+      
         "v2-d4-d-vas-data": { url: "$A/modules/w/windfarm-lab-tasks/vas-data.html", Table: "20009275", form_module: "v2-d4-d-vas-form" },
         "v2-d4-d-vas-form": { url: "$A/modules/w/windfarm-lab-tasks/vas-form.html", Table: "20009275" },
         "v2-d4-d-nas-data": { url: "$A/modules/w/windfarm-lab-tasks/nas-data.html", Table: "20009248", form_module: "v2-d4-d-nas-form" },
@@ -335,6 +343,15 @@
         "v2-wemwb-form": { url: "$A/modules/w/windfarm-lab-tasks/wemwb-form.html", Table: "20009246" },
         "v2-dass-data": { url: "$A/modules/w/windfarm-lab-tasks/dass-data.html", Table: "20009247", form_module: "v2-dass-form" },
         "v2-dass-form": { url: "$A/modules/w/windfarm-lab-tasks/dass-form.html", Table: "20009247" },
+
+      //Visit 2 Pulse Wave and Endothelial Function Test   
+      "v2-pulsewaveanalysis": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-data.html', Table: "20009510", form_module: "v2-pwa-form" },
+      "v2-pwa-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-form.html', Table: "20009510" },
+      "v2-pulsewavevelocity": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveavelocity-data.html', Table: "20009513", form_module: "v2-pwv_form" },
+      "v2-pwv-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveavelocity-form.html', Table: "20009513" },
+      "v2-endopat": { url: '$A/modules/w/windfarm-lab-tasks/endothelialft-data.html', Table: "20008784", form_module: "v2-endopat-form" },
+      "v2-endopat-form": { url: '$A/modules/w/windfarm-lab-tasks/endothelialft-form.html', Table: "20008784" },
+
 
 
 
@@ -507,29 +524,40 @@
         "v3-dass-data": { url: "$A/modules/w/windfarm-lab-tasks/dass-data.html", Table: "20009251", form_module: "v3-dass-form" },
         "v3-dass-form": { url: "$A/modules/w/windfarm-lab-tasks/dass-form.html", Table: "20009251" },
 
+        //Visit 2 Pulse Wave and Endothelial Function Test   
+        "v3-pulsewaveanalysis": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-data.html', Table: "20009512", form_module: "v3-pwa-form" },
+        "v3-pwa-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-form.html', Table: "20009512" },
+        "v3-pulsewavevelocity": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveavelocity-data.html', Table: "20009515", form_module: "v3-pwv_form" },
+        "v3-pwv-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveavelocity-form.html', Table: "20009515" },
+        "v3-endopat": { url: '$A/modules/w/windfarm-lab-tasks/endothelialft-data.html', Table: "20008847", form_module: "v3-endopat-form" },
+        "v3-endopat-form": { url: '$A/modules/w/windfarm-lab-tasks/endothelialft-form.html', Table: "20008847" },
 
         //additional panels
-      "panel-neurotology":         { url: "$A/modules/p/panel-windfarm-lab/panel-neurotology.html", Table:"1903221208"},
-      "panel-test-export":         { url: "$A/modules/p/panel-windfarm-lab/panel-test-export.html", Table:"1903221209"},
+        "panel-neurotology":         { url: "$A/modules/p/panel-windfarm-lab/panel-neurotology.html", Table:"1903221208"},
+        "panel-test-export":         { url: "$A/modules/p/panel-windfarm-lab/panel-test-export.html", Table:"1903221209"},
+        "panel-data-entry":          { url: "$A/modules/p/panel-windfarm-lab/panel-data-entry.html", Table: "1903221210"},
 
 
-      //exportpages
-      "VAS_V1":	          						{"url":"$A/modules/e/export_modules/VAS_V1.html", "name_for_search":"Visual Analogue Scale (VAS)_ Visit 1 "},
-      "NAS_V1":	          						{"url":"$A/modules/e/export_modules/NAS_V1.html", "name_for_search":"Noise Annoyance Scale (VAS)_ Visit 1 "},
-      "NBACK_V1":	          						{"url":"$A/modules/e/export_modules/NBACK_V1.html", "name_for_search":"NBack_ Visit 1 "},
-      "TOL_V1":	          						{"url":"$A/modules/e/export_modules/TOL_V1.html", "name_for_search":"Tower of London_ Visit 1 "},
-      "PVT_V1":	          						{"url":"$A/modules/e/export_modules/PVT_V1.html", "name_for_search":"Psychomotor Vigilance Task(PVT)_ Visit 1 "},
-      "VAS_V2":	          						{"url":"$A/modules/e/export_modules/VAS_V2.html", "name_for_search":"Visual Analogue Scale (VAS)_ Visit 2"},
-      "NAS_V2":	          						{"url":"$A/modules/e/export_modules/NAS_V2.html", "name_for_search":"Noise Annoyance Scale (VAS)_ Visit 2 "},
-      "NBACK_V2":	          						{"url":"$A/modules/e/export_modules/NBACK_V2.html", "name_for_search":"NBack_ Visit 2 "},
-      "TOL_V2":	          						{"url":"$A/modules/e/export_modules/TOL_V2.html", "name_for_search":"Tower of London_ Visit 2 "},
-      "PVT_V2":	          						{"url":"$A/modules/e/export_modules/PVT_V2.html", "name_for_search":"Psychomotor Vigilance Task(PVT)_ Visit 2 "},
-      "VAS_V3":	          						{"url":"$A/modules/e/export_modules/VAS_V3.html", "name_for_search":"Visual Analogue Scale (VAS)_ Visit 3 "},
-      "NAS_V3":	          						{"url":"$A/modules/e/export_modules/NAS_V3.html", "name_for_search":"Noise Annoyance Scale (VAS)_ Visit 3 "},
-      "NBACK_V3":	          						{"url":"$A/modules/e/export_modules/NBACK_V3.html", "name_for_search":"NBack_ Visit 3 "},
-      "TOL_V3":	          						{"url":"$A/modules/e/export_modules/TOL_V3.html", "name_for_search":"Tower of London_ Visit 3 "},
-      "PVT_V3":	          						{"url":"$A/modules/e/export_modules/PVT_V3.html", "name_for_search":"Psychomotor Vigilance Task(PVT)_ Visit 3" }
+        //exportpages
+        "VAS_V1":	                    {"url":"$A/modules/e/export_modules/VAS_V1.html", "name_for_search":"Visual Analogue Scale (VAS)_ Visit 1 "},
+        "NAS_V1":	          		    {"url":"$A/modules/e/export_modules/NAS_V1.html", "name_for_search":"Noise Annoyance Scale (VAS)_ Visit 1 "},
+        "NBACK_V1":	          		{"url":"$A/modules/e/export_modules/NBACK_V1.html", "name_for_search":"NBack_ Visit 1 "},
+        "TOL_V1":	          			{"url":"$A/modules/e/export_modules/TOL_V1.html", "name_for_search":"Tower of London_ Visit 1 "},
+        "PVT_V1":	          			{"url":"$A/modules/e/export_modules/PVT_V1.html", "name_for_search":"Psychomotor Vigilance Task(PVT)_ Visit 1 "},
+        "VAS_V2":	          			{"url":"$A/modules/e/export_modules/VAS_V2.html", "name_for_search":"Visual Analogue Scale (VAS)_ Visit 2"},
+        "NAS_V2":	          			{"url":"$A/modules/e/export_modules/NAS_V2.html", "name_for_search":"Noise Annoyance Scale (VAS)_ Visit 2 "},
+        "NBACK_V2":	          		{"url":"$A/modules/e/export_modules/NBACK_V2.html", "name_for_search":"NBack_ Visit 2 "},
+        "TOL_V2":	          		    {"url":"$A/modules/e/export_modules/TOL_V2.html", "name_for_search":"Tower of London_ Visit 2 "},
+        "PVT_V2":	          			{"url":"$A/modules/e/export_modules/PVT_V2.html", "name_for_search":"Psychomotor Vigilance Task(PVT)_ Visit 2 "},
+        "VAS_V3":	          			{"url":"$A/modules/e/export_modules/VAS_V3.html", "name_for_search":"Visual Analogue Scale (VAS)_ Visit 3 "},
+        "NAS_V3":	          			{"url":"$A/modules/e/export_modules/NAS_V3.html", "name_for_search":"Noise Annoyance Scale (VAS)_ Visit 3 "},
+        "NBACK_V3":	          		{"url":"$A/modules/e/export_modules/NBACK_V3.html", "name_for_search":"NBack_ Visit 3 "},
+        "TOL_V3":	          			{"url":"$A/modules/e/export_modules/TOL_V3.html", "name_for_search":"Tower of London_ Visit 3 "},
+        "PVT_V3":	          			{"url":"$A/modules/e/export_modules/PVT_V3.html", "name_for_search":"Psychomotor Vigilance Task(PVT)_ Visit 3" },
 
+      //outcomereport
+        "v1-outcome":                  { "url": "$A/modules/o/outcome-questionnaire/outcome-quest-report.html" },
+        "screening_complete":          { "url": "$A/modules/r/report/screening_complete.html" }
 
 
 

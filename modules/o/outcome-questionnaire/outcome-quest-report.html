@@ -1,0 +1,181 @@
+<div>
+	VmInclude:__COMPONENT__/g/grid.01.html
+	<form id=F__ID>
+		<table id=tb__header>
+			<col style='width:337px' />
+			<col style='width:260px' />
+			<col />
+			</colgroup>
+			<tr>
+				<td colspan="3" style='font-size:22px;padding: 20px'>
+					<center><b>Outcome Questionnaire Summary</b></center>
+				</td>
+			</tr>
+			<table id=tb__ID>
+				<col style='width:337px' />
+				<col style='width:260px' />
+				<col />
+				</colgroup>
+				<tr>
+					<td>Randomisation Number: </td>
+					<td id=F20008848__ID></td>
+				</tr>
+				<tr>
+						<td>Date of Birth:</td>
+					<td id=F20008848__ID></td>
+				</tr>
+					
+				<tr>
+					<table id=tb__ID>
+						<col style='width:337px' />
+						<col style='width:260px' />
+						<col />
+						</colgroup>
+						<tr>
+							<td><b>
+									<center>Questionnaries<br></td>
+							<td><b>
+									<center>Questionnaire Score<br></td>
+							</center>
+					</table>
+						<table id=tb__ID>
+						<col style='width:337px' />
+						<col style='width:260px' />
+						<col />
+						</colgroup>
+						<tr>
+						</tr>
+						<tr>
+							<td><b>Insomnia Severity Index (ISI)</b></td>
+							<td id=F20008717__ID></td>
+						</tr>
+						<tr>
+							<td><b>Kessler - 10 </b></td>
+							<td id=F20008718__ID></td>
+						</tr>
+						<tr>
+							<td><b>Warwick Edingburgh Mental Wellbeing Scale </b></td>	
+							<td id=F20009221__ID></td>
+						</tr>
+						<tr>
+							<td><b>Depression Anxiety Stress Scale (DASS-21)</b></td>
+							<td id=F20009222__ID></td>
+						</tr>
+					
+					</table>
+	</form>
+</div>
+<script>
+	function F__ID() {
+		//-------------------------------------
+		VmInclude:__COMPONENT__/g/grid.01.js
+		VmInclude:__CURRENT_PATH__/task-data.js
+		//-------------------------------------
+		$('#D__ID').on('load', function () {
+			var Record_ID = $vm.vm['__ID'].op.Record_ID;
+			
+			var Record_ID = $vm.vm['__ID'].op.Record_ID;
+			var sql = "select Information from [TABLE-20008717] where UID=" + Record_ID;
+			$VmAPI.request({
+				data: { cmd: 'query_records', sql: sql }, callback: function (res) {
+					if (res.records.length != 0) $('#F20008717__ID').text(res.records[0].ISI);
+				}
+			})
+
+			var sql = "select Information from [TABLE-20008718] where PUID=" + Record_ID;
+			$VmAPI.request({
+				data: { cmd: 'query_records', sql: sql }, callback: function (res) {
+					if (res.records.length != 0) $('#F20008718__ID').text(res.records[0].kessler);
+				}
+			})
+
+			var sql = "select Information from [TABLE-20009221] where PUID=" + Record_ID;
+			$VmAPI.request({
+				data: { cmd: 'query_records', sql: sql }, callback: function (res) {
+					if (res.records.length != 0) $('#F20009221__ID').text(res.records[0].wemw);
+
+				}
+			})
+
+			var sql = "select Information from [TABLE-20009222] where PUID=" + Record_ID;
+			$VmAPI.request({
+				data: { cmd: 'query_records', sql: sql }, callback: function (res) {
+					if (res.records.length != 0) $('#F20009222__ID').html("<b> Depression:</b>&nbsp " + res.records[0].DASS_DS + '<br><b>Anxiety:</b>&nbsp   ' + res.records[0].DASS_AS + '<br><b>Stress:</b> &nbsp' + res.records[0].DASS_SS);
+
+				}
+			})
+
+			$('#F20008848__ID').text(res.records[0].Record_ID + res.records[0].DOB);
+
+		})
+	}
+	
+		//-------------------------------------
+
+</script>
+<style>
+			VmInclude:__COMPONENT__/g/grid.01.css
+
+
+	{		
+		border: 2px solid #000;
+		width: 800px;
+		border-collapse: collapse;
+		background-color: #f0f0f0;
+		padding: 100px;
+	}
+
+	#tb__ID {
+		border: 2px solid #000;
+		width: 800px;
+		border-collapse: collapse;
+
+	}
+
+	#tb__ID td {
+		border: 1px solid #888;
+		padding: 20px;
+	}
+
+	#tb__IDD {
+		border: 2px solid #000;
+		width: 800px;
+		border-collapse: collapse;
+		background-color: #f0f0f0;
+		text-align: center;
+
+
+	}
+
+	#tb__IDD td {
+		border: 1px solid #888;
+		padding: 10px;
+
+
+	}
+
+	@media print {
+		body * {
+			visibility: hidden;
+		}
+
+		#F__ID,
+		#F__ID * {
+			visibility: visible;
+		}
+
+		.c_print {
+			display: none;
+		}
+
+		#F__ID {
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+
+		.file_buttons {
+			display: none;
+		}
+	}
+</style>

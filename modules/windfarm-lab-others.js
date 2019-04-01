@@ -4,7 +4,6 @@
         "panel-child-windfarm-lab":    	{url:"$A/modules/p/panel-windfarm-lab/panel-child.html"},
         "panel-reports-windfarm-lab":   {url:"$A/modules/p/panel-windfarm-lab/panel-reports.html"},
         "panel-neurotology-windfarm-lab":{url:"$A/modules/p/panel-windfarm-lab/panel-neurotology.html"},
-        "panel-neurocog-vas-windfarm-lab":{url:"$A/modules/p/panel-windfarm-lab/panel-neurocog-vas.html"},
         "participant-data-windfarm-lab":{url:"$A/modules/p/participant-data-windfarm-lab.html",Table:"20008848",form_module:"participant-form-windfarm-lab",router:1,
                                             child_panel:"panel-child-windfarm-lab",
                                             questionnaire_setup:"online-questionnaire-setup-windfarm-lab",
