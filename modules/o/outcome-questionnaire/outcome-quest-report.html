@@ -1,6 +1,27 @@
 <div>
-	VmInclude:__COMPONENT__/g/grid.01.html
-	<form id=F__ID>
+		<section id=form_container__ID>
+				<form id=F__ID>
+		
+                <!-- participant part for all tsak forms -------------------->
+                <div class="row row__ID" id=row_participant__ID>
+                    <div class="col-sm-12 col-lg-9 input__ID">
+                        <span class=label__ID>Participant</span><br>
+                        <input type=text name="Participant" class=form-control id=Participant__ID data-id="Participant" required />
+                    </div>
+                    <div class="col-sm-12 col-lg-3 input__ID">
+                        <span class=label__ID>Participant ID</span><br>
+                        <input type=text name="Participant_uid" class=form-control readonly id=Participant_uid__ID />
+                    </div>
+                    <hr style="border-top: 1px solid #888;width: 100%;margin:10px 0">
+                </div>
+				<!---------------------------------------------------->
+                <!-- submit button part for all tsak forms------------>
+                <div class="row">
+                    <div class=col>
+                        <button id=q__ID type="button" class="btn btn-secondary">Query</button>
+                    </div>
+                </div>
+                <!---------------------------------------------------->
 		<table id=tb__header>
 			<col style='width:337px' />
 			<col style='width:260px' />
@@ -64,23 +85,33 @@
 					
 					</table>
 	</form>
+		</section>
 </div>
 <script>
 	function F__ID() {
 		//-------------------------------------
 		VmInclude:__COMPONENT__/g/grid.01.js
-		VmInclude:__CURRENT_PATH__/task-data.js
+		VmInclude:__CURRENT_PATH__/task-form.js
 		//-------------------------------------
-		$('#D__ID').on('load', function () {
-			var Record_ID = $vm.vm['__ID'].op.Record_ID;
-			
-			var Record_ID = $vm.vm['__ID'].op.Record_ID;
-			var sql = "select Information from [TABLE-20008717] where UID=" + Record_ID;
+		$('#q__ID').on('click', function () {
+			var Participant_uid=$('#Participant_uid__ID').val();
+			if(Participant_uid==""){
+				alert("Select participant please.");
+				return;
+			}
+
+			alert(Participant_uid)
+			var sql = "select Information from [TABLE-20008717] where PUID=" + Participant_uid;
 			$VmAPI.request({
 				data: { cmd: 'query_records', sql: sql }, callback: function (res) {
 					if (res.records.length != 0) $('#F20008717__ID').text(res.records[0].ISI);
 				}
 			})
+
+
+			return;
+			var Record_ID = $vm.vm['__ID'].op.Record_ID;
+			
 
 			var sql = "select Information from [TABLE-20008718] where PUID=" + Record_ID;
 			$VmAPI.request({
@@ -114,12 +145,15 @@
 
 </script>
 <style>
-			VmInclude:__COMPONENT__/g/grid.01.css
+        VmInclude:__COMPONENT__/f/form.01.css
+        #form_container__ID{
+            max-width:800px;
+        }
 
 
 	{		
 		border: 2px solid #000;
-		width: 800px;
+		_width: 800px;
 		border-collapse: collapse;
 		background-color: #f0f0f0;
 		padding: 100px;
@@ -127,7 +161,7 @@
 
 	#tb__ID {
 		border: 2px solid #000;
-		width: 800px;
+		_width: 800px;
 		border-collapse: collapse;
 
 	}
@@ -139,7 +173,7 @@
 
 	#tb__IDD {
 		border: 2px solid #000;
-		width: 800px;
+		_width: 800px;
 		border-collapse: collapse;
 		background-color: #f0f0f0;
 		text-align: center;

@@ -21,6 +21,27 @@
                 <!---------------------------------------------------->
                 <!-- Form Inputs-------------------------------------->
                 <div id=dynamic_part__ID></div>
+                <div class='row row__ID'>
+    				<div class="col">
+    					<span>Awp4 Upload</span>
+                        <div class="form-control">
+                            <u style='cursor:pointer' id=link_Awp4__ID></u>
+                            <br>
+                            <input type="file" name=Awp4 style="margin-top:6px" /> &nbsp&nbsp&nbsp <button type="button" id=x_Awp4__ID>Remove</button>
+                        </div>
+					</div>
+                </div>            
+                <div class='row row__ID'>
+    				<div class="col">
+    					<span>Report Upload</span>
+                        <div class="form-control">
+                            <u style='cursor:pointer' id=link_Report__ID></u>
+                            <br>
+                            <input type="file" name=Report style="margin-top:6px" /> &nbsp&nbsp&nbsp <button type="button" id=x_Report__ID>Remove</button>
+                        </div>
+					</div>
+                </div>            
+
                 <!---------------------------------------------------->
                 <!-- submit button part for all tsak forms------------>
                 <br>
@@ -33,11 +54,12 @@
             </div>
         </form>
     </section>
+    VmInclude:__COMPONENT__/m/model.01.html
     <script>
         function F__ID(){
             //-------------------------------------
             //build text input fields
-            var fields="Participant,Visit,.Awp4|AccuwinFile,Report,.gdt,.xml";
+            var fields="Visit,gdt,xml";
             var fs=fields.split(',');
             var txt="";
             for(var i=0;i<fs.length;i++){
@@ -49,6 +71,13 @@
             //-------------------------------------
             VmInclude:__COMPONENT__/f/form.01.js
             VmInclude:'__CURRENT_PATH__/task-form.js'
+            //-------------------------------------
+            var load5=m.load;
+            m.load=function(){
+                load5();
+                m.set_file_link("Awp4");
+                m.set_file_link("Report");
+            }
             //-------------------------------------
         }
     </script>
