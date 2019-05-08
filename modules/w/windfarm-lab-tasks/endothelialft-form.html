@@ -20,42 +20,62 @@
                 </div>
                 <!---------------------------------------------------->
                 <!-- Form Inputs-------------------------------------->
-                <div id=dynamic_part__ID></div>
-                <!---------------------------------------------------->
-                <!-- submit button part for all tsak forms------------>
-                <br>
-                <div class="row">
-                    <div class=col>
-                        <button id=submit__ID type="submit" class="btn btn-secondary">Submit</button>
-                    </div>
-                </div>
-                <!---------------------------------------------------->
-            </div>
-        </form>
-    </section>
-    <script>
-        function F__ID(){
-            //-------------------------------------
-            //build text input fields
-            var fields="Participant,Visit,Ln_Reactive Hyperemia Index,RHI";
-            var fs=fields.split(',');
-            var txt="";
-            for(var i=0;i<fs.length;i++){
-                txt+="<div class='row row__ID'><div class='col'>\r\n";
-                txt+="<span>"+fs[i].replace(/_/g," ")+"</span><input type=text class=form-control name="+fs[i]+">\r\n";
-                txt+="</div></div>\r\n";
-            }
-            $('#dynamic_part__ID').html(txt);
-            //-------------------------------------
-            VmInclude:__COMPONENT__/f/form.01.js
-            VmInclude:'__CURRENT_PATH__/task-form.js'
-            //-------------------------------------
+<div id=dynamic_part__ID></div>
+<div class='row row__ID'>
+    <div class="col">
+        <span>Report Upload</span>
+        <div class="form-control">
+            <u style='cursor:pointer' id=link_eft-Report__ID></u>
+            <br>
+            <input type="file" name=eft-Report style="margin-top:6px" /> &nbsp&nbsp&nbsp <button type="button" id=eft-Report__ID>Remove</button>
+        </div>
+    </div>
+</div>
+
+<!---------------------------------------------------->
+<!-- submit button part for all tsak forms------------>
+<br>
+<div class="row">
+    <div class=col>
+        <button id=submit__ID type="submit" class="btn btn-secondary">Submit</button>
+    </div>
+</div>
+<!---------------------------------------------------->
+</div>
+</form>
+</section>
+VmInclude:__COMPONENT__/m/model.01.html
+<script>
+    function F__ID() {
+        //-------------------------------------
+        //build text input fields
+        var fields = "LnRHI,Heart Rate";
+        var fs = fields.split(',');
+        var txt = "";
+        for (var i = 0; i < fs.length; i++) {
+            txt += "<div class='row row__ID'><div class='col'>\r\n";
+            txt += "<span>" + fs[i].replace(/_/g, " ") + "</span><input type=text class=form-control name=" + fs[i] + ">\r\n";
+            txt += "</div></div>\r\n";
         }
-    </script>
-    <style>
-        #form_container__ID{
-            max-width:700px;
+        $('#dynamic_part__ID').html(txt);
+        //-------------------------------------
+        VmInclude:__COMPONENT__/f/form.01.js
+        VmInclude: '__CURRENT_PATH__/task-form.js'
+        //-------------------------------------
+        var load5 = m.load;
+        m.load = function () {
+            load5();
+            m.set_file_link("eft-Report");
+            
         }
-        VmInclude:__COMPONENT__/f/form.01.css
-    </style>
+        //-------------------------------------
+    }
+</script>
+<style>
+    #form_container__ID {
+        max-width: 700px;
+    }
+
+    VmInclude:__COMPONENT__/f/form.01.css
+</style>
 </div>

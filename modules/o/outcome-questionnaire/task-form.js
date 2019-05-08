@@ -1,18 +1,18 @@
 //-------------------------------------
 //for auto select participant
 var participant_tid =$vm.module_list['participant-data'].Table;
-var participant_name =function(record){ if(record.Subject_Initials!=undefined) return record.UID+" "+record.Subject_Initials; else return record.UID; }
+var participant_name =function(record){ if(record.Subject_Initials!=undefined) return record.Randomisation_Number+" "+record.Subject_Initials+" "+record.DOB ; else return record.UID; }
 //-------------------------------------
 //auto select participant
 var wait1=function(){
     //var sql="with tb as (select UID,Subject_Initials=JSON_VALUE(Information,'$.Subject_Initials') from [TABLE-"+participant_tid+"])";
-    var sql="with tb as (select UID,Subject_Initials=@('Subject_Initials') from [TABLE-"+participant_tid+"])";
-    sql+=" select top 10 UID,Subject_Initials from tb where Subject_Initials like '%'+@S1+'%' ";
+    var sql="with tb as (select UID,Subject_Initials=@('Subject_Initials'),Randomisation_Number=@('Randomisation_Number'),DOB=@('DOB') from [TABLE-"+participant_tid+"])";
+    sql+=" select top 10 UID,Subject_Initials,Randomisation_Number,DOB from tb where Randomisation_Number like '%'+@S1+'%' or Subject_Initials like '%'+@S1+'%' ";
     var autocomplete_list=function(records){
         var items=[];
         for(var i=0;i<records.length;i++){
             var obj={};
-            obj.label=records[i].UID+' '+records[i].Subject_Initials;
+            obj.label=records[i].Randomisation_Number+" "+records[i].Subject_Initials+" "+records[i].DOB;//records[i].UID+' '+records[i].Subject_Initials;
             obj['UID']=records[i].UID;
             items.push(obj);
         }
@@ -45,12 +45,14 @@ m.load=function(){
     }
     //--------------------------
     var wait2=function(){
+        /*
         $('#F__ID input[name=Participant]').prop('readonly',false);
         $('#F__ID input[name=Participant]').autocomplete( "enable" );
         if($("#F__ID input[name=Participant_uid]").val()!=''){
             $('#F__ID input[name=Participant]').prop('readonly',true);
             $('#F__ID input[name=Participant]').autocomplete( "disable" );
         }
+        */
     }
     //--------------------------
     var I2=0, loop_2=setInterval(function (){

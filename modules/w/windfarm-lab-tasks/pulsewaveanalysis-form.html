@@ -27,7 +27,7 @@
                         <div class="form-control">
                             <u style='cursor:pointer' id=link_Awp4__ID></u>
                             <br>
-                            <input type="file" name=Awp4 style="margin-top:6px" /> &nbsp&nbsp&nbsp <button type="button" id=x_Awp4__ID>Remove</button>
+                            <input type="file" name=Awp4 style="margin-top:6px" /> &nbsp&nbsp&nbsp <button type="button" id=Awp4__ID>Remove</button>
                         </div>
 					</div>
                 </div>            
@@ -37,10 +37,30 @@
                         <div class="form-control">
                             <u style='cursor:pointer' id=link_Report__ID></u>
                             <br>
-                            <input type="file" name=Report style="margin-top:6px" /> &nbsp&nbsp&nbsp <button type="button" id=x_Report__ID>Remove</button>
+                            <input type="file" name=Report style="margin-top:6px" /> &nbsp&nbsp&nbsp <button type="button" id=Report__ID >Remove</button>
                         </div>
 					</div>
-                </div>            
+                </div>
+                <div class='row row__ID'>
+                    <div class="col">
+                        <span>GDT file Upload</span>
+                        <div class="form-control">
+                            <u style='cursor:pointer' id=link_gdt__ID></u>
+                            <br>
+                            <input type="file" name=gdt style="margin-top:6px" /> &nbsp&nbsp&nbsp <button type="button" id=gdt__ID>Remove</button>
+                        </div>
+                    </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class="col">
+                        <span>xml file Upload</span>
+                        <div class="form-control">
+                            <u style='cursor:pointer' id=link_xml__ID></u>
+                            <br>
+                            <input type="file" name=xml style="margin-top:6px" /> &nbsp&nbsp&nbsp <button type="button" id=xml__ID>Remove</button>
+                        </div>
+                    </div>
+                </div>
 
                 <!---------------------------------------------------->
                 <!-- submit button part for all tsak forms------------>
@@ -59,7 +79,7 @@
         function F__ID(){
             //-------------------------------------
             //build text input fields
-            var fields="Visit,gdt,xml";
+            var fields="Visit ";
             var fs=fields.split(',');
             var txt="";
             for(var i=0;i<fs.length;i++){
@@ -77,6 +97,9 @@
                 load5();
                 m.set_file_link("Awp4");
                 m.set_file_link("Report");
+                m.set_file_link("gdt");
+                m.set_file_link("xml");
+                
             }
             //-------------------------------------
         }

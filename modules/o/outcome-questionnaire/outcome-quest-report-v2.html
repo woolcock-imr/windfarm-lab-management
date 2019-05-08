@@ -5,11 +5,11 @@
                 <!-- participant part for all tsak forms -------------------->
                 <div class="row row__ID" id=row_participant__ID>
                     <div class="col-sm-12 col-lg-9 input__ID">
-                        <span class=label__ID>Participant</span><br>
+                        <span class=label__ID>Participant Randomisation No.</span><br>
                         <input type=text name="Participant" class=form-control id=Participant__ID data-id="Participant" required />
                     </div>
                     <div class="col-sm-12 col-lg-3 input__ID">
-                        <span class=label__ID>Participant ID</span><br>
+                        <span class=label__ID>Database ID</span><br>
                         <input type=text name="Participant_uid" class=form-control readonly id=Participant_uid__ID />
                     </div>
                     <hr style="border-top: 1px solid #888;width: 100%;margin:10px 0">
@@ -23,8 +23,8 @@
                 </div>
                 <!---------------------------------------------------->
 		<table id=tb__header>
-			<col style='width:337px' />
-			<col style='width:260px' />
+			<col style='width:400px' />
+			<col style='width:400px' />
 			<col />
 			</colgroup>
 			<tr>
@@ -33,8 +33,8 @@
 				</td>
 			</tr>
 			<table id=tb__ID>
-				<col style='width:337px' />
-				<col style='width:260px' />
+				<col style='width:400px' />
+				<col style='width:400px' />
 				<col />
 				</colgroup>
 				<tr>
@@ -48,8 +48,8 @@
 					
 				<tr>
 					<table id=tb__ID>
-						<col style='width:337px' />
-						<col style='width:260px' />
+						<col style='width:400px' />
+						<col style='width:400px' />
 						<col />
 						</colgroup>
 						<tr>
@@ -60,27 +60,27 @@
 							</center>
 					</table>
 						<table id=tb__ID>
-						<col style='width:337px' />
-						<col style='width:260px' />
+						<col style='width:400px' />
+						<col style='width:400px' />
 						<col />
 						</colgroup>
 						<tr>
 						</tr>
 						<tr>
 							<td><b>Insomnia Severity Index (ISI)</b></td>
-							<td id=F20008717__ID></td>
+							<td id=F20008780__ID></td>
 						</tr>
 						<tr>
 							<td><b>Kessler - 10 </b></td>
-							<td id=F20008718__ID></td>
+							<td id=F20008781__ID></td>
 						</tr>
 						<tr>
 							<td><b>Warwick Edingburgh Mental Wellbeing Scale </b></td>	
-							<td id=F20009221__ID></td>
+							<td id=F20009246__ID></td>
 						</tr>
 						<tr>
 							<td><b>Depression Anxiety Stress Scale (DASS-21)</b></td>
-							<td id=F20009222__ID></td>
+							<td id=F20009247__ID></td>
 						</tr>
 					
 					</table>
@@ -100,43 +100,41 @@
 				return;
 			}
 
-			alert(Participant_uid)
-			var sql = "select Information from [TABLE-20008717] where PUID=" + Participant_uid;
+			
+			var sql = "select Information from [TABLE-20008780] where PUID=" + Participant_uid;
 			$VmAPI.request({
 				data: { cmd: 'query_records', sql: sql }, callback: function (res) {
-					if (res.records.length != 0) $('#F20008717__ID').text(res.records[0].ISI);
+					if (res.records.length != 0) $('#F20008780__ID').text(res.records[0].ISI);
 				}
 			})
 
-
-			return;
-			var Record_ID = $vm.vm['__ID'].op.Record_ID;
+			//var Record_ID = $vm.vm['__ID'].op.Record_ID;
 			
 
-			var sql = "select Information from [TABLE-20008718] where PUID=" + Record_ID;
+			var sql = "select Information from [TABLE-20008781] where PUID=" + Participant_uid;
 			$VmAPI.request({
 				data: { cmd: 'query_records', sql: sql }, callback: function (res) {
-					if (res.records.length != 0) $('#F20008718__ID').text(res.records[0].kessler);
+					if (res.records.length != 0) $('#F20008781__ID').text(res.records[0].kessler);
 				}
 			})
 
-			var sql = "select Information from [TABLE-20009221] where PUID=" + Record_ID;
+			var sql = "select Information from [TABLE-20009246] where PUID=" + Participant_uid;
 			$VmAPI.request({
 				data: { cmd: 'query_records', sql: sql }, callback: function (res) {
-					if (res.records.length != 0) $('#F20009221__ID').text(res.records[0].wemw);
-
-				}
-			})
-
-			var sql = "select Information from [TABLE-20009222] where PUID=" + Record_ID;
-			$VmAPI.request({
-				data: { cmd: 'query_records', sql: sql }, callback: function (res) {
-					if (res.records.length != 0) $('#F20009222__ID').html("<b> Depression:</b>&nbsp " + res.records[0].DASS_DS + '<br><b>Anxiety:</b>&nbsp   ' + res.records[0].DASS_AS + '<br><b>Stress:</b> &nbsp' + res.records[0].DASS_SS);
+					if (res.records.length != 0) $('#F20009246__ID').text(res.records[0].wemw);
 
 				}
 			})
 
-			$('#F20008848__ID').text(res.records[0].Record_ID + res.records[0].DOB);
+			var sql = "select Information from [TABLE-20009247] where PUID=" + Participant_uid;
+			$VmAPI.request({
+				data: { cmd: 'query_records', sql: sql }, callback: function (res) {
+					if (res.records.length != 0) $('#F20009247__ID').html("<b> Depression:</b>&nbsp " + res.records[0].DASS_DS + '<br><b>Anxiety:</b>&nbsp   ' + res.records[0].DASS_AS + '<br><b>Stress:</b> &nbsp' + res.records[0].DASS_SS);
+
+				}
+			})
+
+		//	$('#F20008848__ID').text(res.records[0].Randomsation_Number + res.records[0].DOB);
 
 		})
 	}
@@ -153,7 +151,7 @@
 
 	{		
 		border: 2px solid #000;
-		_width: 800px;
+		width: 1000px;
 		border-collapse: collapse;
 		background-color: #f0f0f0;
 		padding: 100px;
@@ -168,7 +166,7 @@
 
 	#tb__ID td {
 		border: 1px solid #888;
-		padding: 20px;
+		padding: 30px;
 	}
 
 	#tb__IDD {
@@ -183,7 +181,7 @@
 
 	#tb__IDD td {
 		border: 1px solid #888;
-		padding: 10px;
+		padding: 20px;
 
 
 	}

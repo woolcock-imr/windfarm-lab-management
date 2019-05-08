@@ -1,7 +1,6 @@
 <div id-D__ID>
 <section>
     <div id=toolbar__ID>
-        <a id=back__ID>Back</a>
 		<button id=query2__ID type=button class='btn btn-secondary' title='Query'>Query</button>
 		<button id=export2__ID type=button class='btn btn-secondary' title='Export'>Export</button>
     	<span class=tab__ID></span>Screening Completion
@@ -61,4 +60,27 @@ m.fields = "Registration_ID|PUID,First_Name,Last_Name,Complete Time|DateTime";
 </script>
 <style>
     VmInclude:__COMPONENT__/g/grid.01.css
+
+	 
+	#toolbar__ID{
+		background-color:#ccc;
+		padding:5px 0px 5px 20px;
+		margin-bottom:0px;
+		overflow:hidden
+	}
+	#toolbar__ID *{
+		margin-right:3px;
+	}
+	@media screen and (max-width:768px){
+		#toolbar__ID{
+			padding: 3px 0;
+		}
+		#toolbar__ID div{
+			padding-left:3px;
+		}
+		#row_1__ID{
+			padding-bottom: 3px;
+		}
+	}
+
 </style>

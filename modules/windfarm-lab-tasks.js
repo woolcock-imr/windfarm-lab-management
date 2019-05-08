@@ -142,16 +142,16 @@
         "v1-d3-d-tol-data":         { url: "$A/modules/w/windfarm-lab-tasks/tol-data.html", Table: "20008665", form_module: "v1-d3-d-tol-form" },
         "v1-d3-d-tol-form":         { url: "$A/modules/w/windfarm-lab-tasks/tol-form.html", Table: "20008665" },
 
-        "v1-d4-d-vas-data":         { url: "$A/modules/w/windfarm-lab-tasks/vas-data.html", Table: "20009274", form_module: "v1-d4-d-vas-form" },
-        "v1-d4-d-vas-form":         { url: "$A/modules/w/windfarm-lab-tasks/vas-form.html", Table: "20009274" },
-        "v1-d4-d-nas-data":         { url: "$A/modules/w/windfarm-lab-tasks/nas-data.html", Table: "20009223", form_module: "v1-d4-d-nas-form" },
-        "v1-d4-d-nas-form":         { url: "$A/modules/w/windfarm-lab-tasks/nas-form.html", Table: "20009223" },
-        "v1-d4-d-n-back-data":      { url: "$A/modules/w/windfarm-lab-tasks/n-back-data.html", Table: "20008712", form_module: "v1-d4-d-n-back-form" },
-        "v1-d4-d-n-back-form":      { url: "$A/modules/w/windfarm-lab-tasks/n-back-form.html", Table: "20008712" },
-        "v1-d4-d-pvt-data":         { url: "$A/modules/w/windfarm-lab-tasks/pvt-data.html", Table: "20008714", form_module: "v1-d4-d-pvt-form" },
-        "v1-d4-d-pvt-form":         { url: "$A/modules/w/windfarm-lab-tasks/pvt-form.html", Table: "20008714" },
-        "v1-d4-d-tol-data":         { url: "$A/modules/w/windfarm-lab-tasks/tol-data.html", Table: "20008715", form_module: "v1-d4-d-tol-form" },
-        "v1-d4-d-tol-form":         { url: "$A/modules/w/windfarm-lab-tasks/tol-form.html", Table: "20008715" },
+        "v1-d4-a-vas-data":         { url: "$A/modules/w/windfarm-lab-tasks/vas-data.html", Table: "20009274", form_module: "v1-d4-a-vas-form" },
+        "v1-d4-a-vas-form":         { url: "$A/modules/w/windfarm-lab-tasks/vas-form.html", Table: "20009274" },
+        "v1-d4-a-nas-data":         { url: "$A/modules/w/windfarm-lab-tasks/nas-data.html", Table: "20009223", form_module: "v1-d4-a-nas-form" },
+        "v1-d4-a-nas-form":         { url: "$A/modules/w/windfarm-lab-tasks/nas-form.html", Table: "20009223" },
+        "v1-d4-a-n-back-data":      { url: "$A/modules/w/windfarm-lab-tasks/n-back-data.html", Table: "20008712", form_module: "v1-d4-a-n-back-form" },
+        "v1-d4-a-n-back-form":      { url: "$A/modules/w/windfarm-lab-tasks/n-back-form.html", Table: "20008712" },
+        "v1-d4-a-pvt-data":         { url: "$A/modules/w/windfarm-lab-tasks/pvt-data.html", Table: "20008714", form_module: "v1-d4-a-pvt-form" },
+        "v1-d4-a-pvt-form":         { url: "$A/modules/w/windfarm-lab-tasks/pvt-form.html", Table: "20008714" },
+        "v1-d4-a-tol-data":         { url: "$A/modules/w/windfarm-lab-tasks/tol-data.html", Table: "20008715", form_module: "v1-d4-a-tol-form" },
+        "v1-d4-a-tol-form":         { url: "$A/modules/w/windfarm-lab-tasks/tol-form.html", Table: "20008715" },
 
         "v1-isi-data":              { url: "$A/modules/w/windfarm-lab-tasks/isi-data.html", Table: "20008717", form_module: "v1-isi-form" },
         "v1-isi-form":              { url: "$A/modules/w/windfarm-lab-tasks/isi-form.html", Table: "20008717" },
@@ -167,12 +167,16 @@
         "v1-n3-sleepscoring":       { url: '$A/modules/..../' },
         "v1-n3-rea-report":         { url: '$A/modules/..../' },
         "v1-n3-researchreport":     { url: '$A/modules/..../' },
+      
+      // Pulse Wave Analysis and co  
         "v1-pulsewaveanalysis": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-data.html', Table:"20009510",form_module:"v1-pwa-form"},
         "v1-pwa-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-form.html', Table:"20009510"},
-        "v1-pulsewavevelocity": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveavelocity-data.html', Table: "20009513",form_module:"v1-pwv_form"},
-        "v1-pwv-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveavelocity-form.html', Table: "20009513"},
+        "v1-pulsewavevelocity": { url: '$A/modules/w/windfarm-lab-tasks/pulsewavevelocity-data.html', Table: "20009513",form_module:"v1-pwv-form"},
+        "v1-pwv-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewavevelocity-form.html', Table: "20009513"},
         "v1-endopat": { url: '$A/modules/w/windfarm-lab-tasks/endothelialft-data.html', Table: "20008721",form_module:"v1-endopat-form"},
         "v1-endopat-form": { url: '$A/modules/w/windfarm-lab-tasks/endothelialft-form.html', Table: "20008721" },
+        "v1-blood": { url: '$A/modules/w/windfarm-lab-tasks/blood-data.html', Table:"20009220", form_module:"v1-blood-form"},
+        "v1-blood-form": { url: '$A/modules/w/windfarm-lab-tasks/blood-form.html', Table: "20009220", form_module: "v1-blood-form" },
 
 
 
@@ -324,16 +328,16 @@
         "v2-n3-researchreport": { url: '$A/modules/..../' },
 
       
-        "v2-d4-d-vas-data": { url: "$A/modules/w/windfarm-lab-tasks/vas-data.html", Table: "20009275", form_module: "v2-d4-d-vas-form" },
-        "v2-d4-d-vas-form": { url: "$A/modules/w/windfarm-lab-tasks/vas-form.html", Table: "20009275" },
-        "v2-d4-d-nas-data": { url: "$A/modules/w/windfarm-lab-tasks/nas-data.html", Table: "20009248", form_module: "v2-d4-d-nas-form" },
-        "v2-d4-d-nas-form": { url: "$A/modules/w/windfarm-lab-tasks/nas-form.html", Table: "20009248" },
-        "v2-d4-d-n-back-data": { url: "$A/modules/w/windfarm-lab-tasks/n-back-data.html", Table: "20008775", form_module: "v2-d4-d-n-back-form" },
-        "v2-d4-d-n-back-form": { url: "$A/modules/w/windfarm-lab-tasks/n-back-form.html", Table: "20008775" },
-        "v2-d4-d-pvt-data": { url: "$A/modules/w/windfarm-lab-tasks/pvt-data.html", Table: "20008777", form_module: "v2-d4-d-pvt-form" },
-        "v2-d4-d-pvt-form": { url: "$A/modules/w/windfarm-lab-tasks/pvt-form.html", Table: "20008777" },
-        "v2-d4-d-tol-data": { url: "$A/modules/w/windfarm-lab-tasks/tol-data.html", Table: "20008778", form_module: "v2-d4-d-tol-form" },
-        "v2-d4-d-tol-form": { url: "$A/modules/w/windfarm-lab-tasks/tol-form.html", Table: "20008778" },
+        "v2-d4-a-vas-data": { url: "$A/modules/w/windfarm-lab-tasks/vas-data.html", Table: "20009275", form_module: "v2-d4-a-vas-form" },
+        "v2-d4-a-vas-form": { url: "$A/modules/w/windfarm-lab-tasks/vas-form.html", Table: "20009275" },
+        "v2-d4-a-nas-data": { url: "$A/modules/w/windfarm-lab-tasks/nas-data.html", Table: "20009248", form_module: "v2-d4-a-nas-form" },
+        "v2-d4-a-nas-form": { url: "$A/modules/w/windfarm-lab-tasks/nas-form.html", Table: "20009248" },
+        "v2-d4-a-n-back-data": { url: "$A/modules/w/windfarm-lab-tasks/n-back-data.html", Table: "20008775", form_module: "v2-d4-a-n-back-form" },
+        "v2-d4-a-n-back-form": { url: "$A/modules/w/windfarm-lab-tasks/n-back-form.html", Table: "20008775" },
+        "v2-d4-a-pvt-data": { url: "$A/modules/w/windfarm-lab-tasks/pvt-data.html", Table: "20008777", form_module: "v2-d4-a-pvt-form" },
+        "v2-d4-a-pvt-form": { url: "$A/modules/w/windfarm-lab-tasks/pvt-form.html", Table: "20008777" },
+        "v2-d4-a-tol-data": { url: "$A/modules/w/windfarm-lab-tasks/tol-data.html", Table: "20008778", form_module: "v2-d4-a-tol-form" },
+        "v2-d4-a-tol-form": { url: "$A/modules/w/windfarm-lab-tasks/tol-form.html", Table: "20008778" },
 
         "v2-isi-data": { url: "$A/modules/w/windfarm-lab-tasks/isi-data.html", Table: "20008780", form_module: "v2-isi-form" },
         "v2-isi-form": { url: "$A/modules/w/windfarm-lab-tasks/isi-form.html", Table: "20008780" },
@@ -345,12 +349,15 @@
         "v2-dass-form": { url: "$A/modules/w/windfarm-lab-tasks/dass-form.html", Table: "20009247" },
 
       //Visit 2 Pulse Wave and Endothelial Function Test   
-      "v2-pulsewaveanalysis": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-data.html', Table: "20009510", form_module: "v2-pwa-form" },
-      "v2-pwa-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-form.html', Table: "20009510" },
-      "v2-pulsewavevelocity": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveavelocity-data.html', Table: "20009513", form_module: "v2-pwv_form" },
-      "v2-pwv-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveavelocity-form.html', Table: "20009513" },
-      "v2-endopat": { url: '$A/modules/w/windfarm-lab-tasks/endothelialft-data.html', Table: "20008784", form_module: "v2-endopat-form" },
-      "v2-endopat-form": { url: '$A/modules/w/windfarm-lab-tasks/endothelialft-form.html', Table: "20008784" },
+        "v2-pulsewaveanalysis": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-data.html', Table: "20009511", form_module: "v2-pwa-form" },
+        "v2-pwa-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-form.html', Table: "20009511" },
+        "v2-pulsewavevelocity": { url: '$A/modules/w/windfarm-lab-tasks/pulsewavevelocity-data.html', Table: "20009514", form_module: "v2-pwv-form" },
+        "v2-pwv-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewavevelocity-form.html', Table: "20009514" },
+        "v2-endopat": { url: '$A/modules/w/windfarm-lab-tasks/endothelialft-data.html', Table: "20008784", form_module: "v2-endopat-form" },
+        "v2-endopat-form": { url: '$A/modules/w/windfarm-lab-tasks/endothelialft-form.html', Table: "20008784" },
+        "v2-blood": { url: '$A/modules/w/windfarm-lab-tasks/blood-data.html', Table: "20009245", form_module: "v2-blood-form" },
+        "v2-blood-form": { url: '$A/modules/w/windfarm-lab-tasks/blood-form.html', Table: "20009245", form_module: "v2-blood-form" },
+
 
 
 
@@ -504,16 +511,16 @@
         "v3-n3-rea-report": { url: '$A/modules/..../' },
         "v3-n3-researchreport": { url: '$A/modules/..../' },
 
-        "v3-d4-d-vas-data": { url: "$A/modules/w/windfarm-lab-tasks/vas-data.html", Table: "20009276", form_module: "v3-d4-d-vas-form" },
-        "v3-d4-d-vas-form": { url: "$A/modules/w/windfarm-lab-tasks/vas-form.html", Table: "20009276" },
-        "v3-d4-d-nas-data": { url: "$A/modules/w/windfarm-lab-tasks/nas-data.html", Table: "20009252", form_module: "v3-d4-d-nas-form" },
-        "v3-d4-d-nas-form": { url: "$A/modules/w/windfarm-lab-tasks/nas-form.html", Table: "20009252" },
-        "v3-d4-d-n-back-data": { url: "$A/modules/w/windfarm-lab-tasks/n-back-data.html", Table: "20008838", form_module: "v3-d4-d-n-back-form" },
-        "v3-d4-d-n-back-form": { url: "$A/modules/w/windfarm-lab-tasks/n-back-form.html", Table: "20008838" },
-        "v3-d4-d-pvt-data": { url: "$A/modules/w/windfarm-lab-tasks/pvt-data.html", Table: "20008840", form_module: "v3-d4-d-pvt-form" },
-        "v3-d4-d-pvt-form": { url: "$A/modules/w/windfarm-lab-tasks/pvt-form.html", Table: "20008840" },
-        "v3-d4-d-tol-data": { url: "$A/modules/w/windfarm-lab-tasks/tol-data.html", Table: "20008841", form_module: "v3-d4-d-tol-form" },
-        "v3-d4-d-tol-form": { url: "$A/modules/w/windfarm-lab-tasks/tol-form.html", Table: "20008841" },
+        "v3-d4-a-vas-data": { url: "$A/modules/w/windfarm-lab-tasks/vas-data.html", Table: "20009276", form_module: "v3-d4-a-vas-form" },
+        "v3-d4-a-vas-form": { url: "$A/modules/w/windfarm-lab-tasks/vas-form.html", Table: "20009276" },
+        "v3-d4-a-nas-data": { url: "$A/modules/w/windfarm-lab-tasks/nas-data.html", Table: "20009252", form_module: "v3-d4-a-nas-form" },
+        "v3-d4-a-nas-form": { url: "$A/modules/w/windfarm-lab-tasks/nas-form.html", Table: "20009252" },
+        "v3-d4-a-n-back-data": { url: "$A/modules/w/windfarm-lab-tasks/n-back-data.html", Table: "20008838", form_module: "v3-d4-a-n-back-form" },
+        "v3-d4-a-n-back-form": { url: "$A/modules/w/windfarm-lab-tasks/n-back-form.html", Table: "20008838" },
+        "v3-d4-a-pvt-data": { url: "$A/modules/w/windfarm-lab-tasks/pvt-data.html", Table: "20008840", form_module: "v3-d4-a-pvt-form" },
+        "v3-d4-a-pvt-form": { url: "$A/modules/w/windfarm-lab-tasks/pvt-form.html", Table: "20008840" },
+        "v3-d4-a-tol-data": { url: "$A/modules/w/windfarm-lab-tasks/tol-data.html", Table: "20008841", form_module: "v3-d4-a-tol-form" },
+        "v3-d4-a-tol-form": { url: "$A/modules/w/windfarm-lab-tasks/tol-form.html", Table: "20008841" },
 
         "v3-isi-data": { url: "$A/modules/w/windfarm-lab-tasks/isi-data.html", Table: "20008843", form_module: "v3-isi-form" },
         "v3-isi-form": { url: "$A/modules/w/windfarm-lab-tasks/isi-form.html", Table: "20008843" },
@@ -524,13 +531,16 @@
         "v3-dass-data": { url: "$A/modules/w/windfarm-lab-tasks/dass-data.html", Table: "20009251", form_module: "v3-dass-form" },
         "v3-dass-form": { url: "$A/modules/w/windfarm-lab-tasks/dass-form.html", Table: "20009251" },
 
-        //Visit 2 Pulse Wave and Endothelial Function Test   
+        //Visit 3 Pulse Wave and Endothelial Function Test   
         "v3-pulsewaveanalysis": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-data.html', Table: "20009512", form_module: "v3-pwa-form" },
         "v3-pwa-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-form.html', Table: "20009512" },
-        "v3-pulsewavevelocity": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveavelocity-data.html', Table: "20009515", form_module: "v3-pwv_form" },
-        "v3-pwv-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveavelocity-form.html', Table: "20009515" },
+        "v3-pulsewavevelocity": { url: '$A/modules/w/windfarm-lab-tasks/pulsewavevelocity-data.html', Table: "20009515", form_module: "v3-pwv-form" },
+        "v3-pwv-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewavevelocity-form.html', Table: "20009515" },
         "v3-endopat": { url: '$A/modules/w/windfarm-lab-tasks/endothelialft-data.html', Table: "20008847", form_module: "v3-endopat-form" },
         "v3-endopat-form": { url: '$A/modules/w/windfarm-lab-tasks/endothelialft-form.html', Table: "20008847" },
+        "v3-blood": { url: '$A/modules/w/windfarm-lab-tasks/blood-data.html', Table: "20009249", form_module: "v3-blood-form" },
+        "v3-blood-form": { url: '$A/modules/w/windfarm-lab-tasks/blood-form.html', Table: "20009249", form_module: "v3-blood-form" },
+
 
         //additional panels
         "panel-neurotology":         { url: "$A/modules/p/panel-windfarm-lab/panel-neurotology.html", Table:"1903221208"},
@@ -556,7 +566,10 @@
         "PVT_V3":	          			{"url":"$A/modules/e/export_modules/PVT_V3.html", "name_for_search":"Psychomotor Vigilance Task(PVT)_ Visit 3" },
 
       //outcomereport
-        "v1-outcome":                  { "url": "$A/modules/o/outcome-questionnaire/outcome-quest-report.html" },
+       "v1-outcome":              { "url": "$A/modules/o/outcome-questionnaire/outcome-quest-report-v1.html" },
+       "v2-outcome":              { "url": "$A/modules/o/outcome-questionnaire/outcome-quest-report-v2.html" },
+       "v3-outcome":              { "url": "$A/modules/o/outcome-questionnaire/outcome-quest-report-v3.html" },
+
         "screening_complete":          { "url": "$A/modules/r/report/screening_complete.html" }
 
 

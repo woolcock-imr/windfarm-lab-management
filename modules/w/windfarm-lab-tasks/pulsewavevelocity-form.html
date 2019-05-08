@@ -2,7 +2,7 @@
 <div id=D__ID>
     <section id=form_container__ID>
         <div id=header__ID>
-            Form
+            Pulse Wave Velocity 
         </div>
         <form id=F__ID>
             <div class="container">
@@ -20,37 +20,88 @@
                 </div>
                 <!---------------------------------------------------->
                 <!-- Form Inputs-------------------------------------->
-                <div id=dynamic_part__ID></div>
-                <!---------------------------------------------------->
-                <!-- submit button part for all tsak forms------------>
-                <br>
-                <div class="row">
-                    <div class=col>
-                        <button id=submit__ID type="submit" class="btn btn-secondary">Submit</button>
+                    <div id=dynamic_part__ID></div>
+                    <div class='row row__ID'>
+                        <div class="col">
+                            <span>Trial 1 Patient Report </span>
+                            <div class="form-control">
+                                <u style='cursor:pointer' id=link_patientreport1__ID></u>
+                                <br>
+                                <input type="file" name=patientreport1 style="margin-top:6px" /> &nbsp&nbsp&nbsp <button type="button" id=patientreport1__ID>Remove</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <!---------------------------------------------------->
-            </div>
-        </form>
-    </section>
-    <script>
-        function F__ID(){
-            //-------------------------------------
-            //build text input fields
-            var fields="Participant,Visit,Report Trial 1 ,Patient_Report_1, Report Trial 2, Patient_Report_2";
-            var fs=fields.split(',');
-            var txt="";
-            for(var i=0;i<fs.length;i++){
-                txt+="<div class='row row__ID'><div class='col'>\r\n";
-                txt+="<span>"+fs[i].replace(/_/g," ")+"</span><input type=text class=form-control name="+fs[i]+">\r\n";
-                txt+="</div></div>\r\n";
-            }
-            $('#dynamic_part__ID').html(txt);
-            //-------------------------------------
-            VmInclude:__COMPONENT__/f/form.01.js
-            VmInclude:'__CURRENT_PATH__/task-form.js'
-            //-------------------------------------
-        }
+                    <div class='row row__ID'>
+                        <div class="col">
+                            <span>Trial 1 Clinical Report </span>
+                            <div class="form-control">
+                                <u style='cursor:pointer' id=link_clinicalreport1__ID></u>
+                                <br>
+                                <input type="file" name=clinicalreport1 style="margin-top:6px" /> &nbsp&nbsp&nbsp <button type="button" id=clinicalreport1__ID>Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='row row__ID'>
+                        <div class="col">
+                            <span>Trial 2 Patient Report </span>
+                            <div class="form-control">
+                                <u style='cursor:pointer' id=link_patientreport2__ID></u>
+                                <br>
+                                <input type="file" name=patientreport2 style="margin-top:6px" /> &nbsp&nbsp&nbsp <button type="button" id=patientreport2__ID>Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='row row__ID'>
+                        <div class="col">
+                            <span>Trial 2 Clinical Report</span>
+                            <div class="form-control">
+                                <u style='cursor:pointer' id=link_clinicalreport2__ID></u>
+                                <br>
+                                <input type="file" name=clinicalreport2 style="margin-top:6px" /> &nbsp&nbsp&nbsp <button type="button" id=clinicalreport2__ID>Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!---------------------------------------------------->
+                    <!-- submit button part for all task forms------------>
+                    <br>
+                    <div class="row">
+                        <div class=col>
+                            <button id=submit__ID type="submit" class="btn btn-secondary">Submit</button>
+                        </div>
+                    </div>
+                    <!---------------------------------------------------->
+                    </div>
+                    </form>
+                    </section>
+                    VmInclude:__COMPONENT__/m/model.01.html
+                    <script>
+                        function F__ID() {
+                            //-------------------------------------
+                            //build text input fields
+                            var fields = "Visit,Heart_Rate_Trial_1,Pulse Wave Velocity Trial 1,Pulse Transit Time Trial 1,PWV Distance Trial 1,Heart Rate Trial 2,Pulse Wave Velocity Trial 2,Pulse Transit Time Trial 2,PWV Distance Trial 2";
+                            var fs = fields.split(',');
+                            var txt = "";
+                            for (var i = 0; i < fs.length; i++) {
+                                txt += "<div class='row row__ID'><div class='col'>\r\n";
+                                txt += "<span>" + fs[i].replace(/_/g, " ") + "</span><input type=text class=form-control name=" + fs[i] + ">\r\n";
+                                txt += "</div></div>\r\n";
+                            }
+                            $('#dynamic_part__ID').html(txt);
+                            //-------------------------------------
+                            VmInclude:__COMPONENT__/f/form.01.js
+                            VmInclude:'__CURRENT_PATH__/task-form.js'
+                            //-------------------------------------
+                            var load5 = m.load;
+                            m.load = function () {
+                                load5();
+                                m.set_file_link("patientreport1");
+                                m.set_file_link("clinicalreport1");
+                                m.set_file_link("patientreport2");
+                                m.set_file_link("clinicalreport2");
+
+                            }
+                        }
     </script>
     <style>
         #form_container__ID{
