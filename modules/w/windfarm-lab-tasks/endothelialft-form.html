@@ -31,6 +31,17 @@
         </div>
     </div>
 </div>
+<div class='row row__ID'>
+    <div class="col">
+<span>EndoPAT File Upload</span>
+<div class="form-control">
+    <u style='cursor:pointer' id=link_eft-file__ID></u>
+    <br>
+    <input type="file" name=eft-file style="margin-top:6px" /> &nbsp&nbsp&nbsp <button type="button"
+        id=eft-file__ID>Remove</button>
+</div>
+</div>
+</div>
 
 <!---------------------------------------------------->
 <!-- submit button part for all tsak forms------------>
@@ -66,7 +77,7 @@ VmInclude:__COMPONENT__/m/model.01.html
         m.load = function () {
             load5();
             m.set_file_link("eft-Report");
-            
+            m.set_file_link("eft-file");
         }
         //-------------------------------------
     }

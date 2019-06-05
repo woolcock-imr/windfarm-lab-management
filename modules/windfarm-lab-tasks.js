@@ -178,6 +178,13 @@
         "v1-blood": { url: '$A/modules/w/windfarm-lab-tasks/blood-data.html', Table:"20009220", form_module:"v1-blood-form"},
         "v1-blood-form": { url: '$A/modules/w/windfarm-lab-tasks/blood-form.html', Table: "20009220", form_module: "v1-blood-form" },
 
+      // Neurotology V1
+      "v1-neuro-clinical": { url: '$A/modules/w/windfarm-lab-tasks/neuro-clinical-data.html', Table: "1905231525", form_module: "v1-neuro-clinical-form" },
+      "v1-neuro-clinical-form": { url: '$A/modules/w/windfarm-lab-tasks/neuro-clinical-form.html', Table: "1905231525" },
+
+      //Sourcedocuments
+      "v1-sourcedocs": { url: '$A/modules/w/windfarm-lab-tasks/sourcedocs-data.html', Table: "1906041346", form_module: "v1-sourcedocs-form" },
+      "v1-sourcedocs-form": { url: '$A/modules/w/windfarm-lab-tasks/sourcedocs-form.html', Table: "1906041346" },
 
 
 
@@ -358,7 +365,9 @@
         "v2-blood": { url: '$A/modules/w/windfarm-lab-tasks/blood-data.html', Table: "20009245", form_module: "v2-blood-form" },
         "v2-blood-form": { url: '$A/modules/w/windfarm-lab-tasks/blood-form.html', Table: "20009245", form_module: "v2-blood-form" },
 
-
+      //V2-Sourcedocuments
+      "v2-sourcedocs": { url: '$A/modules/w/windfarm-lab-tasks/sourcedocs-data.html', Table: "1906041214", form_module: "v2-souredocs-form" },
+      "v2-sourcedocs-form": { url: '$A/modules/w/windfarm-lab-tasks/sourcedocs-form.html', Table: "1906041214" },
 
 
 

@@ -19,23 +19,21 @@
                     <hr style="border-top: 1px solid #888;width: 100%;margin:10px 0">
                 </div>
                 <!---------------------------------------------------->
-                <!-- Form Inputs-------------------------------------->               
+                <!-- Form Inputs-------------------------------------->
+                
                 <div class='row row__ID'>
                     <div class="col">
-                        <span>Was Blood Collected During this Visit?</span>
+                        <span>Source Document Upload</span>
                         <div class="form-control">
+                            <u style='cursor:pointer' id=link_sourcedocs__ID></u>
                             <br>
-                            <input type="radio" name=Bloodcollect value=yes style="margin-top:6px;padding:10px" />Yes</input>
-                            <input type="radio" name=Bloodcollect value=no style="margin-top:6px;padding:10px" />No</input>
-                            
+                            <input type="file" name=sourcedocs style="margin-top:6px" /> &nbsp&nbsp&nbsp 
+                            <button type="button" id=sourcedocs__ID>Remove</button>
                         </div>
                     </div>
                 </div>
-                
-                <div id=dynamic_part__ID></div>
-                
 
-                
+                <div id=dynamic_part__ID></div>
                 <!---------------------------------------------------->
                 <!-- submit button part for all tsak forms------------>
                 <br>
@@ -53,7 +51,7 @@
         function F__ID() {
             //-------------------------------------
             //build text input fields
-            var fields = "Sodium,Potassium,Chloride,Bicarbonate,Anion_Gap,Urea,eGFR,Urate,Bilirubin,AST,ALT,GGT,Alkaline_Phosphatase,Protein,Albumin,Globulin,Calcium,Corrected_Calcium,Phosphate,Glucose,Cholesterol,Triglycerides,HDL_Chol,Cholesterol_HDL_C_Ratio,VLDL_Cholesterol,LDL_Chol,Hb,RCC,Hct,MCV,MCH,MCHC,RDW,PLT,WCC,Neutrophils,Lymphocytes,Monocytes,Eosinophils,Basophils,Insulin,HbA1c_NGSP,HbA1c_IFCC,UrinepH,UrineVolume,UrineDuration,AdrenalineExcr,AdrenalineCalc,UrAdrenaline,NoradrenalineExcr,NoradrenalineCalc,UrNoradrenaline,UrCreatinine,Creatinine ";
+            var fields = "Comments";
             var fs = fields.split(',');
             var txt = "";
             for (var i = 0; i < fs.length; i++) {
@@ -66,9 +64,14 @@
             VmInclude:__COMPONENT__/f/form.01.js
             VmInclude:'__CURRENT_PATH__/task-form.js'
             //-------------------------------------
-           
-            //-------------------------------------
+            var load5 = m.load;
+            m.load = function () {
+            load5();
+            m.set_file_link("sourcedocs");
+            }
         }
+            //-------------------------------------
+        
     </script>
     <style>
         #form_container__ID {

@@ -29,7 +29,7 @@
 			</colgroup>
 			<tr>
 				<td colspan="3" style='font-size:22px;padding: 20px'>
-					<center><b>Outcome Questionnaire Summary</b></center>
+					<center><b>Outcome Questionnaire Summary Visit 1</b></center>
 				</td>
 			</tr>
 			<table id=tb__ID>
@@ -37,6 +37,7 @@
 				<col style='width:400px' />
 				<col />
 				</colgroup>
+							
 				<tr>
 					<td>Randomisation Number: </td>
 					<td id=F20008848_RN__ID></td>
@@ -103,10 +104,17 @@
 			var sql = "select Information from [TABLE-20008848] where UID=" + Participant_uid;
 			$VmAPI.request({
 				data: { cmd: 'query_records', sql: sql }, callback: function (res) {
-					if (res.records.length != 0) $('#F20008848_RN__ID').text(res.records[0].Randomisation_Number);
+					if (res.records.length != 0) $('#F20008848_RN__ID').text("LABWIND R " + res.records[0].Randomisation_Number);
 				}
 			})
-			
+
+			var sql = "select Information from [TABLE-20008848] where UID=" + Participant_uid;
+			$VmAPI.request({
+				data: { cmd: 'query_records', sql: sql }, callback: function (res) {
+					if (res.records.length != 0) $('#F20008848_DOB__ID').text(res.records[0].DOB);
+				}
+			})
+
 			var sql = "select Information from [TABLE-20008717] where PUID=" + Participant_uid;
 			$VmAPI.request({
 				data: { cmd: 'query_records', sql: sql }, callback: function (res) {

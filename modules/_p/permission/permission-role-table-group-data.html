@@ -1,19 +1,18 @@
 <div id=D__ID>
-    <section>
+    <div>
         VmInclude:__COMPONENT__/g/grid.01.html
-    </section>
+    </div>
     <script>
         function F__ID(){
             //-------------------------------------
             VmInclude:__COMPONENT__/g/grid.01.js
-            VmInclude:__CURRENT_PATH__/task-data.js
             //-------------------------------------
-            var fields="LnRHI,Heart Rate,eft-Report,eft-file";
-            m.fields="_Form,Status|S3,Notes|NT,Participant_ID|Participant_uid,Randomisation_Number,Participant,"+fields+",Submit_date,Submitted_by,_Delete";
+            var fields="Role,Permission";
+            m.fields="_Form,"+fields+",Submit_date,Submitted_by,_Delete";
+            //-------------------------------------
         }
     </script>
     <style>
         VmInclude:__COMPONENT__/g/grid.01.css
     </style>
 </div>
-    

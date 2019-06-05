@@ -20,10 +20,12 @@
                 </div>
                 <!---------------------------------------------------->
                 <!-- Form Inputs-------------------------------------->
+
+                    
                     <div id=dynamic_part__ID></div>
                     <div class='row row__ID'>
                         <div class="col">
-                            <span>Trial Patient Report </span>
+                            <span><b>Trial 1</b> Patient Report </span>
                             <div class="form-control">
                                 <u style='cursor:pointer' id=link_patientreport1__ID></u>
                                 <br>
@@ -33,11 +35,38 @@
                     </div>
                     <div class='row row__ID'>
                         <div class="col">
-                            <span>Trial Clinical Report </span>
+                            <span><b>Trial 1</b> Clinical Report </span>
                             <div class="form-control">
                                 <u style='cursor:pointer' id=link_clinicalreport1__ID></u>
                                 <br>
                                 <input type="file" name=clinicalreport1 style="margin-top:6px" /> &nbsp&nbsp&nbsp <button type="button" id=clinicalreport1__ID>Remove</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <hr>
+
+                   
+                    <div id=dynamic_part__ID></div>
+                    <div class='row row__ID'>
+                        <div class="col">
+                            <span><b>Trial 2</b> Patient Report </span>
+                            <div class="form-control">
+                                <u style='cursor:pointer' id=link_patientreport2__ID></u>
+                                <br>
+                                <input type="file" name=patientreport2 style="margin-top:6px" /> &nbsp&nbsp&nbsp <button type="button"
+                                    id=patientreport2__ID>Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class='row row__ID'>
+                        <div class="col">
+                            <span><b>Trial 2</b> Clinical Report </span>
+                            <div class="form-control">
+                                <u style='cursor:pointer' id=link_clinicalreport2__ID></u>
+                                <br>
+                                <input type="file" name=clinicalreport2 style="margin-top:6px" /> &nbsp&nbsp&nbsp <button type="button"
+                                    id=clinicalreport2__ID>Remove</button>
                             </div>
                         </div>
                     </div>
@@ -59,7 +88,7 @@
                         function F__ID() {
                             //-------------------------------------
                             //build text input fields
-                            var fields = "Visit,Heart_Rate_Trial,Pulse_Wave_Velocity_Trial,Pulse_Transit_Time_Trial,PWV_Distance_Trial ";
+                            var fields = "Visit,Heart_Rate_Trial1,Pulse_Wave_Velocity_Trial1,Pulse_Transit_Time_Trial1,PWV_Distance_Trial1,Heart_Rate_Trial2,Pulse_Wave_Velocity_Trial2,Pulse_Transit_Time_Trial2,PWV_Distance_Trial2 ";
                             var fs = fields.split(',');
                             var txt = "";
                             for (var i = 0; i < fs.length; i++) {
@@ -77,7 +106,9 @@
                                 load5();
                                 m.set_file_link("patientreport1");
                                 m.set_file_link("clinicalreport1");
-                              
+                                m.set_file_link("patientreport2");
+                                m.set_file_link("clinicalreport2");
+
 
                             }
                         }

@@ -6,7 +6,7 @@
         </div>
         <form id=F__ID>
             <div class="container">
-                <!-- participant part for all tsak forms -------------------->
+                <!-- participant part for all task forms -------------------->
                 <div class="row row__ID" id=row_participant__ID>
                     <div class="col-sm-12 col-lg-9 input__ID">
                         <span class=label__ID>Participant</span><br>
@@ -21,6 +21,21 @@
                 <!---------------------------------------------------->
                 <!-- Form Inputs-------------------------------------->
                 <div id=dynamic_part__ID></div>
+
+            <div class='row row__ID'>
+                <div class="col">
+                    <span>Matted Romberg</span>
+                    <div class="form-control">
+                        <u style='cursor:pointer' id=link_matted_romberg__ID></u>
+                        <br>
+                        <input type="datalist" name=matted_rombger style="margin-top:6px" /> &nbsp&nbsp&nbsp <button type="button"
+                            id=matted-romberg__ID>Remove</button>
+                    </div>
+                </div>
+            </div>
+
+
+
                 <!---------------------------------------------------->
                 <!-- submit button part for all tsak forms------------>
                 <br>
@@ -33,11 +48,12 @@
             </div>
         </form>
     </section>
+    VmInclude:__COMPONENT__/m/model.01.html
     <script>
         function F__ID(){
             //-------------------------------------
             //build text input fields
-            var fields="Visit_date,Visit_date_end";
+            var fields="Matted_Romberg,Unterberger,Tandem_walking";
             var fs=fields.split(',');
             var txt="";
             for(var i=0;i<fs.length;i++){
@@ -49,6 +65,13 @@
             //-------------------------------------
             VmInclude:__COMPONENT__/f/form.01.js
             VmInclude:'__CURRENT_PATH__/task-form.js'
+            //-------------------------------------
+            var load5=m.load;
+            m.load=function(){
+                load5();
+        
+                
+            }
             //-------------------------------------
         }
     </script>

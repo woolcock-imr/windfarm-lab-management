@@ -35,17 +35,17 @@
 			<table id=tb__ID>
 				<col style='width:400px' />
 				<col style='width:400px' />
+				<col style='width:400px'/>
 				<col />
 				</colgroup>
 				<tr>
 					<td>Randomisation Number: </td>
-					<td id=F20008848__ID></td>
+					<td id=F20008848_RN__ID></td>
 				</tr>
 				<tr>
 						<td>Date of Birth:</td>
-					<td id=F20008848__ID></td>
+					<td id=F20008848_DOB__ID></td>
 				</tr>
-					
 				<tr>
 					<table id=tb__ID>
 						<col style='width:400px' />
@@ -58,6 +58,7 @@
 							<td><b>
 									<center>Questionnaire Score<br></td>
 							</center>
+							</tr>
 					</table>
 						<table id=tb__ID>
 						<col style='width:400px' />
@@ -100,6 +101,20 @@
 				return;
 			}
 
+
+			var sql = "select Information from [TABLE-20008848] where UID=" + Participant_uid;
+			$VmAPI.request({
+				data: { cmd: 'query_records', sql: sql }, callback: function (res) {
+					if (res.records.length != 0) $('#F20008848_RN__ID').text("LABWIND R " + res.records[0].Randomisation_Number);
+				}
+			})
+
+			var sql = "select Information from [TABLE-20008848] where UID=" + Participant_uid;
+			$VmAPI.request({
+				data: { cmd: 'query_records', sql: sql }, callback: function (res) {
+					if (res.records.length != 0) $('#F20008848_DOB__ID').text(res.records[0].DOB);
+				}
+			})
 			
 			var sql = "select Information from [TABLE-20008843] where PUID=" + Participant_uid;
 			$VmAPI.request({

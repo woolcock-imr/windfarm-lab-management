@@ -1,0 +1,121 @@
+<section id=panel__ID>
+
+		<span>Neurotology</span>
+		<br>
+		<div class='nav__ID'>
+			<span>Visit 1</span>
+			<ul>
+		<li><a href=?/v1-neuro-clinical>Neurotology Clinical Assessment & Notes</a></li>
+		<li><a href=?/v1-neuro-audio>Neurotology - Audiology</a></li>
+		<li><a href=?/v1-neuro-tymp>Neurotology - Tympanometry & Otoscopy</a></li>
+		<li><a href=?/v1-neuro-vemp>Neurotology - Vestibular Evoked Myogenic Potentials (VEMP)</a></li>
+		<li><a href=?/v1-neuro-vhit>Neurotology- Video Head Impulse Test (Vhit)</a></li>
+		<li><a href=?/v1-neuro-oae>Neurotology - Otoacoustic Emissions</a></li>
+			</ul>
+		</div>
+
+		<div class='nav__ID'>
+			<span>Visit 2</span>
+			<ul>
+		<li><a href=?/v1-neuro-clinical>Neurotology Clinical Assessment & Notes</a></li>
+		<li><a href=?/v1-neuro-audio>Neurotology - Audiology</a></li>
+		<li><a href=?/v1-neuro-tymp>Neurotology - Tympanometry & Otoscopy</a></li>
+		<li><a href=?/v1-neuro-vemp>Neurotology - Vestibular Evoked Myogenic Potentials (VEMP)</a></li>
+		<li><a href=?/v1-neuro-vhit>Neurotology- Video Head Impulse Test (Vhit)</a></li>
+		<li><a href=?/v1-neuro-oae>Neurotology - Otoacoustic Emissions</a></li>
+			</ul>
+		</div>
+
+		<div class='nav__ID'>
+			<span>Visit 3</span>
+			<ul>
+		<li><a href=?/v1-neuro-clinical>Neurotology Clinical Assessment & Notes</a></li>
+		<li><a href=?/v1-neuro-audio>Neurotology - Audiology</a></li>
+		<li><a href=?/v1-neuro-tymp>Neurotology - Tympanometry & Otoscopy</a></li>
+		<li><a href=?/v1-neuro-vemp>Neurotology - Vestibular Evoked Myogenic Potentials (VEMP)</a></li>
+		<li><a href=?/v1-neuro-vhit>Neurotology- Video Head Impulse Test (Vhit)</a></li>
+		<li><a href=?/v1-neuro-oae>Neurotology - Otoacoustic Emissions</a></li>
+			</ul>
+		</div>
+
+
+
+</section>
+
+<script>
+	function F__ID() {
+		//--------------------------------------------------------
+		var prefix = $vm.module_list[$vm.vm['__ID'].name].prefix;
+		$('#panel__ID li').on('click', function () {
+			var m = $(this).attr('module');
+			if (m != undefined) {
+				if ($vm.module_list[prefix + m] == undefined) {
+					alert(prefix + m + " is not in the module list.");
+					return;
+				}
+				$vm.module_list[prefix + m].alert = '1';
+				$vm.nav_load_module(prefix + m);
+			}
+		})
+		//--------------------------------------------------------
+	}
+</script>
+
+<style>
+		#toolbar__ID{
+		background-color:#ccc;
+		padding-left:10px;
+		margin-bottom:0px;
+		overflow:hidden'
+	}
+		#toolbar__ID .form-inline > * {
+				margin-right:5px;
+		}
+	@media screen and (max-width:768px){
+		#toolbar__ID{
+			padding: 3px 10px;
+		}
+		#toolbar__ID div{
+			padding-left:3px;
+		}
+	}
+		#D__ID{
+		background-color:#fff;
+		height:100%;
+		overflow: auto;
+		animation: vm_module_fadein 1.0s;
+	}
+		#panel__ID{
+		padding:10px 0 0 20px;
+				font-size:14px;
+	}
+	#panel__ID a {
+		text-decoration: none;
+	}
+	#panel__ID a:link {
+		color:#555;
+	}
+	#panel__ID a:visited {
+		color:#555;
+	}
+	#panel__ID a:hover {
+		color:red;
+	}
+	#panel__ID a:active {
+		color:#555;
+	}
+		.nav__ID{
+			padding:6px 26px 6px 6px;
+			float:left;
+	}
+	.nav__ID span{
+	color:#283f55;
+	font-weight: bold;
+	margin:3px 10px;
+	}
+	@media screen and (max-width:768px){
+		#panel__ID{
+			padding:10px 0 0 10px;
+		}
+	}
+</style>
