@@ -2,7 +2,7 @@
 <div id=D__ID>
     <section id=form_container__ID>
         <div id=header__ID>
-            Form
+            Neurotology Clinical Entry
         </div>
         <form id=F__ID>
             <div class="container">
@@ -20,7 +20,7 @@
                 </div>
                 <!---------------------------------------------------->
                 <!-- Form Inputs-------------------------------------->
-                <div id=dynamic_part__ID></div>
+                <!----div id=dynamic_part__ID></div-->
 
             <div class='row row__ID'>
                 <div class="col">
@@ -28,8 +28,41 @@
                     <div class="form-control">
                         <u style='cursor:pointer' id=link_matted_romberg__ID></u>
                         <br>
-                        <input type="datalist" name=matted_rombger style="margin-top:6px" /> &nbsp&nbsp&nbsp <button type="button"
-                            id=matted-romberg__ID>Remove</button>
+                        <input type="datalist" placeholder=" 0= normal 1= abnormal" name=matted_romberg style="margin-top:6px;width:600px" /> &nbsp&nbsp&nbsp 
+                        
+                    </div>
+                </div>
+            </div>
+            <div class='row row__ID'>
+                <div class="col">
+                    <span>Unterberger</span>
+                    <div class="form-control">
+                        <u style='cursor:pointer' id=link_unterberger__ID></u>
+                        <br>
+                        <input type="datalist" placeholder="degrees and direction"name=unterberger style="margin-top:6px;width:600px" /> &nbsp&nbsp&nbsp 
+                        
+                    </div>
+                </div>
+            </div>
+            <div class='row row__ID'>
+                <div class="col">
+                    <span>Unterberger</span>
+                    <div class="form-control">
+                        <u style='cursor:pointer' id=link_tandem__ID></u>
+                        <br>
+                        <input type="datalist" placeholder="0 = normal, 1 =  abnormal" name=tandem style="margin-top:6px;width:600px" /> &nbsp&nbsp&nbsp 
+                        
+                    </div>
+                </div>
+            </div>
+            <div class='row row__ID'>
+                <div class="col">
+                    <span>Questionnaire Upload </span>
+                    <div class="form-control">
+                        <u style='cursor:pointer' id=link_questionnaire__ID></u>
+                        <br>
+                        <input type="file" name=questionnaire style="margin-top:6px" /> &nbsp&nbsp&nbsp <button type="button"
+                            id=questionnaire__ID>Remove</button>
                     </div>
                 </div>
             </div>
@@ -53,7 +86,7 @@
         function F__ID(){
             //-------------------------------------
             //build text input fields
-            var fields="Matted_Romberg,Unterberger,Tandem_walking";
+            var fields="matted_romberg,unterberger,tandem";
             var fs=fields.split(',');
             var txt="";
             for(var i=0;i<fs.length;i++){
@@ -69,6 +102,7 @@
             var load5=m.load;
             m.load=function(){
                 load5();
+                 m.set_file_link("questionnaire");
         
                 
             }
@@ -80,5 +114,6 @@
             max-width:700px;
         }
         VmInclude:__COMPONENT__/f/form.01.css
+        
     </style>
 </div>

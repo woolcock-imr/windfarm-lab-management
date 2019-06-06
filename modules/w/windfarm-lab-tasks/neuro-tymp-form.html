@@ -2,7 +2,7 @@
 <div id=D__ID>
     <section id=form_container__ID>
         <div id=header__ID>
-            Form
+            Neurotology - Otoscopy and Tympanometry
         </div>
         <form id=F__ID>
             <div class="container">
@@ -20,47 +20,44 @@
                 </div>
                 <!---------------------------------------------------->
                 <!-- Form Inputs-------------------------------------->
+            <div class='row row__ID'>
+                <div class="col">
+                    <span>Tympanometry Type</span>
+                    <div class="form-control">
+                        <u style='cursor:pointer' id=link_tymp_type__ID></u>
+                        <br>
+                        <input type="radio" name=tymp_type value=a style="margin-right:15px;">A</input><br>
+                        <input type="radio" name=tymp_type value=b style="margin-right:15px;">B</input><br>
+                        <input type="radio" name=tymp_type value=c style="margin-right:15px;">C</input><br>
+                        <a href="https://previews.dropbox.com/p/thumb/AAdtkkpSjcMZ2CAf_WrfmncmqCieV4Clot7ZlQ5MS8H2Z1906i2jwCBzL7t0cYy2UPbJxFuZ1GYZ3eU01rL3rRUA-GQP__6g6MPkcZVpsC-s68SyRo0kWYAhM1cMNuYRFPNMy8UwWy26ORCXVjcdBWVAKsHaWnj0rOJCQdeh2_s3SWl7t_3eCP5zMD6sI8J2p0k3y4G1uX9zqFN00G-3JJmiIghvJp5amDEdUCIS9t1EhVnBIi0EzGKp2NhT6PNJ8Ut8IS6-dQ0sT6eKghh58dQjxYqU0w_a8wMZQ0ZGKUssWbqgxNwYl_MRETyGdxpXaNdHmO7cEjLMF7DBwsjMdGnY/p.png?fv_content=true&size_mode=5">More info about types here</a>
+                        </div>
+                </div>
+            </div>
                 <div id=dynamic_part__ID></div>
-                <div class='row row__ID'>
-    				<div class="col">
-    					<span>Awp4 Upload</span>
-                        <div class="form-control">
-                            <u style='cursor:pointer' id=link_Awp4__ID></u>
-                            <br>
-                            <input type="file" name=Awp4 style="margin-top:6px" /> &nbsp&nbsp&nbsp <button type="button" id=Awp4__ID>Remove</button>
-                        </div>
-					</div>
-                </div>            
-                <div class='row row__ID'>
-    				<div class="col">
-    					<span>Report Upload</span>
-                        <div class="form-control">
-                            <u style='cursor:pointer' id=link_Report__ID></u>
-                            <br>
-                            <input type="file" name=Report style="margin-top:6px" /> &nbsp&nbsp&nbsp <button type="button" id=Report__ID >Remove</button>
-                        </div>
-					</div>
-                </div>
-                <div class='row row__ID'>
-                    <div class="col">
-                        <span>GDT file Upload</span>
-                        <div class="form-control">
-                            <u style='cursor:pointer' id=link_gdt__ID></u>
-                            <br>
-                            <input type="file" name=gdt style="margin-top:6px" /> &nbsp&nbsp&nbsp <button type="button" id=gdt__ID>Remove</button>
-                        </div>
+           
+            <div class='row row__ID'>
+                <div class="col">
+                    <span>Otoscopy And Tympanometry Comments</span>
+                    <div class="form-control">
+                        <u style='cursor:pointer' id=link_comments__ID></u>
+                        <br>
+                        <input type="datalist" name=comments style="margin-top:6px;width:600px" /> &nbsp&nbsp&nbsp 
                     </div>
                 </div>
-                <div class='row row__ID'>
-                    <div class="col">
-                        <span>xml file Upload</span>
-                        <div class="form-control">
-                            <u style='cursor:pointer' id=link_xml__ID></u>
-                            <br>
-                            <input type="file" name=xml style="margin-top:6px" /> &nbsp&nbsp&nbsp <button type="button" id=xml__ID>Remove</button>
-                        </div>
+            </div>
+            <div class='row row__ID'>
+                <div class="col">
+                    <span>Tympanometry Upload </span>
+                    <div class="form-control">
+                        <u style='cursor:pointer' id=link_tymp__ID></u>
+                        <br>
+                        <input type="file" name=tymp_upload style="margin-top:6px" /> &nbsp&nbsp&nbsp <button type="button"
+                            id=tymp__ID>Remove</button>
                     </div>
                 </div>
+            </div>
+
+
 
                 <!---------------------------------------------------->
                 <!-- submit button part for all tsak forms------------>
@@ -79,12 +76,12 @@
         function F__ID(){
             //-------------------------------------
             //build text input fields
-            var fields="Visit ";
+            var fields="L_Otoscopy,R_Otoscopy,L_Static_Compliance(mmho),L_Middle_Ear_Pressure(daPa),L_EarCanalVolume(CCs),R_Static_Compliance(mmho),R_Middle_Ear_Pressure(daPa),R_EarCanalVolume(CCs)";
             var fs=fields.split(',');
             var txt="";
             for(var i=0;i<fs.length;i++){
                 txt+="<div class='row row__ID'><div class='col'>\r\n";
-                txt+="<span>"+fs[i].replace(/_/g," ") +"</span><input type=text class=form-control name=" + fs[i] +" >\r\n";
+                txt+="<span>"+fs[i].replace(/_/g," ")+"</span><input type=text class=form-control name="+fs[i]+">\r\n";
                 txt+="</div></div>\r\n";
             }
             $('#dynamic_part__ID').html(txt);
@@ -95,10 +92,8 @@
             var load5=m.load;
             m.load=function(){
                 load5();
-                m.set_file_link("Awp4");
-                m.set_file_link("Report");
-                m.set_file_link("gdt");
-                m.set_file_link("xml");
+                 m.set_file_link("tymp_upload");
+        
                 
             }
             //-------------------------------------
@@ -109,5 +104,6 @@
             max-width:700px;
         }
         VmInclude:__COMPONENT__/f/form.01.css
+        
     </style>
 </div>

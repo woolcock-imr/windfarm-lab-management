@@ -2,9 +2,14 @@
 <div id=D__ID>
     <section id=form_container__ID>
         <div id=header__ID>
-            Form
+            Neurotology - Pure Tone Audiometry
         </div>
         <form id=F__ID>
+            <b>R</b> - Right <br>
+            <b>L</b> - Left<br>
+            <b>AC</b> - Air Conduction Tones<br>
+            <b>BC</b> - Bone Conduction Tones<br>
+            <hr style="border-top: 1px solid #888;width: 100%;margin:10px 0">
             <div class="container">
                 <!-- participant part for all task forms -------------------->
                 <div class="row row__ID" id=row_participant__ID>
@@ -21,46 +26,30 @@
                 <!---------------------------------------------------->
                 <!-- Form Inputs-------------------------------------->
                 <div id=dynamic_part__ID></div>
-                <div class='row row__ID'>
-    				<div class="col">
-    					<span>Awp4 Upload</span>
-                        <div class="form-control">
-                            <u style='cursor:pointer' id=link_Awp4__ID></u>
-                            <br>
-                            <input type="file" name=Awp4 style="margin-top:6px" /> &nbsp&nbsp&nbsp <button type="button" id=Awp4__ID>Remove</button>
-                        </div>
-					</div>
-                </div>            
-                <div class='row row__ID'>
-    				<div class="col">
-    					<span>Report Upload</span>
-                        <div class="form-control">
-                            <u style='cursor:pointer' id=link_Report__ID></u>
-                            <br>
-                            <input type="file" name=Report style="margin-top:6px" /> &nbsp&nbsp&nbsp <button type="button" id=Report__ID >Remove</button>
-                        </div>
-					</div>
-                </div>
-                <div class='row row__ID'>
-                    <div class="col">
-                        <span>GDT file Upload</span>
-                        <div class="form-control">
-                            <u style='cursor:pointer' id=link_gdt__ID></u>
-                            <br>
-                            <input type="file" name=gdt style="margin-top:6px" /> &nbsp&nbsp&nbsp <button type="button" id=gdt__ID>Remove</button>
-                        </div>
+            
+            <div class='row row__ID'>
+                <div class="col">
+                    <span>Audiometry Comments</span>
+                    <div class="form-control">
+                        <u style='cursor:pointer' id=link_comments__ID></u>
+                        <br>
+                        <input type="datalist" name=comments style="margin-top:6px;width:600px" /> &nbsp&nbsp&nbsp 
                     </div>
                 </div>
-                <div class='row row__ID'>
-                    <div class="col">
-                        <span>xml file Upload</span>
-                        <div class="form-control">
-                            <u style='cursor:pointer' id=link_xml__ID></u>
-                            <br>
-                            <input type="file" name=xml style="margin-top:6px" /> &nbsp&nbsp&nbsp <button type="button" id=xml__ID>Remove</button>
-                        </div>
+            </div>
+            <div class='row row__ID'>
+                <div class="col">
+                    <span>Audiogram Upload </span>
+                    <div class="form-control">
+                        <u style='cursor:pointer' id=link_audiogram__ID></u>
+                        <br>
+                        <input type="file" name=audiogram style="margin-top:6px" /> &nbsp&nbsp&nbsp <button type="button"
+                            id=audiogram__ID>Remove</button>
                     </div>
                 </div>
+            </div>
+
+
 
                 <!---------------------------------------------------->
                 <!-- submit button part for all tsak forms------------>
@@ -79,12 +68,12 @@
         function F__ID(){
             //-------------------------------------
             //build text input fields
-            var fields="Visit ";
+            var fields="R_AC_250,R_AC_500,R_AC_750,R_AC_1000,R_AC_1500,R_AC_2000,R_AC_3000,R_AC_4000,R_AC_6000,R_AC_8000,R_BC_500,R_BC_1000,R_BC_1500,R_BC_2000,R_BC_3000,R_BC_4000,L_AC_250,L_AC_500,L_AC_750,L_AC_1000,L_AC_1500,L_AC_2000,L_AC_3000,L_AC_4000,L_AC_6000,L_AC_8000,L_BC_500,L_BC_1000,L_BC_1500,L_BC_2000,L_BC_3000,L_BC_4000";
             var fs=fields.split(',');
             var txt="";
             for(var i=0;i<fs.length;i++){
                 txt+="<div class='row row__ID'><div class='col'>\r\n";
-                txt+="<span>"+fs[i].replace(/_/g," ") +"</span><input type=text class=form-control name=" + fs[i] +" >\r\n";
+                txt+="<span>"+fs[i].replace(/_/g," ")+"</span><input type=text class=form-control name="+fs[i]+">\r\n";
                 txt+="</div></div>\r\n";
             }
             $('#dynamic_part__ID').html(txt);
@@ -95,10 +84,8 @@
             var load5=m.load;
             m.load=function(){
                 load5();
-                m.set_file_link("Awp4");
-                m.set_file_link("Report");
-                m.set_file_link("gdt");
-                m.set_file_link("xml");
+                 m.set_file_link("audiogram");
+        
                 
             }
             //-------------------------------------
@@ -109,5 +96,6 @@
             max-width:700px;
         }
         VmInclude:__COMPONENT__/f/form.01.css
+        
     </style>
 </div>

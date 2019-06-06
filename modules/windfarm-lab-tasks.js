@@ -181,7 +181,18 @@
       // Neurotology V1
       "v1-neuro-clinical": { url: '$A/modules/w/windfarm-lab-tasks/neuro-clinical-data.html', Table: "1905231525", form_module: "v1-neuro-clinical-form" },
       "v1-neuro-clinical-form": { url: '$A/modules/w/windfarm-lab-tasks/neuro-clinical-form.html', Table: "1905231525" },
+      "v1-neuro-audio": { url: '$A/modules/w/windfarm-lab-tasks/neuro-audio-data.html', Table: "1905231526", form_module: "v1-neuro-audio-form" },
+      "v1-neuro-audio-form": { url: '$A/modules/w/windfarm-lab-tasks/neuro-audio-form.html', Table: "1905231526" },
+      "v1-neuro-tymp": { url: '$A/modules/w/windfarm-lab-tasks/neuro-tymp-data.html', Table: "1905231527", form_module: "v1-neuro-tymp-form" },
+      "v1-neuro-tymp-form": { url: '$A/modules/w/windfarm-lab-tasks/neuro-tymp-form.html', Table: "1905231527" },
+      "v1-neuro-vng": { url: '$A/modules/w/windfarm-lab-tasks/neuro-vng-data.html', Table: "1905231528", form_module: "v1-neuro-vng-form" },
+      "v1-neuro-vng-form": { url: '$A/modules/w/windfarm-lab-tasks/neuro-vng-form.html', Table: "1905231528" },
+      "v1-neuro-vemp": { url: '$A/modules/w/windfarm-lab-tasks/neuro-vemp-data.html', Table: "1905231529", form_module: "v1-neuro-vemp-form" },
+      "v1-neuro-vemp-form": { url: '$A/modules/w/windfarm-lab-tasks/neuro-vemp-form.html', Table: "1905231529" },
+      "v1-neuro-vhit": { url: '$A/modules/w/windfarm-lab-tasks/neuro-vhit-data.html', Table: "1905231530", form_module: "v1-neuro-vhit-form" },
+      "v1-neuro-vhit-form": { url: '$A/modules/w/windfarm-lab-tasks/neuro-vhit-form.html', Table: "1905231530" },
 
+      
       //Sourcedocuments
       "v1-sourcedocs": { url: '$A/modules/w/windfarm-lab-tasks/sourcedocs-data.html', Table: "1906041346", form_module: "v1-sourcedocs-form" },
       "v1-sourcedocs-form": { url: '$A/modules/w/windfarm-lab-tasks/sourcedocs-form.html', Table: "1906041346" },
