@@ -1,0 +1,100 @@
+
+<div id=D__ID>
+    <section id=form_container__ID>
+        <div id=header__ID>
+            Neurotology - Videonystamography
+        </div>
+        <form id=F__ID>
+            <b>TEOAE</b> - Transitory Evoked Otoacoustic Emission
+            <b>DPOAE</b> - Distortion Product Otoacoustic Emission
+            <b>SNR</b> - Signal To Noise Ratio
+            <div class="container">
+                <!-- participant part for all task forms -------------------->
+                <div class="row row__ID" id=row_participant__ID>
+                    <div class="col-sm-12 col-lg-9 input__ID">
+                        <span class=label__ID>Participant</span><br>
+                        <input type=text name="Participant" class=form-control id=Participant__ID data-id="Participant" required />
+                    </div>
+                    <div class="col-sm-12 col-lg-3 input__ID">
+                        <span class=label__ID>Participant ID</span><br>
+                        <input type=text name="Participant_uid" class=form-control readonly />
+                    </div>
+                    <hr style="border-top: 1px solid #888;width: 100%;margin:10px 0">
+                </div>
+                <!---------------------------------------------------->
+                <!-- Form Inputs-------------------------------------->
+      
+                <div id=dynamic_part__ID></div>
+           
+            <div class='row row__ID'>
+                <div class="col">
+                    <span>Otoacoustic Emissions Comments</span>
+                    <div class="form-control">
+                        <u style='cursor:pointer' id=link_comments__ID></u>
+                        <br>
+                        <input type="datalist" name=comments style="margin-top:6px;width:600px" /> &nbsp&nbsp&nbsp 
+                    </div>
+                </div>
+            </div>
+            <div class='row row__ID'>
+                <div class="col">
+                    <span> Otoacoustic Emissions Upload </span>
+                    <div class="form-control">
+                        <u style='cursor:pointer' id=link_oae__ID></u>
+                        <br>
+                        <input type="file" name=oae_upload style="margin-top:6px" /> &nbsp&nbsp&nbsp <button type="button"
+                            id=vng__ID>Remove</button>
+                    </div>
+                </div>
+            </div>
+
+
+
+                <!---------------------------------------------------->
+                <!-- submit button part for all tsak forms------------>
+                <br>
+                <div class="row">
+                    <div class=col>
+                        <button id=submit__ID type="submit" class="btn btn-secondary">Submit</button>
+                    </div>
+                </div>
+                <!---------------------------------------------------->
+            </div>
+        </form>
+    </section>
+    VmInclude:__COMPONENT__/m/model.01.html
+    <script>
+        function F__ID(){
+            //-------------------------------------
+            //build text input fields
+            var fields="R TEOAE 1000Hz Signal, R TEOAE 1000Hz Noise,R TEOAE 1000hz SNR,R TEOAE 1400Hz Signal, R TEOAE 1400Hz Noise, R TEOAE 1400Hz SNR,R TEOAE 2000Hz Signal, R TEOAE 2000Hz Noise, R TEOAE 2000Hz SNR,R TEOAE 2800Hz Signal, R TEOAE 2800Hz Noise, R TEOAE 2800Hz SNR,R TEOAE 4000Hz Signal, R TEOAE 4000Hz Noise, R TEOAE 4000Hz SNR,L TEOAE 1000Hz Signal, L TEOAE 1000Hz Noise,L TEOAE 1000hz SNR,L TEOAE 1400Hz Signal, L TEOAE 1400Hz Noise, L TEOAE 1400Hz SNR,L TEOAE 2000Hz Signal, L TEOAE 2000Hz Noise, L TEOAE 2000Hz SNR,L TEOAE 2800Hz Signal, L TEOAE 2800Hz Noise, L TEOAE 2800Hz SNR,L TEOAE 4000Hz Signal, L TEOAE 4000Hz Noise, L TEOAE 4000Hz SNR,R DPOAE 1000Hz Signal, R DPOAE 1000Hz Noise,R DPOAE 1000hz SNR,R DPOAE 1400Hz Signal, R DPOAE 1400Hz Noise, R DPOAE 1400Hz SNR,R DPOAE 2000Hz Signal, R DPOAE 2000Hz Noise, R DPOAE 2000Hz SNR,R DPOAE 2800Hz Signal, R DPOAE 2800Hz Noise, R DPOAE 2800Hz SNR,R DPOAE 4000Hz Signal, R DPOAE 4000Hz Noise, R DPOAE 4000Hz SNR,R DPOAE 6000Hz Signal, R DPOAE 6000Hz Noise, R DPOAE 6000Hz SNR,L DPOAE 1000Hz Signal, L DPOAE 1000Hz Noise,L DPOAE 1000hz SNR,L DPOAE 1400Hz Signal, L DPOAE 1400Hz Noise, L DPOAE 1400Hz SNR,L DPOAE 2000Hz Signal, L DPOAE 2000Hz Noise, L DPOAE 2000Hz SNR,L DPOAE 2800Hz Signal, L DPOAE 2800Hz Noise, L DPOAE 2800Hz SNR,L DPOAE 4000Hz Signal, L DPOAE 4000Hz Noise, L DPOAE 4000Hz SNR,L DPOAE 6000Hz Signal, L DPOAE 6000Hz Noise, L DPOAE 6000Hz SNR";
+            var fs=fields.split(',');
+            var txt="";
+            for(var i=0;i<fs.length;i++){
+                txt+="<div class='row row__ID'><div class='col'>\r\n";
+                txt+="<span>"+fs[i].replace(/_/g," ")+"</span><input type=text class=form-control name="+fs[i]+">\r\n";
+                txt+="</div></div>\r\n";
+            }
+            $('#dynamic_part__ID').html(txt);
+            //-------------------------------------
+            VmInclude:__COMPONENT__/f/form.01.js
+            VmInclude:'__CURRENT_PATH__/task-form.js'
+            //-------------------------------------
+            var load5=m.load;
+            m.load=function(){
+                load5();
+                 m.set_file_link("oae_upload");
+        
+                
+            }
+            //-------------------------------------
+        }
+    </script>
+    <style>
+        #form_container__ID{
+            max-width:700px;
+        }
+        VmInclude:__COMPONENT__/f/form.01.css
+        
+    </style>
+</div>

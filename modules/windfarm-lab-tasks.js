@@ -3,7 +3,6 @@
         "participant-data":         { url: "$A/modules/p/participant-data-windfarm-lab.html", Table:"20008848",form_module:"participant-data-form"},
         "participant-data-form":    { url: "$A/modules/p/participant-form-windfarm-lab.html", Table:"20008848"},
 
-
         "v1-d1-b-visit-date-data":		    {url:"$A/modules/w/windfarm-lab-tasks/visit-date-data.html",Table:"20008659",form_module:"v1-d1-b-visit-date-form"},
         "v1-d1-b-visit-date-form":		    {url:"$A/modules/w/windfarm-lab-tasks/visit-date-form.html",Table:"20008659"},
 
@@ -11,8 +10,8 @@
         "v1-d1-b-vas-form":		    {url:"$A/modules/w/windfarm-lab-tasks/vas-form.html",Table:"20009518"},
         "v1-d1-b-nas-data":		    {url:"$A/modules/w/windfarm-lab-tasks/nas-data.html",Table:"20009517",form_module:"v1-d1-b-nas-form"},
         "v1-d1-b-nas-form":		    {url:"$A/modules/w/windfarm-lab-tasks/nas-form.html",Table:"20009517"},
-    "v1-d1-b-n-back-data":		    {url:"$A/modules/w/windfarm-lab-tasks/n-back-data.html",Table:"20009522",form_module:"v1-d1-b-n-back-form"},
-    "v1-d1-b-n-back-form":		    {url:"$A/modules/w/windfarm-lab-tasks/n-back-form.html",Table:"20009522"},
+        "v1-d1-b-n-back-data":		    {url:"$A/modules/w/windfarm-lab-tasks/n-back-data.html",Table:"20009522",form_module:"v1-d1-b-n-back-form"},
+        "v1-d1-b-n-back-form":		    {url:"$A/modules/w/windfarm-lab-tasks/n-back-form.html",Table:"20009522"},
         "v1-d1-b-pvt-data":		    {url:"$A/modules/w/windfarm-lab-tasks/pvt-data.html",Table:"20009521",form_module:"v1-d1-b-pvt-form"},
         "v1-d1-b-pvt-form":		    {url:"$A/modules/w/windfarm-lab-tasks/pvt-form.html",Table:"20009521"},
         "v1-d1-b-tol-data":		    {url:"$A/modules/w/windfarm-lab-tasks/tol-data.html",Table:"20009519",form_module:"v1-d1-b-tol-form"},
@@ -22,8 +21,8 @@
         "v1-d1-c-vas-form":		    {url:"$A/modules/w/windfarm-lab-tasks/vas-form.html",Table:"20009200"},
         "v1-d1-c-nas-data":		    {url:"$A/modules/w/windfarm-lab-tasks/nas-data.html",Table:"20009388",form_module:"v1-d1-c-nas-form"},
         "v1-d1-c-nas-form":		    {url:"$A/modules/w/windfarm-lab-tasks/nas-form.html",Table:"20009388"},
-    "v1-d1-c-n-back-data":		    {url:"$A/modules/w/windfarm-lab-tasks/n-back-data.html",Table:"20008662",form_module:"v1-d1-c-n-back-form"},
-    "v1-d1-c-n-back-form":		    {url:"$A/modules/w/windfarm-lab-tasks/n-back-form.html",Table:"20008662"},
+        "v1-d1-c-n-back-data":		    {url:"$A/modules/w/windfarm-lab-tasks/n-back-data.html",Table:"20008662",form_module:"v1-d1-c-n-back-form"},
+        "v1-d1-c-n-back-form":		    {url:"$A/modules/w/windfarm-lab-tasks/n-back-form.html",Table:"20008662"},
         "v1-d1-c-pvt-data":		    {url:"$A/modules/w/windfarm-lab-tasks/pvt-data.html",Table:"20008664",form_module:"v1-d1-c-pvt-form"},
         "v1-d1-c-pvt-form":		    {url:"$A/modules/w/windfarm-lab-tasks/pvt-form.html",Table:"20008664"},
         "v1-d1-c-tol-data":		    {url:"$A/modules/w/windfarm-lab-tasks/tol-data.html",Table:"20008665",form_module:"v1-d1-c-tol-form"},
@@ -191,6 +190,8 @@
       "v1-neuro-vemp-form": { url: '$A/modules/w/windfarm-lab-tasks/neuro-vemp-form.html', Table: "1905231529" },
       "v1-neuro-vhit": { url: '$A/modules/w/windfarm-lab-tasks/neuro-vhit-data.html', Table: "1905231530", form_module: "v1-neuro-vhit-form" },
       "v1-neuro-vhit-form": { url: '$A/modules/w/windfarm-lab-tasks/neuro-vhit-form.html', Table: "1905231530" },
+      "v1-neuro-oae": { url: '$A/modules/w/windfarm-lab-tasks/neuro-oae-data.html', Table: "1905231531", form_module: "v1-neuro-oae-form" },
+      "v1-neuro-oae-form": { url: '$A/modules/w/windfarm-lab-tasks/neuro-oae-form.html', Table: "1905231531" },
 
       
       //Sourcedocuments
@@ -380,6 +381,22 @@
       "v2-sourcedocs": { url: '$A/modules/w/windfarm-lab-tasks/sourcedocs-data.html', Table: "1906041214", form_module: "v2-souredocs-form" },
       "v2-sourcedocs-form": { url: '$A/modules/w/windfarm-lab-tasks/sourcedocs-form.html', Table: "1906041214" },
 
+      //V2-Neurotology
+      "v2-neuro-clinical": { url: '$A/modules/w/windfarm-lab-tasks/neuro-clinical-data.html', Table: "1905231525", form_module: "v2-neuro-clinical-form" },
+      "v2-neuro-clinical-form": { url: '$A/modules/w/windfarm-lab-tasks/neuro-clinical-form.html', Table: "1905231525" },
+      "v2-neuro-audio": { url: '$A/modules/w/windfarm-lab-tasks/neuro-audio-data.html', Table: "1905231526", form_module: "v2-neuro-audio-form" },
+      "v2-neuro-audio-form": { url: '$A/modules/w/windfarm-lab-tasks/neuro-audio-form.html', Table: "1905231526" },
+      "v2-neuro-tymp": { url: '$A/modules/w/windfarm-lab-tasks/neuro-tymp-data.html', Table: "1905231527", form_module: "v2-neuro-tymp-form" },
+      "v2-neuro-tymp-form": { url: '$A/modules/w/windfarm-lab-tasks/neuro-tymp-form.html', Table: "1905231527" },
+      "v2-neuro-vng": { url: '$A/modules/w/windfarm-lab-tasks/neuro-vng-data.html', Table: "1905231528", form_module: "v2-neuro-vng-form" },
+      "v2-neuro-vng-form": { url: '$A/modules/w/windfarm-lab-tasks/neuro-vng-form.html', Table: "1905231528" },
+      "v2-neuro-vemp": { url: '$A/modules/w/windfarm-lab-tasks/neuro-vemp-data.html', Table: "1905231529", form_module: "v2-neuro-vemp-form" },
+      "v2-neuro-vemp-form": { url: '$A/modules/w/windfarm-lab-tasks/neuro-vemp-form.html', Table: "1905231529" },
+      "v2-neuro-vhit": { url: '$A/modules/w/windfarm-lab-tasks/neuro-vhit-data.html', Table: "1905231530", form_module: "v2-neuro-vhit-form" },
+      "v2-neuro-vhit-form": { url: '$A/modules/w/windfarm-lab-tasks/neuro-vhit-form.html', Table: "1905231530" },
+      "v2-neuro-oae": { url: '$A/modules/w/windfarm-lab-tasks/neuro-oae-data.html', Table: "1905231531", form_module: "v2-neuro-oae-form" },
+      "v2-neuro-oae-form": { url: '$A/modules/w/windfarm-lab-tasks/neuro-oae-form.html', Table: "1905231531" },
+
 
 
         //Visit 3
@@ -561,36 +578,50 @@
         "v3-blood": { url: '$A/modules/w/windfarm-lab-tasks/blood-data.html', Table: "20009249", form_module: "v3-blood-form" },
         "v3-blood-form": { url: '$A/modules/w/windfarm-lab-tasks/blood-form.html', Table: "20009249", form_module: "v3-blood-form" },
 
+      //V3 Neurotology
+      "v3-neuro-clinical": { url: '$A/modules/w/windfarm-lab-tasks/neuro-clinical-data.html', Table: "1905231525", form_module: "v3-neuro-clinical-form" },
+      "v3-neuro-clinical-form": { url: '$A/modules/w/windfarm-lab-tasks/neuro-clinical-form.html', Table: "1905231525" },
+      "v3-neuro-audio": { url: '$A/modules/w/windfarm-lab-tasks/neuro-audio-data.html', Table: "1905231526", form_module: "v3-neuro-audio-form" },
+      "v3-neuro-audio-form": { url: '$A/modules/w/windfarm-lab-tasks/neuro-audio-form.html', Table: "1905231526" },
+      "v3-neuro-tymp": { url: '$A/modules/w/windfarm-lab-tasks/neuro-tymp-data.html', Table: "1905231527", form_module: "v3-neuro-tymp-form" },
+      "v3-neuro-tymp-form": { url: '$A/modules/w/windfarm-lab-tasks/neuro-tymp-form.html', Table: "1905231527" },
+      "v3-neuro-vng": { url: '$A/modules/w/windfarm-lab-tasks/neuro-vng-data.html', Table: "1905231528", form_module: "v3-neuro-vng-form" },
+      "v3-neuro-vng-form": { url: '$A/modules/w/windfarm-lab-tasks/neuro-vng-form.html', Table: "1905231528" },
+      "v3-neuro-vemp": { url: '$A/modules/w/windfarm-lab-tasks/neuro-vemp-data.html', Table: "1905231529", form_module: "v3-neuro-vemp-form" },
+      "v3-neuro-vemp-form": { url: '$A/modules/w/windfarm-lab-tasks/neuro-vemp-form.html', Table: "1905231529" },
+      "v3-neuro-vhit": { url: '$A/modules/w/windfarm-lab-tasks/neuro-vhit-data.html', Table: "1905231530", form_module: "v3-neuro-vhit-form" },
+      "v3-neuro-vhit-form": { url: '$A/modules/w/windfarm-lab-tasks/neuro-vhit-form.html', Table: "1905231530" },
+      "v3-neuro-oae": { url: '$A/modules/w/windfarm-lab-tasks/neuro-oae-data.html', Table: "1905231531", form_module: "v3-neuro-oae-form" },
+      "v3-neuro-oae-form": { url: '$A/modules/w/windfarm-lab-tasks/neuro-oae-form.html', Table: "1905231531" },
 
-        //additional panels
-        "panel-neurotology":         { url: "$A/modules/p/panel-windfarm-lab/panel-neurotology.html", Table:"1903221208"},
-        "panel-test-export":         { url: "$A/modules/p/panel-windfarm-lab/panel-test-export.html", Table:"1903221209"},
-        "panel-data-entry":          { url: "$A/modules/p/panel-windfarm-lab/panel-data-entry.html", Table: "1903221210"},
+      //additional panels
+      "panel-neurotology":         { url: "$A/modules/p/panel-windfarm-lab/panel-neurotology.html", Table:"1903221208"},
+      "panel-test-export":         { url: "$A/modules/p/panel-windfarm-lab/panel-test-export.html", Table:"1903221209"},
+      "panel-data-entry":          { url: "$A/modules/p/panel-windfarm-lab/panel-data-entry.html", Table: "1903221210"},
 
 
-        //exportpages
-        "VAS_V1":	                    {"url":"$A/modules/e/export_modules/VAS_V1.html", "name_for_search":"Visual Analogue Scale (VAS)_ Visit 1 "},
-        "NAS_V1":	          		    {"url":"$A/modules/e/export_modules/NAS_V1.html", "name_for_search":"Noise Annoyance Scale (VAS)_ Visit 1 "},
-        "NBACK_V1":	          		{"url":"$A/modules/e/export_modules/NBACK_V1.html", "name_for_search":"NBack_ Visit 1 "},
-        "TOL_V1":	          			{"url":"$A/modules/e/export_modules/TOL_V1.html", "name_for_search":"Tower of London_ Visit 1 "},
-        "PVT_V1":	          			{"url":"$A/modules/e/export_modules/PVT_V1.html", "name_for_search":"Psychomotor Vigilance Task(PVT)_ Visit 1 "},
-        "VAS_V2":	          			{"url":"$A/modules/e/export_modules/VAS_V2.html", "name_for_search":"Visual Analogue Scale (VAS)_ Visit 2"},
-        "NAS_V2":	          			{"url":"$A/modules/e/export_modules/NAS_V2.html", "name_for_search":"Noise Annoyance Scale (VAS)_ Visit 2 "},
-        "NBACK_V2":	          		{"url":"$A/modules/e/export_modules/NBACK_V2.html", "name_for_search":"NBack_ Visit 2 "},
-        "TOL_V2":	          		    {"url":"$A/modules/e/export_modules/TOL_V2.html", "name_for_search":"Tower of London_ Visit 2 "},
-        "PVT_V2":	          			{"url":"$A/modules/e/export_modules/PVT_V2.html", "name_for_search":"Psychomotor Vigilance Task(PVT)_ Visit 2 "},
-        "VAS_V3":	          			{"url":"$A/modules/e/export_modules/VAS_V3.html", "name_for_search":"Visual Analogue Scale (VAS)_ Visit 3 "},
-        "NAS_V3":	          			{"url":"$A/modules/e/export_modules/NAS_V3.html", "name_for_search":"Noise Annoyance Scale (VAS)_ Visit 3 "},
-        "NBACK_V3":	          		{"url":"$A/modules/e/export_modules/NBACK_V3.html", "name_for_search":"NBack_ Visit 3 "},
-        "TOL_V3":	          			{"url":"$A/modules/e/export_modules/TOL_V3.html", "name_for_search":"Tower of London_ Visit 3 "},
-        "PVT_V3":	          			{"url":"$A/modules/e/export_modules/PVT_V3.html", "name_for_search":"Psychomotor Vigilance Task(PVT)_ Visit 3" },
+      //exportpages
+      "VAS_V1":	                    {"url":"$A/modules/e/export_modules/VAS_V1.html", "name_for_search":"Visual Analogue Scale (VAS)_ Visit 1 "},
+      "NAS_V1":	          		    {"url":"$A/modules/e/export_modules/NAS_V1.html", "name_for_search":"Noise Annoyance Scale (VAS)_ Visit 1 "},
+      "NBACK_V1":	          		{"url":"$A/modules/e/export_modules/NBACK_V1.html", "name_for_search":"NBack_ Visit 1 "},
+      "TOL_V1":	          			{"url":"$A/modules/e/export_modules/TOL_V1.html", "name_for_search":"Tower of London_ Visit 1 "},
+      "PVT_V1":	          			{"url":"$A/modules/e/export_modules/PVT_V1.html", "name_for_search":"Psychomotor Vigilance Task(PVT)_ Visit 1 "},
+      "VAS_V2":	          			{"url":"$A/modules/e/export_modules/VAS_V2.html", "name_for_search":"Visual Analogue Scale (VAS)_ Visit 2"},
+      "NAS_V2":	          			{"url":"$A/modules/e/export_modules/NAS_V2.html", "name_for_search":"Noise Annoyance Scale (VAS)_ Visit 2 "},
+      "NBACK_V2":	          		{"url":"$A/modules/e/export_modules/NBACK_V2.html", "name_for_search":"NBack_ Visit 2 "},
+      "TOL_V2":	          		    {"url":"$A/modules/e/export_modules/TOL_V2.html", "name_for_search":"Tower of London_ Visit 2 "},
+      "PVT_V2":	          			{"url":"$A/modules/e/export_modules/PVT_V2.html", "name_for_search":"Psychomotor Vigilance Task(PVT)_ Visit 2 "},
+      "VAS_V3":	          			{"url":"$A/modules/e/export_modules/VAS_V3.html", "name_for_search":"Visual Analogue Scale (VAS)_ Visit 3 "},
+      "NAS_V3":	          			{"url":"$A/modules/e/export_modules/NAS_V3.html", "name_for_search":"Noise Annoyance Scale (VAS)_ Visit 3 "},
+      "NBACK_V3":	          		{"url":"$A/modules/e/export_modules/NBACK_V3.html", "name_for_search":"NBack_ Visit 3 "},
+      "TOL_V3":	          			{"url":"$A/modules/e/export_modules/TOL_V3.html", "name_for_search":"Tower of London_ Visit 3 "},
+      "PVT_V3":	          			{"url":"$A/modules/e/export_modules/PVT_V3.html", "name_for_search":"Psychomotor Vigilance Task(PVT)_ Visit 3" },
 
-      //outcomereport
-       "v1-outcome":              { "url": "$A/modules/o/outcome-questionnaire/outcome-quest-report-v1.html" },
-       "v2-outcome":              { "url": "$A/modules/o/outcome-questionnaire/outcome-quest-report-v2.html" },
-       "v3-outcome":              { "url": "$A/modules/o/outcome-questionnaire/outcome-quest-report-v3.html" },
-
-        "screening_complete":          { "url": "$A/modules/r/report/screening_complete.html" }
+    //outcomereport
+      "v1-outcome":              { "url": "$A/modules/o/outcome-questionnaire/outcome-quest-report-v1.html" },
+      "v2-outcome":              { "url": "$A/modules/o/outcome-questionnaire/outcome-quest-report-v2.html" },
+      "v3-outcome":              { "url": "$A/modules/o/outcome-questionnaire/outcome-quest-report-v3.html" },
+      "screening_complete":          { "url": "$A/modules/r/report/screening_complete.html" }
 
 
 
