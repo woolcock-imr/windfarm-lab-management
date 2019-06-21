@@ -26,9 +26,9 @@
                     <div class="form-control">
                         <u style='cursor:pointer' id=link_tymp_type__ID></u>
                         <br>
-                        <input type="radio" name=tymp_type value=a style="margin-right:15px;">A</input><br>
-                        <input type="radio" name=tymp_type value=b style="margin-right:15px;">B</input><br>
-                        <input type="radio" name=tymp_type value=c style="margin-right:15px;">C</input><br>
+                        <input type="radio" name=tymp_type value=1 style="margin-right:15px;">A</input><br>
+                        <input type="radio" name=tymp_type value=2 style="margin-right:15px;">B</input><br>
+                        <input type="radio" name=tymp_type value=3 style="margin-right:15px;">C</input><br>
                         <a href="https://previews.dropbox.com/p/thumb/AAdtkkpSjcMZ2CAf_WrfmncmqCieV4Clot7ZlQ5MS8H2Z1906i2jwCBzL7t0cYy2UPbJxFuZ1GYZ3eU01rL3rRUA-GQP__6g6MPkcZVpsC-s68SyRo0kWYAhM1cMNuYRFPNMy8UwWy26ORCXVjcdBWVAKsHaWnj0rOJCQdeh2_s3SWl7t_3eCP5zMD6sI8J2p0k3y4G1uX9zqFN00G-3JJmiIghvJp5amDEdUCIS9t1EhVnBIi0EzGKp2NhT6PNJ8Ut8IS6-dQ0sT6eKghh58dQjxYqU0w_a8wMZQ0ZGKUssWbqgxNwYl_MRETyGdxpXaNdHmO7cEjLMF7DBwsjMdGnY/p.png?fv_content=true&size_mode=5">More info about types here</a>
                         </div>
                 </div>
@@ -76,7 +76,7 @@
         function F__ID(){
             //-------------------------------------
             //build text input fields
-            var fields="L_Otoscopy,R_Otoscopy,L_Static_Compliance(mmho),L_Middle_Ear_Pressure(daPa),L_EarCanalVolume(CCs),R_Static_Compliance(mmho),R_Middle_Ear_Pressure(daPa),R_EarCanalVolume(CCs)";
+            var fields="L_Otoscopy,L_Static_Compliance,L_Middle_Ear_Pressure,L_EarCanalVolume,R_Otoscopy,R_Static_Compliance,R_Middle_Ear_Pressure,R_EarCanalVolume";
             var fs=fields.split(',');
             var txt="";
             for(var i=0;i<fs.length;i++){
