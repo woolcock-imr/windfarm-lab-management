@@ -1,0 +1,22 @@
+<div id=D__ID>
+    <section>
+        VmInclude:__COMPONENT__/g/grid.01.html
+    </section>
+    <script>
+        function F__ID(){
+            //-------------------------------------
+            VmInclude:__COMPONENT__/g/grid.01.js
+            VmInclude:__CURRENT_PATH__/task-data.js
+            //-------------------------------------
+            var fields="Visit";
+            fields+=",Sys_1,Dia_1,HR_1,Mean_1,cSys_1,cDia_1,cHR_1,cPP_1,cAP_1,cAIx_1,cAIx75_1,cMAP_1,Hour_1,Minute_1,Month_1,Day_1,Year_1";
+            fields+=",Sys_2,Dia_2,HR_2,Mean_2,cSys_2,cDia_2,cHR_2,cPP_2,cAP_2,cAIx_2,cAIx75_2,cMAP_2,Hour_2,Minute_2,Month_2,Day_2,Year_2";
+
+            m.fields="_Form,Status|S3,Notes|NT,Participant_ID|Participant_uid,Participant,"+fields+",Submit_date,Submitted_by,_Delete";
+        }
+    </script>
+    <style>
+        VmInclude:__COMPONENT__/g/grid.01.css
+    </style>
+</div>
+    

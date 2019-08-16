@@ -170,8 +170,8 @@
       // Pulse Wave Analysis and co  
         "v1-pulsewaveanalysis": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-data.html', Table:"20009510",form_module:"v1-pwa-form"},
         "v1-pwa-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-form.html', Table:"20009510"},
-        "v1-pulsewaveanalysis-1": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-data.html', Table: "--------", form_module: "v1-pwa1-form" },
-        "v1-pwa1-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-form.html', Table: "---------" },
+        "v1-pulsewaveanalysis-1": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis1-data.html', Table: "91000827", form_module: "v1-pwa1-form" },
+        "v1-pwa1-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis1-form.html', Table: "91000827" },
         "v1-pulsewaveanalysis-2": { url: '$2/modules/w/windfarm-lab-tasks/pulsewaveanalysis-data.html', Table: "--------", form_module: "v1-pwa2-form" },
         "v1-pwa2-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-form.html', Table: "---------" },
         "v1-pulsewavevelocity": { url: '$A/modules/w/windfarm-lab-tasks/pulsewavevelocity-data.html', Table: "20009513",form_module:"v1-pwv-form"},
@@ -374,8 +374,8 @@
       //Visit 2 Pulse Wave and Endothelial Function Test   
         "v2-pulsewaveanalysis": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-data.html', Table: "20009511", form_module: "v2-pwa-form" },
         "v2-pwa-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-form.html', Table: "20009511" },
-        "v2-pulsewaveanalysis-1": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-data.html', Table: "--------", form_module: "v2-pwa1-form" },
-        "v2-pwa1-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-form.html', Table: "---------" },
+        "v2-pulsewaveanalysis-1": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis1-data.html', Table: "91000828", form_module: "v2-pwa1-form" },
+        "v2-pwa1-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis1-form.html', Table: "91000828" },
         "v2-pulsewaveanalysis-2": { url: '$2/modules/w/windfarm-lab-tasks/pulsewaveanalysis-data.html', Table: "--------", form_module: "v2-pwa2-form" },
         "v2-pwa2-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-form.html', Table: "---------" }, 
         "v2-pulsewavevelocity": { url: '$A/modules/w/windfarm-lab-tasks/pulsewavevelocity-data.html', Table: "20009514", form_module: "v2-pwv-form" },
@@ -579,8 +579,8 @@
         //Visit 3 Pulse Wave and Endothelial Function Test   
         "v3-pulsewaveanalysis": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-data.html', Table: "20009512", form_module: "v3-pwa-form" },
         "v3-pwa-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-form.html', Table: "20009512" },
-        "v3-pulsewaveanalysis-1": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-data.html', Table: "--------", form_module: "v3-pwa1-form" },
-        "v3-pwa1-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-form.html', Table: "---------" },
+        "v3-pulsewaveanalysis-1": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis1-data.html', Table: "91000829", form_module: "v3-pwa1-form" },
+        "v3-pwa1-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis1-form.html', Table: "91000829" },
         "v3-pulsewaveanalysis-2": { url: '$2/modules/w/windfarm-lab-tasks/pulsewaveanalysis-data.html', Table: "--------", form_module: "v3-pwa2-form" },
         "v3-pwa2-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-form.html', Table: "---------" },
         "v3-pulsewavevelocity": { url: '$A/modules/w/windfarm-lab-tasks/pulsewavevelocity-data.html', Table: "20009515", form_module: "v3-pwv-form" },
