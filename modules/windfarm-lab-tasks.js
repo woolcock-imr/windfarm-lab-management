@@ -170,6 +170,10 @@
       // Pulse Wave Analysis and co  
         "v1-pulsewaveanalysis": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-data.html', Table:"20009510",form_module:"v1-pwa-form"},
         "v1-pwa-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-form.html', Table:"20009510"},
+        "v1-pulsewaveanalysis-1": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-data.html', Table: "--------", form_module: "v1-pwa1-form" },
+        "v1-pwa1-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-form.html', Table: "---------" },
+        "v1-pulsewaveanalysis-2": { url: '$2/modules/w/windfarm-lab-tasks/pulsewaveanalysis-data.html', Table: "--------", form_module: "v1-pwa2-form" },
+        "v1-pwa2-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-form.html', Table: "---------" },
         "v1-pulsewavevelocity": { url: '$A/modules/w/windfarm-lab-tasks/pulsewavevelocity-data.html', Table: "20009513",form_module:"v1-pwv-form"},
         "v1-pwv-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewavevelocity-form.html', Table: "20009513"},
         "v1-endopat": { url: '$A/modules/w/windfarm-lab-tasks/endothelialft-data.html', Table: "20008721",form_module:"v1-endopat-form"},
@@ -370,6 +374,10 @@
       //Visit 2 Pulse Wave and Endothelial Function Test   
         "v2-pulsewaveanalysis": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-data.html', Table: "20009511", form_module: "v2-pwa-form" },
         "v2-pwa-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-form.html', Table: "20009511" },
+        "v2-pulsewaveanalysis-1": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-data.html', Table: "--------", form_module: "v2-pwa1-form" },
+        "v2-pwa1-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-form.html', Table: "---------" },
+        "v2-pulsewaveanalysis-2": { url: '$2/modules/w/windfarm-lab-tasks/pulsewaveanalysis-data.html', Table: "--------", form_module: "v2-pwa2-form" },
+        "v2-pwa2-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-form.html', Table: "---------" }, 
         "v2-pulsewavevelocity": { url: '$A/modules/w/windfarm-lab-tasks/pulsewavevelocity-data.html', Table: "20009514", form_module: "v2-pwv-form" },
         "v2-pwv-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewavevelocity-form.html', Table: "20009514" },
         "v2-endopat": { url: '$A/modules/w/windfarm-lab-tasks/endothelialft-data.html', Table: "20008784", form_module: "v2-endopat-form" },
@@ -571,6 +579,10 @@
         //Visit 3 Pulse Wave and Endothelial Function Test   
         "v3-pulsewaveanalysis": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-data.html', Table: "20009512", form_module: "v3-pwa-form" },
         "v3-pwa-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-form.html', Table: "20009512" },
+        "v3-pulsewaveanalysis-1": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-data.html', Table: "--------", form_module: "v3-pwa1-form" },
+        "v3-pwa1-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-form.html', Table: "---------" },
+        "v3-pulsewaveanalysis-2": { url: '$2/modules/w/windfarm-lab-tasks/pulsewaveanalysis-data.html', Table: "--------", form_module: "v3-pwa2-form" },
+        "v3-pwa2-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-form.html', Table: "---------" },
         "v3-pulsewavevelocity": { url: '$A/modules/w/windfarm-lab-tasks/pulsewavevelocity-data.html', Table: "20009515", form_module: "v3-pwv-form" },
         "v3-pwv-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewavevelocity-form.html', Table: "20009515" },
         "v3-endopat": { url: '$A/modules/w/windfarm-lab-tasks/endothelialft-data.html', Table: "20008847", form_module: "v3-endopat-form" },
@@ -600,7 +612,7 @@
       "panel-data-entry":          { url: "$A/modules/p/panel-windfarm-lab/panel-data-entry.html", Table: "1903221210"},
 
 
-      //exportpages
+      //exportpages&Reporting
       "VAS_V1":	                    {"url":"$A/modules/e/export_modules/VAS_V1.html", "name_for_search":"Visual Analogue Scale (VAS)_ Visit 1 "},
       "NAS_V1":	          		    {"url":"$A/modules/e/export_modules/NAS_V1.html", "name_for_search":"Noise Annoyance Scale (VAS)_ Visit 1 "},
       "NBACK_V1":	          		{"url":"$A/modules/e/export_modules/NBACK_V1.html", "name_for_search":"NBack_ Visit 1 "},
@@ -616,6 +628,7 @@
       "NBACK_V3":	          		{"url":"$A/modules/e/export_modules/NBACK_V3.html", "name_for_search":"NBack_ Visit 3 "},
       "TOL_V3":	          			{"url":"$A/modules/e/export_modules/TOL_V3.html", "name_for_search":"Tower of London_ Visit 3 "},
       "PVT_V3":	          			{"url":"$A/modules/e/export_modules/PVT_V3.html", "name_for_search":"Psychomotor Vigilance Task(PVT)_ Visit 3" },
+      "V1-Data-Progress": { "url": "$A/modules/e/export_modules/dsmb.html", Table:"1903221210","name_for_search": "dsmb" },
 
     //outcomereport
       "v1-outcome":              { "url": "$A/modules/o/outcome-questionnaire/outcome-quest-report-v1.html" },

@@ -20,7 +20,33 @@
                 </div>
                 <!---------------------------------------------------->
                 <!-- Form Inputs-------------------------------------->
-                <div id=dynamic_part__ID></div>
+            
+                <div class='row row__ID'>
+                    <div class="col">
+                        <span> Visit Start</span>
+                        <div class="form-control"><u style='cursor:pointer' id=link_roomalloc__ID></u>
+                            <input type="date" name=visitstart style="margin-right:15px;">Visit Start</input><br>
+                        </div>
+                    </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class="col">
+                        <span> Visit end</span>
+                        <div class="form-control"><u style='cursor:pointer' id=link_roomalloc__ID></u>
+                            <input type="date" name=visitend style="margin-right:15px;">Visit End</input><br>
+                        </div>
+                    </div>
+                </div>
+                <div class='row row__ID'>
+                    <div class="col">
+                        <span> Visit 1</span>
+                        <div class="form-control"><u style='cursor:pointer' id=link_roomalloc__ID></u>
+                            <input type="radio" name=visitno value="1" style="margin-right:15px;">Visit 1</input><br>
+                            <input type="radio" name=visitno value="2" style="margin-right:15px;">Visit 2</input><br>
+                            <input type="radio" name=visitno value="3" style="margin-right:15px;">Visit 3</input><br>
+                        </div>
+                     </div>   
+                </div>                       
                 <div class='row row__ID'>
                     <div class="col">
                         <span> Room Allocation</span>
@@ -47,7 +73,7 @@
         function F__ID(){
             //-------------------------------------
             //build text input fields
-            var fields="Visit_date,Visit_date_end";
+            var fields="";
             var fs=fields.split(',');
             var txt="";
             for(var i=0;i<fs.length;i++){

@@ -1,0 +1,32 @@
+	<div id=D__ID>
+		<section>
+			VmInclude:__COMPONENT__/g/grid.01.html
+		</section>
+		<script>
+			function F__ID() {
+				//-------------------------------------
+				VmInclude: __COMPONENT__/g/grid.01.js
+				//-------------------------------------
+				var fields = "Job_Name,check_Name,Comments";
+				m.fields = "_Form," + fields + ",Submitted_by,Submit_date,_Delete";
+				//-------------------------------------
+			/*	m.cell_render = function (records, I, field, td, set_value, source) {
+					switch (field) {
+						
+							if (records[I][field] == 'on') td.html('&#x2714;');
+							td.css('padding-left', '20px');
+							break;
+						case 'Comments':
+							var txt = records[I][field];
+							if (txt.length > 30) txt = txt.substring(0, 10) + "...";
+							td.text(txt);
+							break;
+					}
+				}*/
+				//-------------------------------------
+			}
+		</script>
+		<style>
+			VmInclude:__COMPONENT__/g/grid.01.css
+		</style>
+	</div>
