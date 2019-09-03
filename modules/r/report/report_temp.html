@@ -1,0 +1,95 @@
+<div id-D__ID>
+    <section>
+        <div id=toolbar__ID>
+            <button id=query2__ID type=button class='btn btn-secondary' title='Query'>Query</button>
+            <button id=export2__ID type=button class='btn btn-secondary' title='Export'>Export</button>
+            <span class=tab__ID></span>Screening Completion
+            <span class=tab__ID></span>
+        </div>
+        <div id=table__ID>
+            <table id=grid__ID></table>
+        </div>
+    </section>
+    <script>
+    function F__ID(){
+        //------------------------
+        VmInclude:__COMPONENT__/g/grid.01.js
+        //------------------------
+        //_fields="Registration_ID|PUID,First_Name,Last_Name,Complete Time|DateTime";
+        //-------------------------------------
+        //$('#aquery__ID').on('click',function(){_set_req(); _request_data();})
+        //-------------------------------------
+        //var registration_tid=_mlist[_ids.registration].table_id;
+        //var screening_participant_tid=_mlist[_ids.screening_participant].table_id;
+         $('#query2__ID').on('click', function () {
+            m.set_req = function () {
+                var sql = "with participant as (select UID, Randomisation_Number=@('Randomisation_Number'),DOB=@('DOB') from [TABLE-20008848])";
+                sql += ",tb1 as( select PUID, Heart_Rate_Trial1=@('Heart_Rate_Trial1') from [TABLE-20009513]) ";
+                sql += ",tb2 as( select PUID, PVT_Lapses=@('PVT_Lapses') from [TABLE-20009521]) ";
+                //sql += ",tb3 as( select PUID, PVT_Lapses=@('PVT_Lapses') from [TABLE-20009521]) ";
+                sql += " select UID,Randomisation_Number,DOB,Heart_Rate_Trial1,PVT_Lapses from participant join tb1 on tb1.PUID=UID";
+                sql += " join tb2 on tb2.PUID=UID";
+                //sql += " join tb3 on tb3.PUID=UID";
+                
+                /*
+                sql += ", screening_participant as (select registration_id=@('Registration_ID') from [TABLE-20009058])";
+                sql += ", participant as (select UID, Information from registration join screening_participant on UID=registration_id)";
+                sql += ",complete_quest as( select PUID,DateTime from [TABLE-20008713] WHERE PUID >29) ";
+                sql += " select PUID, Information,DateTime from complete_quest join participant on PUID=UID order by DateTime";
+                */
+                m.req = { cmd: 'read', qid: m.qid, sql: sql }
+            }
+            m.set_req(); m.request_data();
+        })
+
+
+
+
+    $('#export2__ID').on('click', function () {
+        var i1 = $('#uid__ID').val();
+        if (i1 == '') {
+            alert('No participant was entered')
+            return;
+        }
+        m.set_req_export = function () {
+            var sql = "with registration as (select UID,Information from [TABLE-20008858])";
+            sql += ", screening_participant as (select registration_id=@('Registration_ID') from [TABLE-20009058])";
+            sql += ", participant as (select UID, Information from registration join screening_participant on UID=registration_id)";
+            sql += ",complete_quest as( select PUID,DateTime from [TABLE-20008713] WHERE PUID >29) ";
+            sql += " select PUID, Information,DateTime from complete_quest join participant on PUID=UID order by DateTime";
+            m.req = { cmd: 'read', qid: m.qid, sql: sql, i1: i1 }
+        }
+        m.set_req(); m.request_data();
+        m.export_records();
+    })
+    m.fields = "Participant ID|UID,Randomisation_Number,DOB,Heart_Rate_Trial1,PVT_Lapses";
+    }
+    
+    </script>
+    <style>
+        VmInclude:__COMPONENT__/g/grid.01.css
+    
+         
+        #toolbar__ID{
+            background-color:#ccc;
+            padding:5px 0px 5px 20px;
+            margin-bottom:0px;
+            overflow:hidden
+        }
+        #toolbar__ID *{
+            margin-right:3px;
+        }
+        @media screen and (max-width:768px){
+            #toolbar__ID{
+                padding: 3px 0;
+            }
+            #toolbar__ID div{
+                padding-left:3px;
+            }
+            #row_1__ID{
+                padding-bottom: 3px;
+            }
+        }
+    
+    </style>
+    

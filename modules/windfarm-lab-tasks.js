@@ -629,6 +629,7 @@
       "TOL_V3":	          			{"url":"$A/modules/e/export_modules/TOL_V3.html", "name_for_search":"Tower of London_ Visit 3 "},
       "PVT_V3":	          			{"url":"$A/modules/e/export_modules/PVT_V3.html", "name_for_search":"Psychomotor Vigilance Task(PVT)_ Visit 3" },
       "V1-Data-Progress": { "url": "$A/modules/e/export_modules/dsmb.html", Table:"1903221210","name_for_search": "dsmb" },
+      "report_temp":{"url":"$A/modules/r/report/report_temp.html",router:1},
 
     //outcomereport
       "v1-outcome":              { "url": "$A/modules/o/outcome-questionnaire/outcome-quest-report-v1.html" },
