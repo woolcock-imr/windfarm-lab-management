@@ -36,13 +36,14 @@
         "v1-d1-d-n-back-form":      {url: "$A/modules/w/windfarm-lab-tasks/n-back-form.html", Table:"20008663"},
         "v1-d1-d-pvt-data":         {url: "$A/modules/w/windfarm-lab-tasks/pvt-data.html", Table:"20009202",form_module:"v1-d1-d-pvt-form"},
         "v1-d1-d-pvt-form":         {url: "$A/modules/w/windfarm-lab-tasks/pvt-form.html", Table:"20009202"},
-        "v1-d1-d-tol-data":         {url: "$A/modules/w/windfarm-lab-tasks/tol-data.html", Table:"20009203",form_module:"v1-d1-d-tol-form"},
+        "v1-d1-d-tol-data":         {url: "$A/modules/w/windfarm-lab-tasks/tol-data.html", Table:"20009203",form_module:"v1-d1-d-tol-form",},
         "v1-d1-d-tol-form":         {url: "$A/modules/w/windfarm-lab-tasks/tol-form.html", Table:"20009203"},
 
         "v1-n1-edf":                {url:'$A/modules/..../'},
         "v1-n1-sleepscoring":       {url: '$A/modules/..../'},
-        "v1-n1-researchreport":     {url: "$A/$A/modules/w/windfarm-lab-tasks/psgreport.html", Table:"201909061134"},
-        "v1-n1-researchreport":     {url: '$A/modules/..../'},
+        "v1-n1-researchreport":     {url: "$A/modules/w/windfarm-lab-tasks/psgreport.html", Table:"91000831",form_module:"v1-n1-researchreport-form",},
+        "v1-n1-researchreport-form":     {url: "$A/modules/w/windfarm-lab-tasks/psgreport-form.html", Table:"91000831"},
+        
 
 
 
