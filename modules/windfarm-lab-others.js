@@ -11,6 +11,8 @@
         "edc-notes-data":  		  		    {url:"$A/modules/e/edc-notes-data.html",Table:"20008850",form_module:"edc-notes-form"},
         "edc-notes-form":  		  	    	{url:"$A/modules/e/edc-notes-form.html",Table:"20008850"},
         "online-questionnaire-setup-windfarm-lab": 	{url:"$A/modules/o/online-questionnaire-setup-windfarm-lab.html",Table:"20009295"},
+        
+
 
 
         "panel-permission":   			    {url:"$A/modules/p/permission/permission-panel.html",router:1},

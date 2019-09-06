@@ -26,10 +26,10 @@
                 var sql = "with participant as (select UID, Randomisation_Number=@('Randomisation_Number'),DOB=@('DOB') from [TABLE-20008848])";
                 sql += ",tb1 as( select PUID, Heart_Rate_Trial1=@('Heart_Rate_Trial1') from [TABLE-20009513]) ";
                 sql += ",tb2 as( select PUID, PVT_Lapses=@('PVT_Lapses') from [TABLE-20009521]) ";
-                //sql += ",tb3 as( select PUID, PVT_Lapses=@('PVT_Lapses') from [TABLE-20009521]) ";
-                sql += " select UID,Randomisation_Number,DOB,Heart_Rate_Trial1,PVT_Lapses from participant join tb1 on tb1.PUID=UID";
+                sql += ",tb3 as( select PUID, PVT_MeanRT=@('PVT_MeanRT') from [TABLE-20009214]) ";
+                sql += " select UID,Randomisation_Number,DOB,Heart_Rate_Trial1,PVT_Lapses,PVT_MeanRT from participant join tb1 on tb1.PUID=UID";
                 sql += " join tb2 on tb2.PUID=UID";
-                //sql += " join tb3 on tb3.PUID=UID";
+                sql += " join tb3 on tb3.PUID=UID";
                 
                 /*
                 sql += ", screening_participant as (select registration_id=@('Registration_ID') from [TABLE-20009058])";
@@ -62,7 +62,7 @@
         m.set_req(); m.request_data();
         m.export_records();
     })
-    m.fields = "Participant ID|UID,Randomisation_Number,DOB,Heart_Rate_Trial1,PVT_Lapses";
+    m.fields = "Participant ID|UID,Randomisation_Number,DOB,Heart_Rate_Trial1,PVT_Lapses,PVT_MeanRT";
     }
     
     </script>

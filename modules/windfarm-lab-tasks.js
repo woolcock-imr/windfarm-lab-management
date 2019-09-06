@@ -164,7 +164,7 @@
 
         "v1-n3-edf":                { url: '$A/modules/..../' },
         "v1-n3-sleepscoring":       { url: '$A/modules/..../' },
-        "v1-n3-rea-report":         { url: '$A/modules/..../' },
+        "v1-n3-rea-report":         { url: "$A/modules/w/windfarm-lab-tasks/psgreport.html/", Table:"201909061134"},
         "v1-n3-researchreport":     { url: '$A/modules/..../' },
       
       // Pulse Wave Analysis and co  
