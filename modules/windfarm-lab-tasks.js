@@ -3,6 +3,23 @@
         "participant-data":         { url: "$A/modules/p/participant-data-windfarm-lab.html", Table:"20008848",form_module:"participant-data-form"},
         "participant-data-form":    { url: "$A/modules/p/participant-form-windfarm-lab.html", Table:"20008848"},
 
+//Screening Visit
+      "sc-neuro-clinical": { url: '$A/modules/w/windfarm-lab-tasks/neuro-clinical-data.html', Table: "91000840", form_module: "sc-neuro-clinical-form" },
+      "sc-neuro-clinical-form": { url: '$A/modules/w/windfarm-lab-tasks/neuro-clinical-form.html', Table: "91000840" },
+      "sc-neuro-audio": { url: '$A/modules/w/windfarm-lab-tasks/neuro-audio-data.html', Table: "91000841", form_module: "sc-neuro-audio-form" },
+      "sc-neuro-audio-form": { url: '$A/modules/w/windfarm-lab-tasks/neuro-audio-form.html', Table: "91000841" },
+      "sc-neuro-tymp": { url: '$A/modules/w/windfarm-lab-tasks/neuro-tymp-data.html', Table: "91000842", form_module: "sc-neuro-tymp-form" },
+      "sc-neuro-tymp-form": { url: '$A/modules/w/windfarm-lab-tasks/neuro-tymp-form.html', Table: "91000842" },
+      "sc-neuro-vng": { url: '$A/modules/w/windfarm-lab-tasks/neuro-vng-data.html', Table: "91000843", form_module: "sc-neuro-vng-form" },
+      "sc-neuro-vng-form": { url: '$A/modules/w/windfarm-lab-tasks/neuro-vng-form.html', Table: "91000843" },
+      "sc-neuro-vemp": { url: '$A/modules/w/windfarm-lab-tasks/neuro-vemp-data.html', Table: "91000844", form_module: "sc-neuro-vemp-form" },
+      "sc-neuro-vemp-form": { url: '$A/modules/w/windfarm-lab-tasks/neuro-vemp-form.html', Table: "91000844" },
+      "sc-neuro-vhit": { url: '$A/modules/w/windfarm-lab-tasks/neuro-vhit-data.html', Table: "91000845", form_module: "sc-neuro-vhit-form" },
+      "sc-neuro-vhit-form": { url: '$A/modules/w/windfarm-lab-tasks/neuro-vhit-form.html', Table: "91000845" },
+      "sc-neuro-oae": { url: '$A/modules/w/windfarm-lab-tasks/neuro-oae-data.html', Table: "91000846", form_module: "sc-neuro-oae-form" },
+      "sc-neuro-oae-form": { url: '$A/modules/w/windfarm-lab-tasks/neuro-oae-form.html', Table: "91000846" },
+
+
         "v1-d1-b-visit-date-data":		    {url:"$A/modules/w/windfarm-lab-tasks/visit-date-data.html",Table:"20008659",form_module:"v1-d1-b-visit-date-form"},
         "v1-d1-b-visit-date-form":		    {url:"$A/modules/w/windfarm-lab-tasks/visit-date-form.html",Table:"20008659"},
 
@@ -629,8 +646,9 @@
       "NBACK_V3":	          		{"url":"$A/modules/e/export_modules/NBACK_V3.html", "name_for_search":"NBack_ Visit 3 "},
       "TOL_V3":	          			{"url":"$A/modules/e/export_modules/TOL_V3.html", "name_for_search":"Tower of London_ Visit 3 "},
       "PVT_V3":	          			{"url":"$A/modules/e/export_modules/PVT_V3.html", "name_for_search":"Psychomotor Vigilance Task(PVT)_ Visit 3" },
-      "V1-Data-Progress": { "url": "$A/modules/e/export_modules/dsmb.html", Table:"1903221210","name_for_search": "dsmb" },
-      "report_temp":{"url":"$A/modules/r/report/report_temp.html",router:1},
+      
+      "V1-Data-Progress":       { "url": "$A/modules/e/export_modules/dsmb.html", Table:"1903221210","name_for_search": "dsmb" },
+      "report_temp":            {"url":"$A/modules/r/report/report_temp.html"},
 
     //outcomereport
       "v1-outcome":              { "url": "$A/modules/o/outcome-questionnaire/outcome-quest-report-v1.html" },
