@@ -2,12 +2,13 @@
 <div id=D__ID>
     <section id=form_container__ID>
         <div id=header__ID>
-            Neurotology - Videonystamography
+            Neurotology - Otoacoustic Emissions (TEOAE and DPOAE)
         </div>
         <form id=F__ID>
-            <b>TEOAE</b> - Transitory Evoked Otoacoustic Emission
-            <b>DPOAE</b> - Distortion Product Otoacoustic Emission
-            <b>SNR</b> - Signal To Noise Ratio
+            <b>TEOAE</b> - Transitory Evoked Otoacoustic Emission<br>
+            <b>DPOAE</b> - Distortion Product Otoacoustic Emission<br>
+            <b>SNR</b> - Signal To Noise Ratio<br>
+            <br>
             <div class="container">
                 <!-- participant part for all task forms -------------------->
                 <div class="row row__ID" id=row_participant__ID>
@@ -67,7 +68,7 @@
         function F__ID(){
             //-------------------------------------
             //build text input fields
-            var fields="R TEOAE 1000Hz Signal, R TEOAE 1000Hz Noise,R TEOAE 1000hz SNR,R TEOAE 1400Hz Signal, R TEOAE 1400Hz Noise, R TEOAE 1400Hz SNR,R TEOAE 2000Hz Signal, R TEOAE 2000Hz Noise, R TEOAE 2000Hz SNR,R TEOAE 2800Hz Signal, R TEOAE 2800Hz Noise, R TEOAE 2800Hz SNR,R TEOAE 4000Hz Signal, R TEOAE 4000Hz Noise, R TEOAE 4000Hz SNR,L TEOAE 1000Hz Signal, L TEOAE 1000Hz Noise,L TEOAE 1000hz SNR,L TEOAE 1400Hz Signal, L TEOAE 1400Hz Noise, L TEOAE 1400Hz SNR,L TEOAE 2000Hz Signal, L TEOAE 2000Hz Noise, L TEOAE 2000Hz SNR,L TEOAE 2800Hz Signal, L TEOAE 2800Hz Noise, L TEOAE 2800Hz SNR,L TEOAE 4000Hz Signal, L TEOAE 4000Hz Noise, L TEOAE 4000Hz SNR,R DPOAE 1000Hz Signal, R DPOAE 1000Hz Noise,R DPOAE 1000hz SNR,R DPOAE 1400Hz Signal, R DPOAE 1400Hz Noise, R DPOAE 1400Hz SNR,R DPOAE 2000Hz Signal, R DPOAE 2000Hz Noise, R DPOAE 2000Hz SNR,R DPOAE 2800Hz Signal, R DPOAE 2800Hz Noise, R DPOAE 2800Hz SNR,R DPOAE 4000Hz Signal, R DPOAE 4000Hz Noise, R DPOAE 4000Hz SNR,R DPOAE 6000Hz Signal, R DPOAE 6000Hz Noise, R DPOAE 6000Hz SNR,L DPOAE 1000Hz Signal, L DPOAE 1000Hz Noise,L DPOAE 1000hz SNR,L DPOAE 1400Hz Signal, L DPOAE 1400Hz Noise, L DPOAE 1400Hz SNR,L DPOAE 2000Hz Signal, L DPOAE 2000Hz Noise, L DPOAE 2000Hz SNR,L DPOAE 2800Hz Signal, L DPOAE 2800Hz Noise, L DPOAE 2800Hz SNR,L DPOAE 4000Hz Signal, L DPOAE 4000Hz Noise, L DPOAE 4000Hz SNR,L DPOAE 6000Hz Signal, L DPOAE 6000Hz Noise, L DPOAE 6000Hz SNR";
+var fields="R_TEOAE_1000Hz_Signal,_R_TEOAE_1000Hz_Noise,R_TEOAE_1000hz_SNR,R_TEOAE_1400Hz_Signal,_R_TEOAE_1400Hz_Noise,_R_TEOAE_1400Hz_SNR,R_TEOAE_2000Hz_Signal,_R_TEOAE_2000Hz_Noise,_R_TEOAE_2000Hz_SNR,R_TEOAE_2800Hz_Signal,_R_TEOAE_2800Hz_Noise,_R_TEOAE_2800Hz_SNR,R_TEOAE_4000Hz_Signal,_R_TEOAE_4000Hz_Noise,_R_TEOAE_4000Hz_SNR,L_TEOAE_1000Hz_Signal,_L_TEOAE_1000Hz_Noise,L_TEOAE_1000hz_SNR,L_TEOAE_1400Hz_Signal,_L_TEOAE_1400Hz_Noise,_L_TEOAE_1400Hz_SNR,L_TEOAE_2000Hz_Signal,_L_TEOAE_2000Hz_Noise,_L_TEOAE_2000Hz_SNR,L_TEOAE_2800Hz_Signal,_L_TEOAE_2800Hz_Noise,_L_TEOAE_2800Hz_SNR,L_TEOAE_4000Hz_Signal,_L_TEOAE_4000Hz_Noise,_L_TEOAE_4000Hz_SNR,R_DPOAE_1000Hz_Signal,_R_DPOAE_1000Hz_Noise,R_DPOAE_1000hz_SNR,R_DPOAE_1400Hz_Signal,_R_DPOAE_1400Hz_Noise,_R_DPOAE_1400Hz_SNR,R_DPOAE_2000Hz_Signal,_R_DPOAE_2000Hz_Noise,_R_DPOAE_2000Hz_SNR,R_DPOAE_2800Hz_Signal,_R_DPOAE_2800Hz_Noise,_R_DPOAE_2800Hz_SNR,R_DPOAE_4000Hz_Signal,_R_DPOAE_4000Hz_Noise,_R_DPOAE_4000Hz_SNR,R_DPOAE_6000Hz_Signal,_R_DPOAE_6000Hz_Noise,_R_DPOAE_6000Hz_SNR,L_DPOAE_1000Hz_Signal,_L_DPOAE_1000Hz_Noise,L_DPOAE_1000hz_SNR,L_DPOAE_1400Hz_Signal,_L_DPOAE_1400Hz_Noise,_L_DPOAE_1400Hz_SNR,L_DPOAE_2000Hz_Signal,_L_DPOAE_2000Hz_Noise,_L_DPOAE_2000Hz_SNR,L_DPOAE_2800Hz_Signal,_L_DPOAE_2800Hz_Noise,_L_DPOAE_2800Hz_SNR,L_DPOAE_4000Hz_Signal,_L_DPOAE_4000Hz_Noise,_L_DPOAE_4000Hz_SNR,L_DPOAE_6000Hz_Signal,_L_DPOAE_6000Hz_Noise,_L_DPOAE_6000Hz_SNR";
             var fs=fields.split(',');
             var txt="";
             for(var i=0;i<fs.length;i++){
