@@ -1,0 +1,124 @@
+
+<div id=D__ID>
+    <section id=form_container__ID>
+        <div id=header__ID>
+            Form
+        </div>
+        <form id=F__ID>
+            <div class="container">
+                <!-- participant part for all task forms -------------------->
+                <div class="row row__ID" id=row_participant__ID>
+                    <div class="col-sm-12 col-lg-9 input__ID">
+                        <span class=label__ID>Participant</span><br>
+                        <input type=text name="Participant" class=form-control id=Participant__ID data-id="Participant" required />
+                    </div>
+                    <div class="col-sm-12 col-lg-3 input__ID">
+                        <span class=label__ID>Participant ID</span><br>
+                        <input type=text name="Participant_uid" class=form-control readonly />
+                    </div>
+                    <hr style="border-top: 1px solid #888;width: 100%;margin:10px 0">
+                </div>
+                <!---------------------------------------------------->
+                
+                <!-- Form Inputs-------------------------------------->
+                <div class='row row__ID'>
+    				<div class="col">
+    					<span>Visit</span>
+                        <div class="form-control">
+                            <input type="text" name=Visit class=form-control required />
+                        </div>
+					</div>
+                </div>            
+                <!---------------------------------------------------->
+                <div class='row row__ID'>
+    				<div class="col">
+    					<span>BP Upload</span>
+                        <div class="form-control">
+                            <input type="file" name=BP  id=bp__ID />
+                        </div>
+					</div>
+                </div>            
+                <!---------------------------------------------------->
+                <!-- submit button part for all tsak forms------------>
+                <br>
+                <div class="row">
+                    <div class=col>
+                        <button id=submit__ID type="submit" class="btn btn-secondary">Submit</button>
+                    </div>
+                </div>
+                <!---------------------------------------------------->
+            </div>
+        </form>
+    </section>
+    VmInclude:__COMPONENT__/m/model.01.html
+    <script>
+        function F__ID(){
+            //-------------------------------------
+            /*
+            //build text input fields
+            var fields="Visit ";
+            fields+=",Sys_1,Dia_1,HR_1,Mean_1,cSys_1,cDia_1,cHR_1,cPP_1,cAP_1,cAIx_1,cAIx75_1,cMAP_1,Hour_1,Minute_1,Month_1,Day_1,Year_1";
+            fields+=",Sys_2,Dia_2,HR_2,Mean_2,cSys_2,cDia_2,cHR_2,cPP_2,cAP_2,cAIx_2,cAIx75_2,cMAP_2,Hour_2,Minute_2,Month_2,Day_2,Year_2";
+            var fs=fields.split(',');
+            var txt="";
+            for(var i=0;i<fs.length;i++){
+                txt+="<div class='row row__ID'><div class='col'>\r\n";
+                txt+="<span>"+fs[i].replace(/_/g," ") +"</span><input type=text class=form-control name=" + fs[i] +" >\r\n";
+                txt+="</div></div>\r\n";
+            }
+            $('#dynamic_part__ID').html(txt);
+            */
+            //-------------------------------------
+            VmInclude:__COMPONENT__/f/form.01.js
+            VmInclude:'__CURRENT_PATH__/task-form.js'
+            //-------------------------------------
+            var csv_records={};
+            $('#bp__ID').on('change',function(){
+                csv_records={};
+                var file = this.files[0];
+                file_process(file,function(){
+                })
+            })
+            //-------------------------------------
+            var file_process=function(file,callback){
+                var reader = new FileReader();
+                reader.onload = (function(e) {
+                    var contents = e.target.result;
+                    var lines=contents.replace(/"/g,'').replace(/\r/,'\n').replace(/\n\n/,'\n').split('\n');
+                    var hd="Awake Sys Mean".split(',');
+                    for(var i=3;i<100;i++){
+                        var line=lines[i];
+                        var cells=line.split(',');
+                        if(cells[0]=="") break;
+                        
+                        for(var j=2;j<19;j++){
+                            var index=cells[0];
+                            var id=hd[j]+"_"+index;
+                            var val=cells[j];
+                            csv_records[id]=val;
+                            console.log(id+"---"+val);
+                        }
+                    }
+                    callback();
+                });
+                reader.readAsText(file);
+            }
+            //-------------------------------------
+			var before_submit=m.before_submit
+            
+            m.before_submit=function(record,dbv){
+                for(p in csv_records){
+                    record[p]=csv_records[p];
+                }
+                return before_submit(record,dbv);
+			}
+			//-------------------------------------
+        }
+    </script>
+    <style>
+        #form_container__ID{
+            max-width:700px;
+        }
+        VmInclude:__COMPONENT__/f/form.01.css
+    </style>
+</div>

@@ -3,7 +3,7 @@
         <div id=toolbar__ID>
             <button id=query2__ID type=button class='btn btn-secondary' title='Query'>Query</button>
             <button id=export2__ID type=button class='btn btn-secondary' title='Export'>Export</button>
-            <span class=tab__ID></span>Data Safety Export 
+            <span class=tab__ID></span>DSMB Export 
             <span class=tab__ID></span>
         </div>
         <div id=table__ID>
@@ -32,6 +32,8 @@
                 sql += " join tb2 on tb2.PUID=UID";
                 sql += " join tb3 on tb3.PUID=UID";
                 sql += " join tb4 on tb4.PUID=UID";
+
+
                 /*
                 sql += ", screening_participant as (select registration_id=@('Registration_ID') from [TABLE-20009058])";
                 sql += ", participant as (select UID, Information from registration join screening_participant on UID=registration_id)";
@@ -63,7 +65,7 @@
         m.set_req(); m.request_data();
         m.export_records();
     })
-    m.fields = "Participant ID|UID,Randomisation_Number,DOB,Heart_Rate_Trial1,PVT_Lapses,PVT_MeanRT,Wake_After_Sleep_Onset_Minutes,Sleep_Latency_min,Sleep_Efficiency_percent";
+    m.fields = "Participant ID|UID,Randomisation_Number,DOB,PWV,Heart_Rate_Trial1,PVT,PVT_Lapses,PVT_MeanRT,PSG,Wake_After_Sleep_Onset_Minutes,Sleep_Latency_min,Sleep_Efficiency_percent";
     }
     
     </script>
