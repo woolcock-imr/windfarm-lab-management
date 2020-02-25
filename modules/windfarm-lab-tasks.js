@@ -60,7 +60,8 @@
         "v1-n1-sleepscoring":       {url: '$A/modules/..../'},
         "v1-n1-researchreport":     {url: "$A/modules/w/windfarm-lab-tasks/psgreport.html", Table:"91000831",form_module:"v1-n1-researchreport-form",},
         "v1-n1-researchreport-form":     {url: "$A/modules/w/windfarm-lab-tasks/psgreport-form.html", Table:"91000831"},
-        
+        "v1-n1-subjsleep":          {url: '$A/modules/w/windfarm-lab-tasks/postsleep-data.html',Table:"20200219",form_module:"v1-n1-subjsleep-form"},
+        "v1-n1-subjsleep-form":     {url: '$A/modules/w/windfarm-lab-tasks/postsleep-form.html',Table:"20200219"},
 
 
 
