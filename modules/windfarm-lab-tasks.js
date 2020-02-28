@@ -112,7 +112,7 @@
 
         "v1-n2-edf":                 {url: '$A/modules/..../'},
         "v1-n2-sleepscoring":        {url: '$A/modules/..../'},
-        "v1-n2-researchreport": { url: "$A/modules/w/windfarm-lab-tasks/psgreport.html", Table: "20008688", form_module: "v1-n2-researchreport-form", },
+        "v1-n2-researchreport":      { url: "$A/modules/w/windfarm-lab-tasks/psgreport.html", Table: "20008688", form_module: "v1-n2-researchreport-form", },
         "v1-n2-researchreport-form": { url: "$A/modules/w/windfarm-lab-tasks/psgreport-form.html", Table: "20008688" },
 
 
