@@ -58,8 +58,8 @@
 
         "v1-n1-edf":                {url:'$A/modules/..../'},
         "v1-n1-sleepscoring":       {url: '$A/modules/..../'},
-        "v1-n1-researchreport":     {url: "$A/modules/w/windfarm-lab-tasks/psgreport.html", Table:"91000831",form_module:"v1-n1-researchreport-form",},
-        "v1-n1-researchreport-form":     {url: "$A/modules/w/windfarm-lab-tasks/psgreport-form.html", Table:"91000831"},
+        "v1-n1-researchreport":     {url: "$A/modules/w/windfarm-lab-tasks/psgreport.html", Table:"20008670",form_module:"v1-n1-researchreport-form",},
+        "v1-n1-researchreport-form": { url: "$A/modules/w/windfarm-lab-tasks/psgreport-form.html", Table:"20008670"},
         "v1-n1-subjsleep":          {url: '$A/modules/w/windfarm-lab-tasks/postsleep-data.html',Table:"20200219",form_module:"v1-n1-subjsleep-form"},
         "v1-n1-subjsleep-form":     {url: '$A/modules/w/windfarm-lab-tasks/postsleep-form.html',Table:"20200219"},
 
@@ -112,8 +112,8 @@
 
         "v1-n2-edf":                 {url: '$A/modules/..../'},
         "v1-n2-sleepscoring":        {url: '$A/modules/..../'},
-        "v1-n2-rea-report":         {url: '$A/modules/..../'},
-        "v1-n2-researchreport":      {url: '$A/modules/..../'},
+        "v1-n2-researchreport": { url: "$A/modules/w/windfarm-lab-tasks/psgreport.html", Table: "20008688", form_module: "v1-n2-researchreport-form", },
+        "v1-n2-researchreport-form": { url: "$A/modules/w/windfarm-lab-tasks/psgreport-form.html", Table: "20008688" },
 
 
         "v1-d3-a-vas-data":         { url: "$A/modules/w/windfarm-lab-tasks/vas-data.html", Table: "20009211", form_module: "v1-d3-a-vas-form" },
@@ -183,8 +183,8 @@
 
         "v1-n3-edf":                { url: '$A/modules/..../' },
         "v1-n3-sleepscoring":       { url: '$A/modules/..../' },
-        "v1-n3-rea-report":         { url: "$A/modules/w/windfarm-lab-tasks/psgreport.html", Table:"201909061134"},
-        "v1-n3-researchreport":     { url: '$A/modules/..../' },
+        "v1-n3-researchreport":     { url: "$A/modules/w/windfarm-lab-tasks/psgreport.html", Table: "20008707", form_module: "v1-n3-researchreport-form", },
+        "v1-n3-researchreport-form":{ url: "$A/modules/w/windfarm-lab-tasks/psgreport-form.html", Table: "20008707" },
       
       // Pulse Wave Analysis and co  
         "v1-pulsewaveanalysis": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-data.html', Table:"20009510",form_module:"v1-pwa-form"},
@@ -262,10 +262,10 @@
         "v2-d1-d-tol-data":        { url: "$A/modules/w/windfarm-lab-tasks/tol-data.html", Table: "20009227", form_module: "v2-d1-d-tol-form" },
         "v2-d1-d-tol-form":        { url: "$A/modules/w/windfarm-lab-tasks/tol-form.html", Table: "20009227" },
 
-        "v2-n1-edf": { url: '$A/modules...',Table:"--------"},
-        "v2-n1-sleepscoring": { url: '$A/modules/..../' },
-        "v2-n1-rea-report": { url: '$A/modules/..../' },
-        "v2-n1-researchreport": { url: '$A/modules/..../' },
+        "v2-n1-edf":                 { url: '$A/modules...',Table:"--------"},
+        "v2-n1-sleepscoring":        { url: '$A/modules/..../' },
+        "v2-n1-researchreport":      { url: "$A/modules/w/windfarm-lab-tasks/psgreport.html", Table: "20008733", form_module: "v2-n1-researchreport-form", },
+        "v2-n1-researchreport-form": { url: "$A/modules/w/windfarm-lab-tasks/psgreport-form.html", Table: "20008733" },
 
 
         "v2-d2-a-vas-data": { url: "$A/modules/w/windfarm-lab-tasks/vas-data.html", Table: "20009229", form_module: "v2-d2-a-vas-form" },
@@ -315,8 +315,8 @@
 
         "v2-n2-edf": { url: '$A/modules/..../' },
         "v2-n2-sleepscoring": { url: '$A/modules/..../' },
-        "v2-n2-rea-report": { url: '$A/modules/..../' },
-        "v2-n2-researchreport": { url: '$A/modules/..../' },
+        "v2-n2-researchreport": { url: "$A/modules/w/windfarm-lab-tasks/psgreport.html", Table: "20008751", form_module: "v2-n2-researchreport-form", },
+        "v2-n2-researchreport-form": { url: "$A/modules/w/windfarm-lab-tasks/psgreport-form.html", Table: "20008751" },
 
 
         "v2-d3-a-vas-data": { url: "$A/modules/w/windfarm-lab-tasks/vas-data.html", Table: "20009236", form_module: "v2-d3-a-vas-form" },
@@ -366,8 +366,8 @@
 
         "v2-n3-edf": { url: '$A/modules/..../' },
         "v2-n3-sleepscoring": { url: '$A/modules/..../' },
-        "v2-n3-rea-report": { url: '$A/modules/..../' },
-        "v2-n3-researchreport": { url: '$A/modules/..../' },
+        "v2-n3-researchreport": { url: "$A/modules/w/windfarm-lab-tasks/psgreport.html", Table: "20008770", form_module: "v2-n3-researchreport-form", },
+        "v2-n3-researchreport-form": { url: "$A/modules/w/windfarm-lab-tasks/psgreport-form.html", Table: "20008770" },
 
       
         "v2-d4-a-vas-data": { url: "$A/modules/w/windfarm-lab-tasks/vas-data.html", Table: "20009275", form_module: "v2-d4-a-vas-form" },
@@ -467,8 +467,8 @@
 
         "v3-n1-edf": { url: '$A/modules/..../' },
         "v3-n1-sleepscoring": { url: '$A/modules/..../' },
-        "v3-n1-rea-report": { url: '$A/modules/..../' },
-        "v3-n1-researchreport": { url: '$A/modules/..../' },
+        "v3-n1-researchreport": { url: "$A/modules/w/windfarm-lab-tasks/psgreport.html", Table: "20008796", form_module: "v3-n1-researchreport-form", },
+        "v3-n1-researchreport-form": { url: "$A/modules/w/windfarm-lab-tasks/psgreport-form.html", Table: "20008796" },
 
 
 
@@ -519,8 +519,8 @@
 
         "v3-n2-edf": { url: '$A/modules/..../' },
         "v3-n2-sleepscoring": { url: '$A/modules/..../' },
-        "v3-n2-rea-report": { url: '$A/modules/..../' },
-        "v3-n2-researchreport": { url: '$A/modules/..../' },
+        "v3-n2-researchreport": { url: "$A/modules/w/windfarm-lab-tasks/psgreport.html", Table: "20008814", form_module: "v3-n2-researchreport-form", },
+        "v3-n2-researchreport-form": { url: "$A/modules/w/windfarm-lab-tasks/psgreport-form.html", Table: "20008814" },
 
 
 
@@ -572,8 +572,8 @@
 
         "v3-n3-edf": { url: '$A/modules/..../' },
         "v3-n3-sleepscoring": { url: '$A/modules/..../' },
-        "v3-n3-rea-report": { url: '$A/modules/..../' },
-        "v3-n3-researchreport": { url: '$A/modules/..../' },
+        "v3-n3-researchreport": { url: "$A/modules/w/windfarm-lab-tasks/psgreport.html", Table: "20008833", form_module: "v3-n3-researchreport-form", },
+        "v3-n3-researchreport-form": { url: "$A/modules/w/windfarm-lab-tasks/psgreport-form.html", Table: "20008833" },
 
         "v3-d4-a-vas-data": { url: "$A/modules/w/windfarm-lab-tasks/vas-data.html", Table: "20009276", form_module: "v3-d4-a-vas-form" },
         "v3-d4-a-vas-form": { url: "$A/modules/w/windfarm-lab-tasks/vas-form.html", Table: "20009276" },
