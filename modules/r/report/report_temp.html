@@ -28,10 +28,12 @@
             sql += ",tb2 as( select PUID, PVT_Lapses=@('PVT_Lapses') from [TABLE-20009521]) ";
             sql += ",tb3 as( select PUID, PVT_MeanRT=@('PVT_MeanRT') from [TABLE-20009214]) ";
             sql += ",tb4 as( select PUID, Study_Date=@('Study_Date'),Time_in_Bed_min=@('Time_in_Bed_min'),Total_Sleep_Time_min=@('Total_Sleep_Time_min'),Wake_After_Sleep_Onset_Minutes=@('Wake_After_Sleep_Onset_Minutes'),Sleep_Efficiency_Percent=@('Sleep_Efficiency_Percent'),Sleep_Latency_min=@('Sleep_Latency_min'),REM_Latency_min=@('REM_Latency_min'),NREM_min=@('NREM_min'),REM_min=@('REM_min'),Total_rdi=@('Total_rdi'),Total_ahi=@('Total_ahi'),min_oxygen_sat=@('min_oxygen_sat'),Total_Arousals_Index_TST=@('Total_Arousals_Index_TST'),rdi_nrem=@('rdi_nrem'),rdi_rem=@('rdi_rem'),rera_index=@('rera_index'),lm_arousal_index=@('lm_arousal_index') from [TABLE-91000831])";
-            sql += " select UID,Randomisation_Number,DOB,Study_Date,Heart_Rate_Trial1,PVT_Lapses,PVT_MeanRT,Time_in_Bed_min,Total_Sleep_Time_min,Wake_After_Sleep_Onset_Minutes,Sleep_Latency_min,Sleep_Efficiency_Percent,REM_Latency_min,NREM_min,REM_min,Total_rdi,rdi_nrem,rdi_rem,Total_ahi,min_oxygen_sat,Total_Arousals_Index_TST,rera_index,lm_arousal_index from participant join tb1 on tb1.PUID=UID";
+            sql += ",tb5 as( select PUID,HEADACHES=@('HEADACHES'),RINGING=@('RINGING'),ITCH=@('ITCH'),BLUR=@('BLUR'),DIZZY=@('DIZZY'),HEART=@('HEART'),VERTIGO=@('VERTIGO'),NAUSEA=@('NAUSEA'),TIREDNESS=@('TIREDNESS'),FAINT=@('FAINT'),SLEEPINESS=@('SLEEPINESS'),CONCENTRATING=@('CONCENTRATING'),MEMORY=@('MEMORY'),FATIGUE=@('FATIGUE'),IRRITABILITY=@('IRRITABILITY'),MUSCLE=@('MUSCLE'),DISRUPTEDSLEEP=@('DISRUPTEDSLEEP'),AWAKEN=@('AWAKEN'),ANXIETY=@('ANXIETY') from [TABLE-20009518])";
+            sql += " select UID,Randomisation_Number,DOB,Study_Date,Heart_Rate_Trial1,PVT_Lapses,PVT_MeanRT,Time_in_Bed_min,Total_Sleep_Time_min,Wake_After_Sleep_Onset_Minutes,Sleep_Latency_min,Sleep_Efficiency_Percent,REM_Latency_min,NREM_min,REM_min,Total_rdi,rdi_nrem,rdi_rem,Total_ahi,min_oxygen_sat,Total_Arousals_Index_TST,rera_index,lm_arousal_index,HEADACHES,RINGING,ITCH,BLUR,DIZZY,HEART,VERTIGO,NAUSEA,TIREDNESS,FAINT,SLEEPINESS,CONCENTRATING,MEMORY,FATIGUE,IRRITABILITY,MUSCLE,DISRUPTEDSLEEP,AWAKEN,ANXIETY from participant join tb1 on tb1.PUID=UID";
             sql += " join tb2 on tb2.PUID=UID";
             sql += " join tb3 on tb3.PUID=UID";
             sql += " join tb4 on tb4.PUID=UID";
+            sql += " join tb5 on tb5.PUID=UID";
            
 
 
@@ -68,7 +70,7 @@
         m.set_req(); m.request_data();
         m.export_records();
         })
-        m.fields = "Participant ID|UID,Randomisation_Number,DOB,Study_Date,Time_in_Bed_min,Total_Sleep_Time_min,Wake_After_Sleep_Onset_Minutes,Sleep_Efficiency_Percent,Sleep_Latency_min,REM_Latency_min,NREM_min,REM_min,Total_rdi,Total_ahi,min_oxygen_sat,Total_Arousals_Index_TST,rdi_nrem,rdi_rem,rera_index,lm_arousal_index,,,";
+        m.fields = "Participant ID|UID,Randomisation_Number,DOB,Study_Date,Time_in_Bed_min,Total_Sleep_Time_min,Wake_After_Sleep_Onset_Minutes,Sleep_Efficiency_Percent,Sleep_Latency_min,REM_Latency_min,NREM_min,REM_min,Total_rdi,Total_ahi,min_oxygen_sat,Total_Arousals_Index_TST,rdi_nrem,rdi_rem,rera_index,lm_arousal_index,HEADACHES,RINGING,ITCH,BLUR,DIZZY,HEART,VERTIGO,NAUSEA,TIREDNESS,FAINT,SLEEPINESS,CONCENTRATING,MEMORY,FATIGUE,IRRITABILITY,MUSCLE,DISRUPTEDSLEEP,AWAKEN,ANXIETY,";
         }
     
         </script>
