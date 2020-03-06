@@ -34,7 +34,7 @@
     				<div class="col">
     					<span>BP Upload</span>
                         <div class="form-control">
-                            <input type="file" name=BP  id=bp__ID />
+                            <input type="file" name=BP2  id=bp2__ID />
                         </div>
 					</div>
                 </div>            
@@ -73,7 +73,7 @@
             VmInclude:'__CURRENT_PATH__/task-form.js'
             //-------------------------------------
             var csv_records={};
-            $('#bp__ID').on('change',function(){
+            $('#bp2__ID').on('change',function(){
                 csv_records={};
                 var file = this.files[0];
                 file_process(file,function(){
@@ -85,8 +85,8 @@
                 reader.onload = (function(e) {
                     var contents = e.target.result;
                     var lines=contents.replace(/"/g,'').replace(/\r/,'\n').replace(/\n\n/,'\n').split('\n');
-                    var hd="Awake Sys Mean".split(',');
-                    for(var i=3;i<100;i++){
+                    var hd="Awake_sys_mean,Awake_dia_mean,Asleep_sys_mean,Asleep_dia_mean,Total_sys_mean,Total_dia_mean,Total_HR_mean".split(',');
+                    for(var i=152;i<250;i++){
                         var line=lines[i];
                         var cells=line.split(',');
                         if(cells[0]=="") break;
