@@ -598,10 +598,10 @@
         //Visit 3 Pulse Wave and Endothelial Function Test   
         "v3-pulsewaveanalysis": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-data.html', Table: "20009512", form_module: "v3-pwa-form" },
         "v3-pwa-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-form.html', Table: "20009512" },
-       "v3-pulsewaveanalysis-1": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis1-data.html', Table: "---------", form_module: "v3-pwa1-form" },
-       "v3-pwa1-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis1-form.html', Table: "---------" },
+        "v3-pulsewaveanalysis-1": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis1-data.html', Table: "---------", form_module: "v3-pwa1-form" },
+        "v3-pwa1-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis1-form.html', Table: "---------" },
         "v3-pulsewaveanalysis-2": { url: '$2/modules/w/windfarm-lab-tasks/pulsewaveanalysis-data.html', Table:"91000829",form_module: "v3-pwa2-form" },
-       "v3-pwa2-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-form.html', Table:"91000829" },
+        "v3-pwa2-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-form.html', Table:"91000829" },
         "v3-pulsewavevelocity": { url: '$A/modules/w/windfarm-lab-tasks/pulsewavevelocity-data.html', Table: "20009515", form_module: "v3-pwv-form" },
         "v3-pwv-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewavevelocity-form.html', Table: "20009515" },
         "v3-endopat": { url: '$A/modules/w/windfarm-lab-tasks/endothelialft-data.html', Table: "20008847", form_module: "v3-endopat-form" },
