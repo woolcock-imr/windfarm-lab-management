@@ -1,0 +1,68 @@
+<div id=D__ID>
+    <div style='padding:30px'>
+        Table ID:<br>
+        <input type=text id=table_id__ID /><br>
+        Fields:<br>
+        <textarea id=fields__ID style='width:800px;height:100px' ></textarea><br>
+        CSV File:<br>
+        <input type=file id=file__ID /><br>
+        <span id=info__ID ></span><br>
+        <button type=button id=upload__ID>Upload</button><br>
+    </div>
+    <script>
+        function F__ID(){
+            //-------------------------------------------
+            var reader_onload = function(e){
+                var contents = e.target.result;
+                var lines=contents.replace(/\r/g,'\n').replace(/\n\n/g,'\n').split('\n');
+                var NN=lines.length;
+                if(lines.length>1){
+                    var tab='\t';
+                    var n1=lines[0].split('\t').length;
+                    var n2=lines[0].split(',').length;
+                    if(n2>n1) tab=',';
+                    var data_cols=lines[0].replace(/ /g,'_').splitCSV(tab);
+                    var data_flds=$('#fields__ID').val().splitCSV(',');
+                    var fields=[];
+                    for(var i=0;i<data_flds.length;i++){
+                        var a=data_flds[i];
+console.log(a)                        
+console.log(data_cols.includes(a))                        
+                        if(data_cols.includes(a)==true){
+                            fields.push(a);
+                        }
+                    }
+                    //var data=[];
+console.log(fields)                    
+                }
+            };
+            var handleFileSelect=function(evt){
+                if($('#table_id__ID').val()==""){
+                    alert("No table ID");
+                    $('#file__ID').val('');
+                    return;
+                }
+                if($('#fields__ID').val()==""){
+                    alert("No fields");
+                    $('#file__ID').val('');
+                    return;
+                }
+                var files = evt.target.files;
+                var reader = new FileReader();
+                reader.onload=reader_onload;
+                reader.readAsText(files[0]);
+            }
+            //-------------------------------------------
+            document.getElementById('file__ID').addEventListener('change', handleFileSelect,false);
+            //-------------------------------------------
+        }
+    </script>
+    <style>
+        #D__ID{
+    		background-color:#fff;
+    		height:100%;
+    		overflow: auto;
+    		animation: vm_module_fadein 1.0s;
+    	}
+    </style>
+</div>

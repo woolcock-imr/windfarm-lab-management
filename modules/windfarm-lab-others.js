@@ -24,6 +24,7 @@
         "permission-query-data":            {url:"$A/modules/p/permission/permission-query-data.html",Table:"91000618",form_module:"permission-query-form"},
         "permission-query-form":            {url:"$A/modules/p/permission/permission-query-form.html",Table:"91000618"},
 
+        "data-import":  		  	    	{url:"$A/modules/data-import/data-import.html"},
     }
     for(m in modules){$vm.module_list[m]=modules[m];}
 })();
