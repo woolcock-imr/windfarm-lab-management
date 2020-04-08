@@ -1,9 +1,9 @@
 <div id=D__ID>
     <div style='padding:30px'>
         Table ID:<br>
-        <input type=text id=table_id__ID /> (Old format)<br>
+        <input type=text id=table_id__ID /><br>
         Fields:<br>
-        <textarea id=fields__ID style='width:800px;height:100px' ></textarea><br>
+        <textarea id=fields__ID style='width:800px;height:100px' placeholder="PUID|participant-uid,DB-field|csv-column,..."></textarea><br>
         CSV File:<br>
         <input type=file id=file__ID  /><br>
         <textarea id=records__ID style='width:800px;height:200px;'></textarea><br>
@@ -13,8 +13,8 @@
     </div>
     <script>
         function F__ID(){
-            $('#fields__ID').val("PUID|ID_Number_0,Gender|Gender_0");
-            $('#table_id__ID').val("20008659");
+            //$('#fields__ID').val("PUID|ID_Number_0,Gender|Gender_0");
+            //$('#table_id__ID').val("20008659");
             //-------------------------------------------
             //var new_fields=[];
             var new_records=[];
