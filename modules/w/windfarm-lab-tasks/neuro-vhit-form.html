@@ -37,10 +37,10 @@
                 <div class="col">
                     <span>Video Head Impulse Test (Vhit) Upload </span>
                     <div class="form-control">
-                        <u style='cursor:pointer' id=link_vhit__ID></u>
+                        <u style='cursor:pointer' id=link_vhit_upload__ID></u>
                         <br>
                         <input type="file" name=vhit_upload style="margin-top:6px" /> &nbsp&nbsp&nbsp <button type="button"
-                            id=vhit__ID>Remove</button>
+                            id=vhit_upload__ID>Remove</button>
                     </div>
                 </div>
             </div>
@@ -64,7 +64,7 @@
         function F__ID(){
             //-------------------------------------
             //build text input fields
-            var fields="R_Vhit_Right_Lateral,R_Vhit_Right_Anterior,R_Vhit_Right_Posterior,L_Vhit_Left_Lateral,L_Vhit_Left_Anterior,L_Vhit_Left_Posterior";
+            var fields="R_Vhit_Right_Lateral,R_Vhit_Right_Anterior,R_Vhit_Right_Posterior,L_Vhit_Left_Lateral,L_Vhit_Left_Anterior,L_Vhit_Left_Posterior,vhit_upload";
             var fs=fields.split(',');
             var txt="";
             for(var i=0;i<fs.length;i++){

@@ -49,10 +49,10 @@
                 <div class="col">
                     <span>Tympanometry Upload </span>
                     <div class="form-control">
-                        <u style='cursor:pointer' id=link_tymp__ID></u>
+                        <u style='cursor:pointer' id=link_tymp_upload_ID></u>
                         <br>
                         <input type="file" name=tymp_upload style="margin-top:6px" /> &nbsp&nbsp&nbsp <button type="button"
-                            id=tymp__ID>Remove</button>
+                            id=tymp_upload__ID>Remove</button>
                     </div>
                 </div>
             </div>
@@ -76,7 +76,7 @@
         function F__ID(){
             //-------------------------------------
             //build text input fields
-            var fields="L_Otoscopy,L_Static_Compliance,L_Middle_Ear_Pressure,L_EarCanalVolume,R_Otoscopy,R_Static_Compliance,R_Middle_Ear_Pressure,R_EarCanalVolume";
+            var fields="L_Otoscopy,L_Static_Compliance,L_Middle_Ear_Pressure,L_EarCanalVolume,R_Otoscopy,R_Static_Compliance,R_Middle_Ear_Pressure,R_EarCanalVolume,tymp_upload";
             var fs=fields.split(',');
             var txt="";
             for(var i=0;i<fs.length;i++){
