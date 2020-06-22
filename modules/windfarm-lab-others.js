@@ -1,6 +1,6 @@
 (function(){
     var modules={
-        "panel-main-windfarm-lab":    	{url:"$A/modules/p/panel-windfarm-lab/panel-main.html",router:1},
+        "panel-main-windfarm-lab":    	{url:"$A/modules/p/panel-windfarm-lab/panel-main.html"},
         "panel-child-windfarm-lab":    	{url:"$A/modules/p/panel-windfarm-lab/panel-child.html"},
         "panel-reports-windfarm-lab":   {url:"$A/modules/p/panel-windfarm-lab/panel-reports.html"},
         "panel-neurotology-windfarm-lab": { url: "$A/modules/p/panel-windfarm-lab/panel-neurotology.html", Table:"1903221208"},
@@ -15,7 +15,7 @@
 
 
 
-        "panel-permission":   			    {url:"$A/modules/p/permission/permission-panel.html",router:1},
+        "panel-permission":   			    {url:"$A/modules/p/permission/permission-panel.html"},
         "permission-check":                 {url:"$A/modules/p/permission/permission-check.html"},
         "permission-role-login-data":       {url:"$A/modules/p/permission/permission-role-login-data.html",Table:"91000620",form_module:"permission-role-login-form"},
         "permission-role-login-form":       {url:"$A/modules/p/permission/permission-role-login-form.html",Table:"91000620"},
