@@ -3,7 +3,7 @@
         "panel-main-windfarm-lab":    	{url:"$A/modules/p/panel-windfarm-lab/panel-main.html",router:1},
         "panel-child-windfarm-lab":    	{url:"$A/modules/p/panel-windfarm-lab/panel-child.html"},
         "panel-reports-windfarm-lab":   {url:"$A/modules/p/panel-windfarm-lab/panel-reports.html"},
-        "panel-neurotology-windfarm-lab":{url:"$A/modules/p/panel-windfarm-lab/panel-neurotology.html",Table"20200622"},
+        "panel-neurotology-windfarm-lab": { url: "$A/modules/p/panel-windfarm-lab/panel-neurotology.html", Table"1903221208"},
         "participant-data-windfarm-lab":{url:"$A/modules/p/participant-data-windfarm-lab.html",Table:"20008848",form_module:"participant-form-windfarm-lab",router:1,child_panel:"panel-child-windfarm-lab",questionnaire_setup:"online-questionnaire-setup-windfarm-lab", online_questionnaire:"online-questionnaire-app-windfarm-lab"},
         "participant-form-windfarm-lab":{url:"$A/modules/p/participant-form-windfarm-lab.html",Table:"20008848"},
         //"todolist": { url: "$A/modules/t/todolist-data.html", Table:"91000782",form_module:"todolist-form"},
