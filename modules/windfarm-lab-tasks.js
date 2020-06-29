@@ -59,7 +59,9 @@
         "v1-n1-edf":                {url:'$A/modules/..../'},
         "v1-n1-sleepscoring":       {url: '$A/modules/..../'},
         "v1-n1-researchreport":     {url: "$A/modules/w/windfarm-lab-tasks/psgreport.html", Table:"20008670",form_module:"v1-n1-researchreport-form",},
-        "v1-n1-researchreport-form": { url: "$A/modules/w/windfarm-lab-tasks/psgreport-form.html", Table:"20008670"},
+        "v1-n1-researchreport-form": {url: "$A/modules/w/windfarm-lab-tasks/psgreport-form.html", Table:"20008670"},
+        "v1-n1-researchreport-grael": { url: "$A/modules/w/windfarm-lab-tasks/PSG-grael.html", Table: "91000873", form_module: "v1-n1-researchreport-form-grael", },
+        "v1-n1-researchreport-form-grael": { url: "$A/modules/w/windfarm-lab-tasks/psgreport-form.html", Table: "91000873" },
         "v1-n1-subjsleep":          {url: '$A/modules/w/windfarm-lab-tasks/postsleep-data.html',Table:"20200219",form_module:"v1-n1-subjsleep-form"},
         "v1-n1-subjsleep-form":     {url: '$A/modules/w/windfarm-lab-tasks/postsleep-form.html',Table:"20200219"},
 
@@ -115,7 +117,6 @@
         "v1-n2-researchreport":      { url: "$A/modules/w/windfarm-lab-tasks/psgreport.html", Table: "20008688", form_module: "v1-n2-researchreport-form", },
         "v1-n2-researchreport-form": { url: "$A/modules/w/windfarm-lab-tasks/psgreport-form.html", Table: "20008688" },
 
-
         "v1-d3-a-vas-data":         { url: "$A/modules/w/windfarm-lab-tasks/vas-data.html", Table: "20009211", form_module: "v1-d3-a-vas-form" },
         "v1-d3-a-vas-form":         { url: "$A/modules/w/windfarm-lab-tasks/vas-form.html", Table: "20009211" },
         "v1-d3-a-nas-data":         { url: "$A/modules/w/windfarm-lab-tasks/nas-data.html", Table: "20009383", form_module: "v1-d3-a-nas-form" },
@@ -124,8 +125,8 @@
         "v1-d3-a-n-back-form":      { url: "$A/modules/w/windfarm-lab-tasks/n-back-form.html", Table: "20008693" },
         "v1-d3-a-pvt-data":         { url: "$A/modules/w/windfarm-lab-tasks/pvt-data.html", Table: "20008695", form_module: "v1-d3-a-pvt-form" },
         "v1-d3-a-pvt-form":         { url: "$A/modules/w/windfarm-lab-tasks/pvt-form.html", Table: "20008695" },
-      "v1-d3-a-tol-data": { url: "$A/modules/w/windfarm-lab-tasks/tol-data.html", Table: "20008665", form_module: "v1-d3-a-tol-form" },
-      "v1-d3-a-tol-form": { url: "$A/modules/w/windfarm-lab-tasks/tol-form.html", Table: "20008665" },
+      "v1-d3-a-tol-data": { url: "$A/modules/w/windfarm-lab-tasks/tol-data.html", Table: "20008696", form_module: "v1-d3-a-tol-form" },
+      "v1-d3-a-tol-form": { url: "$A/modules/w/windfarm-lab-tasks/tol-form.html", Table: "20008696" },
 
         "v1-d3-b-vas-data":         { url: "$A/modules/w/windfarm-lab-tasks/vas-data.html", Table: "20009212", form_module: "v1-d3-b-vas-form" },
         "v1-d3-b-vas-form":         { url: "$A/modules/w/windfarm-lab-tasks/vas-form.html", Table: "20009212" },
@@ -185,7 +186,7 @@
         "v1-n3-sleepscoring":       { url: '$A/modules/..../' },
         "v1-n3-researchreport":     { url: "$A/modules/w/windfarm-lab-tasks/psgreport.html", Table: "20008707", form_module: "v1-n3-researchreport-form", },
         "v1-n3-researchreport-form":{ url: "$A/modules/w/windfarm-lab-tasks/psgreport-form.html", Table: "20008707" },
-      
+
       // Pulse Wave Analysis and co  
         "v1-pulsewaveanalysis": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-data.html', Table:"20009510",form_module:"v1-pwa-form"},
         "v1-pwa-form": { url: '$A/modules/w/windfarm-lab-tasks/pulsewaveanalysis-form.html', Table:"20009510"},
@@ -266,7 +267,8 @@
         "v2-n1-sleepscoring":        { url: '$A/modules/..../' },
         "v2-n1-researchreport":      { url: "$A/modules/w/windfarm-lab-tasks/psgreport.html", Table: "20008733", form_module: "v2-n1-researchreport-form", },
         "v2-n1-researchreport-form": { url: "$A/modules/w/windfarm-lab-tasks/psgreport-form.html", Table: "20008733" },
-
+        "v2-n1-researchreport-grael": { url: "$A/modules/w/windfarm-lab-tasks/PSG-grael.html", Table: "91000874",form_module: "v2-n1-researchreport-form-grael",},
+        "v2-n1-researchreport-form-grael": { url: "$A/modules/w/windfarm-lab-tasks/psgreport-form.html", Table: "91000874" },
 
         "v2-d2-a-vas-data": { url: "$A/modules/w/windfarm-lab-tasks/vas-data.html", Table: "20009229", form_module: "v2-d2-a-vas-form" },
         "v2-d2-a-vas-form": { url: "$A/modules/w/windfarm-lab-tasks/vas-form.html", Table: "20009229" },
@@ -305,8 +307,8 @@
         "v2-d2-d-vas-form": { url: "$A/modules/w/windfarm-lab-tasks/vas-form.html", Table: "20009233" },
         "v2-d2-d-nas-data": { url: "$A/modules/w/windfarm-lab-tasks/nas-data.html", Table: "20009374", form_module: "v2-d2-d-nas-form" },
         "v2-d2-d-nas-form": { url: "$A/modules/w/windfarm-lab-tasks/nas-form.html", Table: "20009374" },
-        "v2-d2-d-n-back-data": { url: "$A/modules/w/windfarm-lab-tasks/n-back-data.html", Table: "20009374", form_module: "v2-d2-d-n-back-form" },
-        "v2-d2-d-n-back-form": { url: "$A/modules/w/windfarm-lab-tasks/n-back-form.html", Table: "20009374" },
+      "v2-d2-d-n-back-data": { url: "$A/modules/w/windfarm-lab-tasks/n-back-data.html", Table: "20008744", form_module: "v2-d2-d-n-back-form" },
+      "v2-d2-d-n-back-form": { url: "$A/modules/w/windfarm-lab-tasks/n-back-form.html", Table: "20008744" },
         "v2-d2-d-pvt-data": { url: "$A/modules/w/windfarm-lab-tasks/pvt-data.html", Table: "20009234", form_module: "v2-d2-d-pvt-form" },
         "v2-d2-d-pvt-form": { url: "$A/modules/w/windfarm-lab-tasks/pvt-form.html", Table: "20009234" },
         "v2-d2-d-tol-data": { url: "$A/modules/w/windfarm-lab-tasks/tol-data.html", Table: "20009235", form_module: "v2-d2-d-tol-form" },
@@ -358,8 +360,8 @@
         "v2-d3-d-nas-form": { url: "$A/modules/w/windfarm-lab-tasks/nas-form.html", Table: "20009370" },
         "v2-d3-d-n-back-data": { url: "$A/modules/w/windfarm-lab-tasks/n-back-data.html", Table: "20008763", form_module: "v2-d3-d-n-back-form" },
         "v2-d3-d-n-back-form": { url: "$A/modules/w/windfarm-lab-tasks/n-back-form.html", Table: "20008763" },
-        "v2-d3-d-pvt-data": { url: "$A/modules/w/windfarm-lab-tasks/pvt-data.html", Table: "20008763", form_module: "v2-d3-d-pvt-form" },
-        "v2-d3-d-pvt-form": { url: "$A/modules/w/windfarm-lab-tasks/pvt-form.html", Table: "20008763" },
+      "v2-d3-d-pvt-data": { url: "$A/modules/w/windfarm-lab-tasks/pvt-data.html", Table: "20009243", form_module: "v2-d3-d-pvt-form" },
+      "v2-d3-d-pvt-form": { url: "$A/modules/w/windfarm-lab-tasks/pvt-form.html", Table: "20009243" },
         "v2-d3-d-tol-data": { url: "$A/modules/w/windfarm-lab-tasks/tol-data.html", Table: "20009244", form_module: "v2-d3-d-tol-form" },
         "v2-d3-d-tol-form": { url: "$A/modules/w/windfarm-lab-tasks/tol-form.html", Table: "20009244" },
 
@@ -469,6 +471,8 @@
         "v3-n1-sleepscoring": { url: '$A/modules/..../' },
         "v3-n1-researchreport": { url: "$A/modules/w/windfarm-lab-tasks/psgreport.html", Table: "20008796", form_module: "v3-n1-researchreport-form", },
         "v3-n1-researchreport-form": { url: "$A/modules/w/windfarm-lab-tasks/psgreport-form.html", Table: "20008796" },
+        "v3-n1-researchreport-grael": { url: "$A/modules/w/windfarm-lab-tasks/PSG-grael.html", Table: "91000875",form_module: "v3-n1-researchreport-form-grael",},
+        "v3-n1-researchreport-form-grael": { url: "$A/modules/w/windfarm-lab-tasks/psgreport-form.html", Table: "91000875" },
 
 
 
@@ -635,12 +639,12 @@
       "VAS_V1":	                {"url":"$A/modules/e/export_modules/VAS_V1.html", "name_for_search":"Visual Analogue Scale (VAS)_ Visit 1 "},
       "NAS_V1":	          		  {"url":"$A/modules/e/export_modules/NAS_V1.html", "name_for_search":"Noise Annoyance Scale (VAS)_ Visit 1 "},
       "NBACK_V1":	          		{"url":"$A/modules/e/export_modules/NBACK_V1.html", "name_for_search":"NBack_ Visit 1 "},
-      "TOL_V1":	          			{"url":"$A/modules/e/export_modules/TOL_V1.html", "name_for_search":"Tower of London_ Visit 1 "},
+      "TOL_V1":	          			{"url":"$A/modules/e/export_modules/TOL_V1.html", "name_for_search":"Tower of London_Visit 1"},
       "PVT_V1":	          			{"url":"$A/modules/e/export_modules/PVT_V1.html", "name_for_search":"Psychomotor Vigilance Task(PVT)_ Visit 1 "},
       "VAS_V2":	          			{"url":"$A/modules/e/export_modules/VAS_V2.html", "name_for_search":"Visual Analogue Scale (VAS)_ Visit 2"},
       "NAS_V2":	          			{"url":"$A/modules/e/export_modules/NAS_V2.html", "name_for_search":"Noise Annoyance Scale (VAS)_ Visit 2 "},
       "NBACK_V2":	          		{"url":"$A/modules/e/export_modules/NBACK_V2.html", "name_for_search":"NBack_ Visit 2 "},
-      "TOL_V2":	          		    {"url":"$A/modules/e/export_modules/TOL_V2.html", "name_for_search":"Tower of London_ Visit 2 "},
+    "TOL_V2":	          		    {"url":"$A/modules/e/export_modules/TOL_V2.html", "name_for_search":"Tower of London_ Visit 2 "},
       "PVT_V2":	          			{"url":"$A/modules/e/export_modules/PVT_V2.html", "name_for_search":"Psychomotor Vigilance Task(PVT)_ Visit 2 "},
       "VAS_V3":	          			{"url":"$A/modules/e/export_modules/VAS_V3.html", "name_for_search":"Visual Analogue Scale (VAS)_ Visit 3 "},
       "NAS_V3":	          			{"url":"$A/modules/e/export_modules/NAS_V3.html", "name_for_search":"Noise Annoyance Scale (VAS)_ Visit 3 "},

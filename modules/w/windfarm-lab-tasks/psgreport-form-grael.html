@@ -1,0 +1,370 @@
+<div id=D__ID>
+    <section id=form_container__ID>
+        <div id=header__ID>
+        </div>
+        <form id=F__ID>
+            <div class="container">
+                <!-- participant part for all tsak forms -------------------->
+                <div class="row row__ID" id=row_participant__ID>
+                    <div class="col-sm-12 col-lg-9 input__ID">
+                        <span class=label__ID>Participant</span><br>
+                        <input type=text name="Participant" class=form-control id=Participant__ID
+                            data-id="Participant" />
+                    </div>
+                    <div class="col-sm-12 col-lg-3 input__ID">
+                        <span class=label__ID>Participant ID</span><br>
+                        <input type=text name="Participant_uid" class=form-control readonly />
+                    </div>
+                    <hr style="border-top: 1px solid #888;width: 100%;margin:10px 0">
+                </div>
+                <!---------------------------------------------------->
+
+                <!-- Form Inputs-------------------------------------->
+                <input name=file_name type=file /><br><br>
+                <button id=submit__ID type="submit" class="btn btn-secondary">Submit</button>
+                <div id=dynamic_part__ID></div>
+                <!---------------------------------------------------->
+
+
+                <!-- submit button part for all tsak forms------------>
+                <br>
+                <div class="row">
+                    <div class=col>
+                        
+                    </div>
+                </div>
+                <!---------------------------------------------------->
+            </div>
+        </form>
+    </section>
+    VmInclude:__COMPONENT__/m/model.01.html
+    <script>
+        function F__ID() {
+            //-------------------------------------
+            var_fields = "PSG_File_Name,CMSPatientID,DateofBirth,Sex,Wt_kg,Ht_cm,BMI,Neckcircumference_cm,ESS,Study_Date,Study_Start_Time,Study_End_Time,Lights_Out_Time,Lights_On_Time,Sleep_Onset_Time,Sleep_Offset_Time,Time_in_Bed_min,Total_Sleep_Time(min)|Total_Sleep_Time_min,Wake_After_Sleep_Onset_min,Sleep_Efficiency_Percent,Sleep_Latency_min,REM_Latency_min,N2_Latency_min,N3_Latency_min,NREM_min,NREM_Percent,N1_min,N1_Percent,N2_min,N2_Percent,N3_min,N3_Percent,REM_min,REM_Percent,NREM_min_Supine,NREM_Percent_Supine,N1_min_Supine,N1_Percent_Supine,N2_min_Supine,N2_Percent_Supine,N3_min_Supine,N3_Percent_Supine,REM_min_Supine,REM_Percent_Supine,NREM_min_Nonsupine,NREM_Percent_Nonsupine,N1_min_Nonsupine,N1_Percent_Nonsupine,N2_min_Nonsupine,N2_Percent_Nonsupine,N3_min_Nonsupine,N3_Percent_Nonsupine,REM_min_Nonsupine,REM_Percent_Nonsupine,Awakenings_TST,Awakenings_REM,Awakening_NREM,Arousal_Index_TST,Arousal_Index_REM,Arousal_Index_NREM,Arousal_Index_N1,Arousal_Index_N2,Arousal_Index_N3,Arousal_Count_TST,Arousal_Count_REM,Arousal_Count_NREM,Arousal_Count_N1,Arousal_Count_N2,Arousal_Count_N3,Spon_Arousals_Index_TST,Spon_Arousals_Index_REM,Spon_Arousals_Index_NREM,Spon_Arousal_Count_TST,Spon_Arousal_Count_REM,Spon_Arousal_Count_NREM,Resp_Arousals_Index_TST,Resp_Arousals_Index_REM,Resp_Arousals_Index_NREM,Resp_Arousal_Count_TST,Resp_Arousal_Count_REM,Resp_Arousal_Count_NREM,Limb_Arousals_Index_TST,Limb_Arousals_Index_REM,Limb_Arousals_Index_NREM,Limb_Arousal_Count_TST,Limb_Arousal_Count_REM,Limb_Arousal_Count_NREM,Periodic_Limb_Arousals_Index_TST,Periodic_Limb_Arousals_Index_REM,Periodic_Limb_Arousals_Index_NREM,Periodic_Limb_Arousal_Count_TST,Periodic_Limb_Arousal_Count_REM,Periodic_Limb_Arousal_Count_NREM,Central_Apnea_Count_TST,Central_Apnea_Index_TST,Obstructive_Apnea_Count_TST,Obstructive_Apnea_Index_TST,Hypopnea_Count_TST,Hypopnea_Index_TST,RERA_Count_TST,RERA_Index_TST,Apnea_Hypopnea_Index_TST,Respiratory_Disturbance_Index_TST,Central_Apnea_Count_REM,Central_Apnea_Index_REM,Obstructive_Apnea_Count_REM,Obstructive_Apnea_Index_REM,Hypopnea_Count_REM,Hypopnea_Index_REM,RERA_Count_REM,RERA_Index_REM,Apnea_Hypopnea_Index_REM,Respiratory_Disturbance_Index_REM,Central_Apnea_Count_NREM,Central_Apnea_Index_NREM,Obstructive_Apnea_Count_NREM,Obstructive_Apnea_Index_NREM,Hypopnea_Count_NREM,Hypopnea_Index_NREM,RERA_Count_NREM,RERA_Index_NREM,Apnea_Hypopnea_Index_NREM,Respiratory_Disturbance_Index_NREM,Central_Apnea_Count_TST_Supine,Central_Apnea_Index_TST_Supine,Obstructive_Apnea_Count_TST_Supine,Obstructive_Apnea_Index_TST_Supine,Hypopnea_Count_TST_Supine,Hypopnea_Index_TST_Supine,RERA_Count_TST_Supine,RERA_Index_TST_Supine,Apnea_Hypopnea_Index_TST_Supine,Respiratory_Disturbance_Index_TST_Supine,Central_Apnea_Count_REM_Supine,Central_Apnea_Index_REM_Supine,Obstructive_Apnea_Count_REM_Supine,Obstructive_Apnea_Index_REM_Supine,Hypopnea_Count_REM_Supine,Hypopnea_Index_REM_Supine,RERA_Count_REM_Supine,RERA_Index_REM_Supine,Apnea_Hypopnea_Index_REM_Supine,Respiratory_Disturbance_Index_REM_Supine,Central_Apnea_Count_NREM_Supine,Central_Apnea_Index_NREM_Supine,Obstructive_Apnea_Count_NREM_Supine,Obstructive_Apnea_Index_NREM_Supine,Hypopnea_Count_NREM_Supine,Hypopnea_Index_NREM_Supine,RERA_Count_NREM_Supine,RERA_Index_NREM_Supine,Apnea_Hypopnea_Index_NREM_Supine,Respiratory_Disturbance_Index_NREM_Supine,Central_Apnea_Count_TST_NonSupine,Central_Apnea_Index_TST_NonSupine,Obstructive_Apnea_Count_TST_NonSupine,Obstructive_Apnea_Index_TST_NonSupine,Hypopnea_Count_TST_NonSupine,Hypopnea_Index_TST_NonSupine,RERA_Count_TST_NonSupine,RERA_Index_TST_NonSupine,Apnea_Hypopnea_Index_TST_NonSupine,Respiratory_Disturbance_Index_TST_NonSupine,Central_Apnea_Count_REM_NonSupine,Central_Apnea_Index_REM_NonSupine,Obstructive_Apnea_Count_REM_NonSupine,Obstructive_Apnea_Index_REM_NonSupine,Hypopnea_Count_REM_NonSupine,Hypopnea_Index_REM_NonSupine,RERA_Count_REM_NonSupine,RERA_Index_REM_NonSupine,Apnea_Hypopnea_Index_REM_NonSupine,Respiratory_Disturbance_Index_REM_NonSupine,Central_Apnea_Count_NREM_NonSupine,Central_Apnea_Index_NREM_NonSupine,Obstructive_Apnea_Count_NREM_NonSupine,Obstructive_Apnea_Index_NREM_NonSupine,Hypopnea_Count_NREM_NonSupine,Hypopnea_Index_NREM_NonSupine,RERA_Count_NREM_NonSupine,RERA_Index_NREM_NonSupine,Apnea_Hypopnea_Index_NREM_NonSupine,Respiratory_Disturbance_Index_NREM_NonSupine,SpO2_lessthan_70percent_min_TIB,SpO2_Percentage_In_Range_70_to_79_min_TIB,SpO2_lessthan_80percent_min_TIB,SpO2_Percentage_In_Range_80_to_89_min_TIB,SpO2_lessthan_90percent_min_TIB,SpO2_Percentage_In_Range_90_to_100_min_TIB,MeanSpO2_percent_TIB,MeanSpO2_percent_TST,MeanSpO2_percent_Wake,MeanSpO2_percent_REM,MeanSpO2_percent_NREM,MinSpO2_percent_TIB,MinSpO2_percent_TST,MinSpO2_percent_Wake,MinSpO2_percent_REM,MinSpO2_percent_NREM,O2_Desat3percent_index_TIB,O2_Desat3percent_Index_TST,O2_Desat3percent_Index_REM,O2_Desat3percent_Index_NREM,O2_Desat3percent_Count_TIB,O2_Desat3percent_Count_TST,O2_Desat3percent_Count_REM,O2_Desat3percent_Count_NREM,O2_Desat4percent_index_TIB,O2_Desat4percent_Index_TST,O2_Desat4percent_Index_REM,O2_Desat4percent_Index_NREM,O2_Desat4percent_Count_TIB,O2_Desat4percent_Count_TST,O2_Desat4percent_Count_REM,O2_Desat4percent_Count_NREM,Limb_Movement_Count_TST,Limb_Movement_Index_TST,PLM_Count_TST,PLM_Index_TST,PLM_Index_TST";
+            $('#header__ID').text("Form Name");
+            //-------------------------------------
+            var fs = fields.split(',');
+            var txt = "";
+            for (var i = 0; i < fs.length; i++) {
+                txt += "<div class='row row__ID'><div class='col'>\r\n";
+                txt += "<span>" + fs[i] + "</span><input type=text class=form-control name=" + fs[i] + ">\r\n";
+                txt += "</div></div>\r\n";
+            }
+            $('#dynamic_part__ID').html(txt);
+            //-------------------------------------
+            VmInclude:__COMPONENT__/f/form.01.js
+            VmInclude:__CURRENT_PATH__/task-form.js
+            //-------------------------------------
+            
+            $('#F__ID').find('input[type=file]').on('change', function (evt) {
+                var file = this.files[0];
+                $('#F__ID').find("input[name='PSG_File_Name']").val(file.name);
+                read_file(file);
+            });
+
+
+            var read_file=function(file){
+                var reader = new FileReader();
+                reader.onload = (function(e) {
+                    var contents = e.target.result;
+                    var lines=contents.replace(/"/g,'').replace(/\r/,'\n').replace(/\n\n/,'\n').split('\n');
+                    for(i=0;i<lines.length;i++){
+                        var items=lines[i].split(/=/);
+                        if(items.length==2){
+                            var left=items[0].trim().replace(/ /g,'');
+                            var right=items[1].trim().replace(/ /g,'');
+console.log(left)
+console.log(right)
+            switch(left) {
+                case 'PSGFileName': $('#F__ID').find(input[name = 'PSGFileName'],).val(right); break;
+                case 'CMSPatientID': $('#F__ID').find(input[name = 'CMSPatientID'],).val(right); break;
+                case 'DateofBirth': $('#F__ID').find(input[name = 'DateofBirth'],).val(right); break;
+                case 'Sex': $('#F__ID').find(input[name = 'Sex'],).val(right); break;
+                case 'Wtkg': $('#F__ID').find(input[name = 'Wtkg'],).val(right); break;
+                case 'Htcm': $('#F__ID').find(input[name = 'Htcm'],).val(right); break;
+                case 'BMI': $('#F__ID').find(input[name = 'BMI'],).val(right); break;
+                case 'Neckcircumferencecm': $('#F__ID').find(input[name = 'Neckcircumferencecm'],).val(right); break;
+                case 'ESS': $('#F__ID').find(input[name = 'ESS'],).val(right); break;
+                case 'StudyDate': $('#F__ID').find(input[name = 'StudyDate'],).val(right); break;
+                case 'StudyStartTime': $('#F__ID').find(input[name = 'StudyStartTime'],).val(right); break;
+                case 'StudyEndTime': $('#F__ID').find(input[name = 'StudyEndTime'],).val(right); break;
+                case 'LightsOutTime': $('#F__ID').find(input[name = 'LightsOutTime'],).val(right); break;
+                case 'LightsOnTime': $('#F__ID').find(input[name = 'LightsOnTime'],).val(right); break;
+                case 'SleepOnsetTime': $('#F__ID').find(input[name = 'SleepOnsetTime'],).val(right); break;
+                case 'SleepOffsetTime': $('#F__ID').find(input[name = 'SleepOffsetTime'],).val(right); break;
+                case 'TimeinBedmin': $('#F__ID').find(input[name = 'TimeinBedmin'],).val(right); break;
+                case 'TotalSleepTime(min)|TotalSleepTimemin': $('#F__ID').find(input[name = 'TotalSleepTime(min)|TotalSleepTimemin'],).val(right); break;
+                case 'WakeAfterSleepOnsetmin': $('#F__ID').find(input[name = 'WakeAfterSleepOnsetmin'],).val(right); break;
+                case 'SleepEfficiencyPercent': $('#F__ID').find(input[name = 'SleepEfficiencyPercent'],).val(right); break;
+                case 'SleepLatencymin': $('#F__ID').find(input[name = 'SleepLatencymin'],).val(right); break;
+                case 'REMLatencymin': $('#F__ID').find(input[name = 'REMLatencymin'],).val(right); break;
+                case 'N2Latencymin': $('#F__ID').find(input[name = 'N2Latencymin'],).val(right); break;
+                case 'N3Latencymin': $('#F__ID').find(input[name = 'N3Latencymin'],).val(right); break;
+                case 'NREMmin': $('#F__ID').find(input[name = 'NREMmin'],).val(right); break;
+                case 'NREMPercent': $('#F__ID').find(input[name = 'NREMPercent'],).val(right); break;
+                case 'N1min': $('#F__ID').find(input[name = 'N1min'],).val(right); break;
+                case 'N1Percent': $('#F__ID').find(input[name = 'N1Percent'],).val(right); break;
+                case 'N2min': $('#F__ID').find(input[name = 'N2min'],).val(right); break;
+                case 'N2Percent': $('#F__ID').find(input[name = 'N2Percent'],).val(right); break;
+                case 'N3min': $('#F__ID').find(input[name = 'N3min'],).val(right); break;
+                case 'N3Percent': $('#F__ID').find(input[name = 'N3Percent'],).val(right); break;
+                case 'REMmin': $('#F__ID').find(input[name = 'REMmin'],).val(right); break;
+                case 'REMPercent': $('#F__ID').find(input[name = 'REMPercent'],).val(right); break;
+                case 'NREMminSupine': $('#F__ID').find(input[name = 'NREMminSupine'],).val(right); break;
+                case 'NREMPercentSupine': $('#F__ID').find(input[name = 'NREMPercentSupine'],).val(right); break;
+                case 'N1minSupine': $('#F__ID').find(input[name = 'N1minSupine'],).val(right); break;
+                case 'N1PercentSupine': $('#F__ID').find(input[name = 'N1PercentSupine'],).val(right); break;
+                case 'N2minSupine': $('#F__ID').find(input[name = 'N2minSupine'],).val(right); break;
+                case 'N2PercentSupine': $('#F__ID').find(input[name = 'N2PercentSupine'],).val(right); break;
+                case 'N3minSupine': $('#F__ID').find(input[name = 'N3minSupine'],).val(right); break;
+                case 'N3PercentSupine': $('#F__ID').find(input[name = 'N3PercentSupine'],).val(right); break;
+                case 'REMminSupine': $('#F__ID').find(input[name = 'REMminSupine'],).val(right); break;
+                case 'REMPercentSupine': $('#F__ID').find(input[name = 'REMPercentSupine'],).val(right); break;
+                case 'NREMminNonsupine': $('#F__ID').find(input[name = 'NREMminNonsupine'],).val(right); break;
+                case 'NREMPercentNonsupine': $('#F__ID').find(input[name = 'NREMPercentNonsupine'],).val(right); break;
+                case 'N1minNonsupine': $('#F__ID').find(input[name = 'N1minNonsupine'],).val(right); break;
+                case 'N1PercentNonsupine': $('#F__ID').find(input[name = 'N1PercentNonsupine'],).val(right); break;
+                case 'N2minNonsupine': $('#F__ID').find(input[name = 'N2minNonsupine'],).val(right); break;
+                case 'N2PercentNonsupine': $('#F__ID').find(input[name = 'N2PercentNonsupine'],).val(right); break;
+                case 'N3minNonsupine': $('#F__ID').find(input[name = 'N3minNonsupine'],).val(right); break;
+                case 'N3PercentNonsupine': $('#F__ID').find(input[name = 'N3PercentNonsupine'],).val(right); break;
+                case 'REMminNonsupine': $('#F__ID').find(input[name = 'REMminNonsupine'],).val(right); break;
+                case 'REMPercentNonsupine': $('#F__ID').find(input[name = 'REMPercentNonsupine'],).val(right); break;
+                case 'AwakeningsTST': $('#F__ID').find(input[name = 'AwakeningsTST'],).val(right); break;
+                case 'AwakeningsREM': $('#F__ID').find(input[name = 'AwakeningsREM'],).val(right); break;
+                case 'AwakeningNREM': $('#F__ID').find(input[name = 'AwakeningNREM'],).val(right); break;
+                case 'ArousalIndexTST': $('#F__ID').find(input[name = 'ArousalIndexTST'],).val(right); break;
+                case 'ArousalIndexREM': $('#F__ID').find(input[name = 'ArousalIndexREM'],).val(right); break;
+                case 'ArousalIndexNREM': $('#F__ID').find(input[name = 'ArousalIndexNREM'],).val(right); break;
+                case 'ArousalIndexN1': $('#F__ID').find(input[name = 'ArousalIndexN1'],).val(right); break;
+                case 'ArousalIndexN2': $('#F__ID').find(input[name = 'ArousalIndexN2'],).val(right); break;
+                case 'ArousalIndexN3': $('#F__ID').find(input[name = 'ArousalIndexN3'],).val(right); break;
+                case 'ArousalCountTST': $('#F__ID').find(input[name = 'ArousalCountTST'],).val(right); break;
+                case 'ArousalCountREM': $('#F__ID').find(input[name = 'ArousalCountREM'],).val(right); break;
+                case 'ArousalCountNREM': $('#F__ID').find(input[name = 'ArousalCountNREM'],).val(right); break;
+                case 'ArousalCountN1': $('#F__ID').find(input[name = 'ArousalCountN1'],).val(right); break;
+                case 'ArousalCountN2': $('#F__ID').find(input[name = 'ArousalCountN2'],).val(right); break;
+                case 'ArousalCountN3': $('#F__ID').find(input[name = 'ArousalCountN3'],).val(right); break;
+                case 'SponArousalsIndexTST': $('#F__ID').find(input[name = 'SponArousalsIndexTST'],).val(right); break;
+                case 'SponArousalsIndexREM': $('#F__ID').find(input[name = 'SponArousalsIndexREM'],).val(right); break;
+                case 'SponArousalsIndexNREM': $('#F__ID').find(input[name = 'SponArousalsIndexNREM'],).val(right); break;
+                case 'SponArousalCountTST': $('#F__ID').find(input[name = 'SponArousalCountTST'],).val(right); break;
+                case 'SponArousalCountREM': $('#F__ID').find(input[name = 'SponArousalCountREM'],).val(right); break;
+                case 'SponArousalCountNREM': $('#F__ID').find(input[name = 'SponArousalCountNREM'],).val(right); break;
+                case 'RespArousalsIndexTST': $('#F__ID').find(input[name = 'RespArousalsIndexTST'],).val(right); break;
+                case 'RespArousalsIndexREM': $('#F__ID').find(input[name = 'RespArousalsIndexREM'],).val(right); break;
+                case 'RespArousalsIndexNREM': $('#F__ID').find(input[name = 'RespArousalsIndexNREM'],).val(right); break;
+                case 'RespArousalCountTST': $('#F__ID').find(input[name = 'RespArousalCountTST'],).val(right); break;
+                case 'RespArousalCountREM': $('#F__ID').find(input[name = 'RespArousalCountREM'],).val(right); break;
+                case 'RespArousalCountNREM': $('#F__ID').find(input[name = 'RespArousalCountNREM'],).val(right); break;
+                case 'LimbArousalsIndexTST': $('#F__ID').find(input[name = 'LimbArousalsIndexTST'],).val(right); break;
+                case 'LimbArousalsIndexREM': $('#F__ID').find(input[name = 'LimbArousalsIndexREM'],).val(right); break;
+                case 'LimbArousalsIndexNREM': $('#F__ID').find(input[name = 'LimbArousalsIndexNREM'],).val(right); break;
+                case 'LimbArousalCountTST': $('#F__ID').find(input[name = 'LimbArousalCountTST'],).val(right); break;
+                case 'LimbArousalCountREM': $('#F__ID').find(input[name = 'LimbArousalCountREM'],).val(right); break;
+                case 'LimbArousalCountNREM': $('#F__ID').find(input[name = 'LimbArousalCountNREM'],).val(right); break;
+                case 'PeriodicLimbArousalsIndexTST': $('#F__ID').find(input[name = 'PeriodicLimbArousalsIndexTST'],).val(right); break;
+                case 'PeriodicLimbArousalsIndexREM': $('#F__ID').find(input[name = 'PeriodicLimbArousalsIndexREM'],).val(right); break;
+                case 'PeriodicLimbArousalsIndexNREM': $('#F__ID').find(input[name = 'PeriodicLimbArousalsIndexNREM'],).val(right); break;
+                case 'PeriodicLimbArousalCountTST': $('#F__ID').find(input[name = 'PeriodicLimbArousalCountTST'],).val(right); break;
+                case 'PeriodicLimbArousalCountREM': $('#F__ID').find(input[name = 'PeriodicLimbArousalCountREM'],).val(right); break;
+                case 'PeriodicLimbArousalCountNREM': $('#F__ID').find(input[name = 'PeriodicLimbArousalCountNREM'],).val(right); break;
+                case 'CentralApneaCountTST': $('#F__ID').find(input[name = 'CentralApneaCountTST'],).val(right); break;
+                case 'CentralApneaIndexTST': $('#F__ID').find(input[name = 'CentralApneaIndexTST'],).val(right); break;
+                case 'ObstructiveApneaCountTST': $('#F__ID').find(input[name = 'ObstructiveApneaCountTST'],).val(right); break;
+                case 'ObstructiveApneaIndexTST': $('#F__ID').find(input[name = 'ObstructiveApneaIndexTST'],).val(right); break;
+                case 'HypopneaCountTST': $('#F__ID').find(input[name = 'HypopneaCountTST'],).val(right); break;
+                case 'HypopneaIndexTST': $('#F__ID').find(input[name = 'HypopneaIndexTST'],).val(right); break;
+                case 'RERACountTST': $('#F__ID').find(input[name = 'RERACountTST'],).val(right); break;
+                case 'RERAIndexTST': $('#F__ID').find(input[name = 'RERAIndexTST'],).val(right); break;
+                case 'ApneaHypopneaIndexTST': $('#F__ID').find(input[name = 'ApneaHypopneaIndexTST'],).val(right); break;
+                case 'RespiratoryDisturbanceIndexTST': $('#F__ID').find(input[name = 'RespiratoryDisturbanceIndexTST'],).val(right); break;
+                case 'CentralApneaCountREM': $('#F__ID').find(input[name = 'CentralApneaCountREM'],).val(right); break;
+                case 'CentralApneaIndexREM': $('#F__ID').find(input[name = 'CentralApneaIndexREM'],).val(right); break;
+                case 'ObstructiveApneaCountREM': $('#F__ID').find(input[name = 'ObstructiveApneaCountREM'],).val(right); break;
+                case 'ObstructiveApneaIndexREM': $('#F__ID').find(input[name = 'ObstructiveApneaIndexREM'],).val(right); break;
+                case 'HypopneaCountREM': $('#F__ID').find(input[name = 'HypopneaCountREM'],).val(right); break;
+                case 'HypopneaIndexREM': $('#F__ID').find(input[name = 'HypopneaIndexREM'],).val(right); break;
+                case 'RERACountREM': $('#F__ID').find(input[name = 'RERACountREM'],).val(right); break;
+                case 'RERAIndexREM': $('#F__ID').find(input[name = 'RERAIndexREM'],).val(right); break;
+                case 'ApneaHypopneaIndexREM': $('#F__ID').find(input[name = 'ApneaHypopneaIndexREM'],).val(right); break;
+                case 'RespiratoryDisturbanceIndexREM': $('#F__ID').find(input[name = 'RespiratoryDisturbanceIndexREM'],).val(right); break;
+                case 'CentralApneaCountNREM': $('#F__ID').find(input[name = 'CentralApneaCountNREM'],).val(right); break;
+                case 'CentralApneaIndexNREM': $('#F__ID').find(input[name = 'CentralApneaIndexNREM'],).val(right); break;
+                case 'ObstructiveApneaCountNREM': $('#F__ID').find(input[name = 'ObstructiveApneaCountNREM'],).val(right); break;
+                case 'ObstructiveApneaIndexNREM': $('#F__ID').find(input[name = 'ObstructiveApneaIndexNREM'],).val(right); break;
+                case 'HypopneaCountNREM': $('#F__ID').find(input[name = 'HypopneaCountNREM'],).val(right); break;
+                case 'HypopneaIndexNREM': $('#F__ID').find(input[name = 'HypopneaIndexNREM'],).val(right); break;
+                case 'RERACountNREM': $('#F__ID').find(input[name = 'RERACountNREM'],).val(right); break;
+                case 'RERAIndexNREM': $('#F__ID').find(input[name = 'RERAIndexNREM'],).val(right); break;
+                case 'ApneaHypopneaIndexNREM': $('#F__ID').find(input[name = 'ApneaHypopneaIndexNREM'],).val(right); break;
+                case 'RespiratoryDisturbanceIndexNREM': $('#F__ID').find(input[name = 'RespiratoryDisturbanceIndexNREM'],).val(right); break;
+                case 'CentralApneaCountTSTSupine': $('#F__ID').find(input[name = 'CentralApneaCountTSTSupine'],).val(right); break;
+                case 'CentralApneaIndexTSTSupine': $('#F__ID').find(input[name = 'CentralApneaIndexTSTSupine'],).val(right); break;
+                case 'ObstructiveApneaCountTSTSupine': $('#F__ID').find(input[name = 'ObstructiveApneaCountTSTSupine'],).val(right); break;
+                case 'ObstructiveApneaIndexTSTSupine': $('#F__ID').find(input[name = 'ObstructiveApneaIndexTSTSupine'],).val(right); break;
+                case 'HypopneaCountTSTSupine': $('#F__ID').find(input[name = 'HypopneaCountTSTSupine'],).val(right); break;
+                case 'HypopneaIndexTSTSupine': $('#F__ID').find(input[name = 'HypopneaIndexTSTSupine'],).val(right); break;
+                case 'RERACountTSTSupine': $('#F__ID').find(input[name = 'RERACountTSTSupine'],).val(right); break;
+                case 'RERAIndexTSTSupine': $('#F__ID').find(input[name = 'RERAIndexTSTSupine'],).val(right); break;
+                case 'ApneaHypopneaIndexTSTSupine': $('#F__ID').find(input[name = 'ApneaHypopneaIndexTSTSupine'],).val(right); break;
+                case 'RespiratoryDisturbanceIndexTSTSupine': $('#F__ID').find(input[name = 'RespiratoryDisturbanceIndexTSTSupine'],).val(right); break;
+                case 'CentralApneaCountREMSupine': $('#F__ID').find(input[name = 'CentralApneaCountREMSupine'],).val(right); break;
+                case 'CentralApneaIndexREMSupine': $('#F__ID').find(input[name = 'CentralApneaIndexREMSupine'],).val(right); break;
+                case 'ObstructiveApneaCountREMSupine': $('#F__ID').find(input[name = 'ObstructiveApneaCountREMSupine'],).val(right); break;
+                case 'ObstructiveApneaIndexREMSupine': $('#F__ID').find(input[name = 'ObstructiveApneaIndexREMSupine'],).val(right); break;
+                case 'HypopneaCountREMSupine': $('#F__ID').find(input[name = 'HypopneaCountREMSupine'],).val(right); break;
+                case 'HypopneaIndexREMSupine': $('#F__ID').find(input[name = 'HypopneaIndexREMSupine'],).val(right); break;
+                case 'RERACountREMSupine': $('#F__ID').find(input[name = 'RERACountREMSupine'],).val(right); break;
+                case 'RERAIndexREMSupine': $('#F__ID').find(input[name = 'RERAIndexREMSupine'],).val(right); break;
+                case 'ApneaHypopneaIndexREMSupine': $('#F__ID').find(input[name = 'ApneaHypopneaIndexREMSupine'],).val(right); break;
+                case 'RespiratoryDisturbanceIndexREMSupine': $('#F__ID').find(input[name = 'RespiratoryDisturbanceIndexREMSupine'],).val(right); break;
+                case 'CentralApneaCountNREMSupine': $('#F__ID').find(input[name = 'CentralApneaCountNREMSupine'],).val(right); break;
+                case 'CentralApneaIndexNREMSupine': $('#F__ID').find(input[name = 'CentralApneaIndexNREMSupine'],).val(right); break;
+                case 'ObstructiveApneaCountNREMSupine': $('#F__ID').find(input[name = 'ObstructiveApneaCountNREMSupine'],).val(right); break;
+                case 'ObstructiveApneaIndexNREMSupine': $('#F__ID').find(input[name = 'ObstructiveApneaIndexNREMSupine'],).val(right); break;
+                case 'HypopneaCountNREMSupine': $('#F__ID').find(input[name = 'HypopneaCountNREMSupine'],).val(right); break;
+                case 'HypopneaIndexNREMSupine': $('#F__ID').find(input[name = 'HypopneaIndexNREMSupine'],).val(right); break;
+                case 'RERACountNREMSupine': $('#F__ID').find(input[name = 'RERACountNREMSupine'],).val(right); break;
+                case 'RERAIndexNREMSupine': $('#F__ID').find(input[name = 'RERAIndexNREMSupine'],).val(right); break;
+                case 'ApneaHypopneaIndexNREMSupine': $('#F__ID').find(input[name = 'ApneaHypopneaIndexNREMSupine'],).val(right); break;
+                case 'RespiratoryDisturbanceIndexNREMSupine': $('#F__ID').find(input[name = 'RespiratoryDisturbanceIndexNREMSupine'],).val(right); break;
+                case 'CentralApneaCountTSTNonSupine': $('#F__ID').find(input[name = 'CentralApneaCountTSTNonSupine'],).val(right); break;
+                case 'CentralApneaIndexTSTNonSupine': $('#F__ID').find(input[name = 'CentralApneaIndexTSTNonSupine'],).val(right); break;
+                case 'ObstructiveApneaCountTSTNonSupine': $('#F__ID').find(input[name = 'ObstructiveApneaCountTSTNonSupine'],).val(right); break;
+                case 'ObstructiveApneaIndexTSTNonSupine': $('#F__ID').find(input[name = 'ObstructiveApneaIndexTSTNonSupine'],).val(right); break;
+                case 'HypopneaCountTSTNonSupine': $('#F__ID').find(input[name = 'HypopneaCountTSTNonSupine'],).val(right); break;
+                case 'HypopneaIndexTSTNonSupine': $('#F__ID').find(input[name = 'HypopneaIndexTSTNonSupine'],).val(right); break;
+                case 'RERACountTSTNonSupine': $('#F__ID').find(input[name = 'RERACountTSTNonSupine'],).val(right); break;
+                case 'RERAIndexTSTNonSupine': $('#F__ID').find(input[name = 'RERAIndexTSTNonSupine'],).val(right); break;
+                case 'ApneaHypopneaIndexTSTNonSupine': $('#F__ID').find(input[name = 'ApneaHypopneaIndexTSTNonSupine'],).val(right); break;
+                case 'RespiratoryDisturbanceIndexTSTNonSupine': $('#F__ID').find(input[name = 'RespiratoryDisturbanceIndexTSTNonSupine'],).val(right); break;
+                case 'CentralApneaCountREMNonSupine': $('#F__ID').find(input[name = 'CentralApneaCountREMNonSupine'],).val(right); break;
+                case 'CentralApneaIndexREMNonSupine': $('#F__ID').find(input[name = 'CentralApneaIndexREMNonSupine'],).val(right); break;
+                case 'ObstructiveApneaCountREMNonSupine': $('#F__ID').find(input[name = 'ObstructiveApneaCountREMNonSupine'],).val(right); break;
+                case 'ObstructiveApneaIndexREMNonSupine': $('#F__ID').find(input[name = 'ObstructiveApneaIndexREMNonSupine'],).val(right); break;
+                case 'HypopneaCountREMNonSupine': $('#F__ID').find(input[name = 'HypopneaCountREMNonSupine'],).val(right); break;
+                case 'HypopneaIndexREMNonSupine': $('#F__ID').find(input[name = 'HypopneaIndexREMNonSupine'],).val(right); break;
+                case 'RERACountREMNonSupine': $('#F__ID').find(input[name = 'RERACountREMNonSupine'],).val(right); break;
+                case 'RERAIndexREMNonSupine': $('#F__ID').find(input[name = 'RERAIndexREMNonSupine'],).val(right); break;
+                case 'ApneaHypopneaIndexREMNonSupine': $('#F__ID').find(input[name = 'ApneaHypopneaIndexREMNonSupine'],).val(right); break;
+                case 'RespiratoryDisturbanceIndexREMNonSupine': $('#F__ID').find(input[name = 'RespiratoryDisturbanceIndexREMNonSupine'],).val(right); break;
+                case 'CentralApneaCountNREMNonSupine': $('#F__ID').find(input[name = 'CentralApneaCountNREMNonSupine'],).val(right); break;
+                case 'CentralApneaIndexNREMNonSupine': $('#F__ID').find(input[name = 'CentralApneaIndexNREMNonSupine'],).val(right); break;
+                case 'ObstructiveApneaCountNREMNonSupine': $('#F__ID').find(input[name = 'ObstructiveApneaCountNREMNonSupine'],).val(right); break;
+                case 'ObstructiveApneaIndexNREMNonSupine': $('#F__ID').find(input[name = 'ObstructiveApneaIndexNREMNonSupine'],).val(right); break;
+                case 'HypopneaCountNREMNonSupine': $('#F__ID').find(input[name = 'HypopneaCountNREMNonSupine'],).val(right); break;
+                case 'HypopneaIndexNREMNonSupine': $('#F__ID').find(input[name = 'HypopneaIndexNREMNonSupine'],).val(right); break;
+                case 'RERACountNREMNonSupine': $('#F__ID').find(input[name = 'RERACountNREMNonSupine'],).val(right); break;
+                case 'RERAIndexNREMNonSupine': $('#F__ID').find(input[name = 'RERAIndexNREMNonSupine'],).val(right); break;
+                case 'ApneaHypopneaIndexNREMNonSupine': $('#F__ID').find(input[name = 'ApneaHypopneaIndexNREMNonSupine'],).val(right); break;
+                case 'RespiratoryDisturbanceIndexNREMNonSupine': $('#F__ID').find(input[name = 'RespiratoryDisturbanceIndexNREMNonSupine'],).val(right); break;
+                case 'SpO2lessthan70percentminTIB': $('#F__ID').find(input[name = 'SpO2lessthan70percentminTIB'],).val(right); break;
+                case 'SpO2PercentageInRange70to79minTIB': $('#F__ID').find(input[name = 'SpO2PercentageInRange70to79minTIB'],).val(right); break;
+                case 'SpO2lessthan80percentminTIB': $('#F__ID').find(input[name = 'SpO2lessthan80percentminTIB'],).val(right); break;
+                case 'SpO2PercentageInRange80to89minTIB': $('#F__ID').find(input[name = 'SpO2PercentageInRange80to89minTIB'],).val(right); break;
+                case 'SpO2lessthan90percentminTIB': $('#F__ID').find(input[name = 'SpO2lessthan90percentminTIB'],).val(right); break;
+                case 'SpO2PercentageInRange90to100minTIB': $('#F__ID').find(input[name = 'SpO2PercentageInRange90to100minTIB'],).val(right); break;
+                case 'MeanSpO2percentTIB': $('#F__ID').find(input[name = 'MeanSpO2percentTIB'],).val(right); break;
+                case 'MeanSpO2percentTST': $('#F__ID').find(input[name = 'MeanSpO2percentTST'],).val(right); break;
+                case 'MeanSpO2percentWake': $('#F__ID').find(input[name = 'MeanSpO2percentWake'],).val(right); break;
+                case 'MeanSpO2percentREM': $('#F__ID').find(input[name = 'MeanSpO2percentREM'],).val(right); break;
+                case 'MeanSpO2percentNREM': $('#F__ID').find(input[name = 'MeanSpO2percentNREM'],).val(right); break;
+                case 'MinSpO2percentTIB': $('#F__ID').find(input[name = 'MinSpO2percentTIB'],).val(right); break;
+                case 'MinSpO2percentTST': $('#F__ID').find(input[name = 'MinSpO2percentTST'],).val(right); break;
+                case 'MinSpO2percentWake': $('#F__ID').find(input[name = 'MinSpO2percentWake'],).val(right); break;
+                case 'MinSpO2percentREM': $('#F__ID').find(input[name = 'MinSpO2percentREM'],).val(right); break;
+                case 'MinSpO2percentNREM': $('#F__ID').find(input[name = 'MinSpO2percentNREM'],).val(right); break;
+                case 'O2Desat3percentindexTIB': $('#F__ID').find(input[name = 'O2Desat3percentindexTIB'],).val(right); break;
+                case 'O2Desat3percentIndexTST': $('#F__ID').find(input[name = 'O2Desat3percentIndexTST'],).val(right); break;
+                case 'O2Desat3percentIndexREM': $('#F__ID').find(input[name = 'O2Desat3percentIndexREM'],).val(right); break;
+                case 'O2Desat3percentIndexNREM': $('#F__ID').find(input[name = 'O2Desat3percentIndexNREM'],).val(right); break;
+                case 'O2Desat3percentCountTIB': $('#F__ID').find(input[name = 'O2Desat3percentCountTIB'],).val(right); break;
+                case 'O2Desat3percentCountTST': $('#F__ID').find(input[name = 'O2Desat3percentCountTST'],).val(right); break;
+                case 'O2Desat3percentCountREM': $('#F__ID').find(input[name = 'O2Desat3percentCountREM'],).val(right); break;
+                case 'O2Desat3percentCountNREM': $('#F__ID').find(input[name = 'O2Desat3percentCountNREM'],).val(right); break;
+                case 'O2Desat4percentindexTIB': $('#F__ID').find(input[name = 'O2Desat4percentindexTIB'],).val(right); break;
+                case 'O2Desat4percentIndexTST': $('#F__ID').find(input[name = 'O2Desat4percentIndexTST'],).val(right); break;
+                case 'O2Desat4percentIndexREM': $('#F__ID').find(input[name = 'O2Desat4percentIndexREM'],).val(right); break;
+                case 'O2Desat4percentIndexNREM': $('#F__ID').find(input[name = 'O2Desat4percentIndexNREM'],).val(right); break;
+                case 'O2Desat4percentCountTIB': $('#F__ID').find(input[name = 'O2Desat4percentCountTIB'],).val(right); break;
+                case 'O2Desat4percentCountTST': $('#F__ID').find(input[name = 'O2Desat4percentCountTST'],).val(right); break;
+                case 'O2Desat4percentCountREM': $('#F__ID').find(input[name = 'O2Desat4percentCountREM'],).val(right); break;
+                case 'O2Desat4percentCountNREM': $('#F__ID').find(input[name = 'O2Desat4percentCountNREM'],).val(right); break;
+                case 'LimbMovementCountTST': $('#F__ID').find(input[name = 'LimbMovementCountTST'],).val(right); break;
+                case 'LimbMovementIndexTST': $('#F__ID').find(input[name = 'LimbMovementIndexTST'],).val(right); break;
+                case 'PLMCountTST': $('#F__ID').find(input[name = 'PLMCountTST'],).val(right); break;
+                case 'PLMIndexTST': $('#F__ID').find(input[name = 'PLMIndexTST'],).val(right); break;
+                case 'PLMIndexTST': $('#F__ID').find(input[name = 'PLMIndexTST'],).val(right); break;
+
+                         
+
+
+
+                    
+
+                            }
+                        }
+                    }
+                    
+                })
+                reader.readAsText(file);
+            };
+            //-------------------------------------
+        }
+    </script>
+    <style>
+        #D__ID {
+            height: 100%;
+            overflow: auto;
+            animation: vm_module_fadein 1.0s;
+            background-color: #fff;
+        }
+
+        #form_container__ID {
+            margin-top: 20px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            font-family: Verdana, sans-serif;
+            font-size: 15px;
+            line-height: 1.5;
+        }
+
+        #F__ID {
+            border: 1px solid #bbb;
+            border-top-width: 0;
+            padding: 6px 15px 20px 15px;
+        }
+
+        #header__ID {
+            background-color: #727b84;
+            color: #fff;
+            padding: 10px 15px 10px 15px;
+            font-size: 120%;
+            border: 1px solid #bbb;
+            border-bottom-width: 0;
+        }
+
+        .row__ID {
+            padding: 6px 0;
+        }
+
+        .row__ID:hover {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .row__ID span {
+            font-weight: bold;
+            display: inline-block;
+            padding: 5px 0;
+        }
+
+        @media screen and (max-width:768px) {
+            #form_container__ID {
+                padding: 20px 10px 50px 10px;
+            }
+        }
+    </style>
+</div>
