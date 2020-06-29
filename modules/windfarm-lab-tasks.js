@@ -268,7 +268,7 @@
         "v2-n1-researchreport":      { url: "$A/modules/w/windfarm-lab-tasks/psgreport.html", Table: "20008733", form_module: "v2-n1-researchreport-form", },
         "v2-n1-researchreport-form": { url: "$A/modules/w/windfarm-lab-tasks/psgreport-form.html", Table: "20008733" },
         "v2-n1-researchreport-grael": { url: "$A/modules/w/windfarm-lab-tasks/PSG-grael.html", Table: "91000874",form_module: "v2-n1-researchreport-form-grael",},
-        "v2-n1-researchreport-form-grael": { url: "$A/modules/w/windfarm-lab-tasks/psgreport-form.html", Table: "91000874" },
+        "v2-n1-researchreport-form-grael": { url: "$A/modules/w/windfarm-lab-tasks/psgreport-form-grael.html", Table: "91000874" },
 
         "v2-d2-a-vas-data": { url: "$A/modules/w/windfarm-lab-tasks/vas-data.html", Table: "20009229", form_module: "v2-d2-a-vas-form" },
         "v2-d2-a-vas-form": { url: "$A/modules/w/windfarm-lab-tasks/vas-form.html", Table: "20009229" },
