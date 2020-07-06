@@ -5,7 +5,7 @@
 
             <button id=query2__ID  type=button class='btn btn-secondary' title='Query'>Query</button>
             <button id=export2__ID  type=button class='btn btn-secondary' title='Export'>Export</button>
-            <span class=tab__ID></span>Visit 2 - PVT
+            <span class=tab__ID></span>Visit 3 - PVT
         </div>
         <div id=table__ID>
             <table id=grid__ID></table>
@@ -45,18 +45,18 @@
                     return;
                 }
                 m.set_req=function(){
-                var sql=" select Task='Visit 3 Day 1 11:30',Information from [TABLE-20009533] where puid=@I1";
-            		sql+=" union select Task='Visit 3 Day 1 15:30',Information from [TABLE-20008790] where puid=@I1";
-                sql+=" union select Task='Visit 3 Day 1 19:30',Information from [TABLE-20009272] where puid=@I1";
-                sql+=" union select Task='Visit 3 Day 2 07:30',Information from [TABLE-20008802] where puid=@I1";
-                sql+=" union select Task='Visit 3 Day 2 11:30',Information from [TABLE-20008804] where puid=@I1";
-                sql+=" union select Task='Visit 3 Day 2 15:30',Information from [TABLE-20008808] where puid=@I1";
-                sql+=" union select Task='Visit 3 Day 2 19:30',Information from [TABLE-20009268] where puid=@I1";
-                sql+=" union select Task='Visit 3 Day 3 07:30',Information from [TABLE-20008821] where puid=@I1";
-                sql+=" union select Task='Visit 3 Day 3 11:30',Information from [TABLE-20008827] where puid=@I1";
-                sql+=" union select Task='Visit 3 Day 3 15:30',Information from [TABLE-20009256] where puid=@I1";
-                sql+=" union select Task='Visit 3 Day 3 19:30',Information from [TABLE-20009260] where puid=@I1";
-                sql+=" union select Task='Visit 3 Day 4 07:30',Information from [TABLE-20008840] where puid=@I1";
+                var sql=" select Task='Visit 3 Day 1 11:30',Information from [TABLE-20009533] where puid<>0";
+            		sql+=" union select Task='Visit 3 Day 1 15:30',Information from [TABLE-20008790] where puid<>0";
+                sql+=" union select Task='Visit 3 Day 1 19:30',Information from [TABLE-20009272] where puid<>0";
+                sql+=" union select Task='Visit 3 Day 2 07:30',Information from [TABLE-20008802] where puid<>0";
+                sql+=" union select Task='Visit 3 Day 2 11:30',Information from [TABLE-20008804] where puid<>0";
+                sql+=" union select Task='Visit 3 Day 2 15:30',Information from [TABLE-20008808] where puid<>0";
+                sql+=" union select Task='Visit 3 Day 2 19:30',Information from [TABLE-20009268] where puid<>0";
+                sql+=" union select Task='Visit 3 Day 3 07:30',Information from [TABLE-20008821] where puid<>0";
+                sql+=" union select Task='Visit 3 Day 3 11:30',Information from [TABLE-20008827] where puid<>0";
+                sql+=" union select Task='Visit 3 Day 3 15:30',Information from [TABLE-20009256] where puid<>0";
+                sql+=" union select Task='Visit 3 Day 3 19:30',Information from [TABLE-20009260] where puid<>0";
+                sql+=" union select Task='Visit 3 Day 4 07:30',Information from [TABLE-20008840] where puid<>0";
 
                                    m.req={cmd:'read',qid:m.qid,sql:sql,i1:i1}
                 }
@@ -69,24 +69,24 @@
                     return;
                 }
                 m.set_req_export=function(){
-                var sql=" select Task='Visit 3 Day 1 11:30',Information from [TABLE-20009533] where puid=@I1";
-            		sql+=" union select Task='Visit 3 Day 1 15:30',Information from [TABLE-20008790] where puid=@I1";
-                sql+=" union select Task='Visit 3 Day 1 19:30',Information from [TABLE-20009272] where puid=@I1";
-                sql+=" union select Task='Visit 3 Day 2 07:30',Information from [TABLE-20008802] where puid=@I1";
-                sql+=" union select Task='Visit 3 Day 2 11:30',Information from [TABLE-20008804] where puid=@I1";
-                sql+=" union select Task='Visit 3 Day 2 15:30',Information from [TABLE-20008808] where puid=@I1";
-                sql+=" union select Task='Visit 3 Day 2 19:30',Information from [TABLE-20009268] where puid=@I1";
-                sql+=" union select Task='Visit 3 Day 3 07:30',Information from [TABLE-20008821] where puid=@I1";
-                sql+=" union select Task='Visit 3 Day 3 11:30',Information from [TABLE-20008827] where puid=@I1";
-                sql+=" union select Task='Visit 3 Day 3 15:30',Information from [TABLE-20009256] where puid=@I1";
-                sql+=" union select Task='Visit 3 Day 3 19:30',Information from [TABLE-20009260] where puid=@I1";
-                sql+=" union select Task='Visit 3 Day 4 07:30',Information from [TABLE-20008840] where puid=@I1";
+                var sql=" select Task='Visit 3 Day 1 11:30',Information from [TABLE-20009533] where puid<>0";
+            		sql+=" union select Task='Visit 3 Day 1 15:30',Information from [TABLE-20008790] where puid<>0";
+                sql+=" union select Task='Visit 3 Day 1 19:30',Information from [TABLE-20009272] where puid<>0";
+                sql+=" union select Task='Visit 3 Day 2 07:30',Information from [TABLE-20008802] where puid<>0";
+                sql+=" union select Task='Visit 3 Day 2 11:30',Information from [TABLE-20008804] where puid<>0";
+                sql+=" union select Task='Visit 3 Day 2 15:30',Information from [TABLE-20008808] where puid<>0";
+                sql+=" union select Task='Visit 3 Day 2 19:30',Information from [TABLE-20009268] where puid<>0";
+                sql+=" union select Task='Visit 3 Day 3 07:30',Information from [TABLE-20008821] where puid<>0";
+                sql+=" union select Task='Visit 3 Day 3 11:30',Information from [TABLE-20008827] where puid<>0";
+                sql+=" union select Task='Visit 3 Day 3 15:30',Information from [TABLE-20009256] where puid<>0";
+                sql+=" union select Task='Visit 3 Day 3 19:30',Information from [TABLE-20009260] where puid<>0";
+                sql+=" union select Task='Visit 3 Day 4 07:30',Information from [TABLE-20008840] where puid<>0";
                     m.req={cmd:'read',qid:m.qid,sql:sql,i1:i1}
                 }
                 m.set_req(); m.request_data();
                 m.export_records();
             })
-            m.fields="Participant,Task,Mean Reaction Time(ms)|PVT_MeanRT,Number of Lapses|PVT_Lapses,Mean Reaction Time for slowest 10% (ms)|PVT_MeanSRT,False Start|PVT_FalseStartsCorrKey";
+            m.fields="Participant_uid,Participant,Task,Mean Reaction Time(ms)|PVT_MeanRT,Number of Lapses|PVT_Lapses,Mean Reaction Time for slowest 10% (ms)|PVT_MeanSRT,False Start|PVT_FalseStartsCorrKey";
         }
     </script>
     <style>

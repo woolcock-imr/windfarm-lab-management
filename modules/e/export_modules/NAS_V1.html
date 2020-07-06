@@ -5,7 +5,7 @@
 
             <button id=query2__ID  type=button class='btn btn-secondary' title='Query'>Query</button>
             <button id=export2__ID  type=button class='btn btn-secondary' title='Export'>Export</button>
-            <span class=tab__ID></span>Visit 3 - Noise Annoyance Scale
+            <span class=tab__ID></span>Visit 1 - Noise Annoyance Scale
         </div>
         <div id=table__ID>
             <table id=grid__ID></table>
@@ -88,7 +88,7 @@
                 m.set_req(); m.request_data();
                 m.export_records();
             })
-            m.fields="Participant,Task,ANNOYANCE";
+            m.fields="Participant_uid,Participant,Task,ANNOYANCE";
         }
     </script>
     <style>
