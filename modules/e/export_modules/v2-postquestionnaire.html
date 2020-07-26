@@ -1,0 +1,85 @@
+<div id-D__ID>
+    <section>
+        <div id=toolbar__ID>
+            <input id=uid__ID type="text" placeholder="Record ID" class="form-control"
+                style="width: 150px; display:inline-block;">
+
+            <button id=query2__ID type=button class='btn btn-secondary' title='Query'>Query</button>
+            <button id=export2__ID type=button class='btn btn-secondary' title='Export'>Export</button>
+            <span class=tab__ID></span>Visit 2 Post questionnaire
+        </div>
+        <div id=table__ID>
+            <table id=grid__ID></table>
+        </div>
+    </section>
+    <style>
+        #toolbar__ID {
+            background-color: #ccc;
+            padding: 5px 0px 5px 20px;
+            margin-bottom: 0px;
+            overflow: hidden
+        }
+
+        #toolbar__ID * {
+            margin-right: 3px;
+        }
+
+        @media screen and (max-width:768px) {
+            #toolbar__ID {
+                padding: 3px 0;
+            }
+
+            #toolbar__ID div {
+                padding-left: 3px;
+            }
+
+            #row_1__ID {
+                padding-bottom: 3px;
+            }
+        }
+    </style>
+    <script>
+        function F__ID() {
+            //------------------------
+            VmInclude: __COMPONENT__/g/grid.01.js
+            //-------------------------------------
+            $('#query2__ID').on('click', function () {
+                var i1 = $('#uid__ID').val();
+                if (i1 == '') {
+                    alert('No participant was entered')
+                    return;
+                }
+                m.set_req = function () {
+                    var sql = "select Task='Visit 2 Questionnaires',Information from [TABLE-20008780] where puid<>0";
+                    sql += " union select Task='Visit 2 Questionnaires',Information from [TABLE-20008781] where puid<>0";
+                    sql += " union select Task='Visit 2 Questionnaires',Information from [TABLE-20009246] where puid<>0";
+                    sql += " union select Task='Visit 2 Questionnaires',Information from [TABLE-20009247] where puid<>0";
+
+
+                    m.req = { cmd: 'read', qid: m.qid, sql: sql, i1: i1 }
+                }
+                m.set_req(); m.request_data();
+            })
+            $('#export2__ID').on('click', function () {
+                var i1 = $('#uid__ID').val();
+                if (i1 == '') {
+                    alert('No participant was entered')
+                    return;
+                }
+                m.set_req_export = function () {
+                    var sql = "select Task='Visit 2 Questionnaires',Information from [TABLE-20008780] where puid<>0";
+                    sql += " union select Task='Visit 2 Questionnaires',Information from [TABLE-20008781] where puid<>0";
+                    sql += " union select Task='Visit 2 Questionnaires',Information from [TABLE-20009246] where puid<>0";
+                    sql += " union select Task='Visit 2 Questionnaires',Information from [TABLE-20009247] where puid<>0";
+                    m.req = { cmd: 'read', qid: m.qid, sql: sql, i1: i1 }
+                }
+                m.set_req(); m.request_data();
+                m.export_records();
+            })
+            m.fields = "Participant_uid,Participant,Task,ISI_1a,ISI_1b,ISI_1c,ISI_2,ISI_3,ISI_4,ISI_5,ISI_1,ISI,kessler_1,kessler_2,kessler_3,kessler_4,kessler_5,kessler_6,kessler_7,kessler_8,kessler_9,kessler_10,kessler,wemw_1,wemw_2,wemw_3,wemw_4,wemw_5,wemw_6,wemw_7,wemw_8,wemw_9,wemw_10,wemw_11,wemw_12,wemw_13,wemw_14,wemw,DASS_1,DASS_2,DASS_3,DASS_4,DASS_5,DASS_6,DASS_7,DASS_8,DASS_9,DASS_10,DASS_11,DASS_12,DASS_13,DASS_14,DASS_15,DASS_16,DASS_17,DASS_18,DASS_19,DASS_20,DASS_21,DASS_DS,DASS_AS,DASS_SS";
+        }
+    </script>
+    <style>
+        VmInclude:__COMPONENT__/g/grid.01.css
+    </style>
+</div>
