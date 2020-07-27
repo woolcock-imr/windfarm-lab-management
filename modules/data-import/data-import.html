@@ -85,7 +85,7 @@
                 var i=III;
                 new_records[i].Participant_uid=new_records[i].PUID;
                 var dbv={PUID:new_records[i].PUID}
-                var reqW={cmd:"add",qid:$vm.qid,db_pid:$('#table_id__ID').val(),data:new_records[i],dbv:dbv,file:{},xml:"1"};
+
                 var sql="select ID,PUID from [TABLE-"+$('#table_id__ID').val()+"] where PUID="+new_records[i].PUID;   
                 var reqR={cmd:'read',qid:$vm.qid,sql:sql}
                 $VmAPI.request({data:reqR,callback:function(res){
@@ -94,14 +94,27 @@
                         var t2=t1+"\r\nPUID "+new_records[i].PUID+": add"
                         $('#info__ID').val(t2);
                         //**********************************************
-                        //write
-                        $VmAPI.request({data:reqW,callback:function(res){
+                        var reqA={cmd:"add",qid:$vm.qid,db_pid:$('#table_id__ID').val(),data:new_records[i],dbv:dbv,file:{},xml:"1"};
+                        //Add
+                        $VmAPI.request({data:reqA,callback:function(res){
+                        }});
+                        //**********************************************
+                    }
+                    if(res.records.length==1){
+                        var t1=$('#info__ID').val();
+                        var t2=t1+"\r\nPUID "+new_records[i].PUID+": modified"
+                        $('#info__ID').val(t2);
+                        //**********************************************
+                        var rid=res.records[0].ID;
+                        var reqM={cmd:"modify",rid:rid,qid:m.qid,db_pid:$('#table_id__ID').val(),data:new_records[i],dbv:dbv,file:{},xml:"1"};
+                        //Modify
+                        $VmAPI.request({data:reqM,callback:function(res){
                         }});
                         //**********************************************
                     }
                     else{
                         var t1=$('#info__ID').val();
-                        var t2=t1+"\r\nPUID "+new_records[i].PUID+": existed"
+                        var t2=t1+"\r\nPUID "+new_records[i].PUID+": error - "+res.records.length;
                         $('#info__ID').val(t2);
                     }
                 }})
