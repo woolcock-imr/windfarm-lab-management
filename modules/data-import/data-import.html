@@ -106,7 +106,7 @@
                         $('#info__ID').val(t2);
                         //**********************************************
                         var rid=res.records[0].ID;
-                        var reqM={cmd:"modify",rid:rid,qid:m.qid,db_pid:$('#table_id__ID').val(),data:new_records[i],dbv:dbv,file:{},xml:"1"};
+                        var reqM={cmd:"modify",rid:rid,qid:$vm.qid,db_pid:$('#table_id__ID').val(),data:new_records[i],dbv:dbv,file:{},xml:"1"};
                         //Modify
                         $VmAPI.request({data:reqM,callback:function(res){
                         }});
