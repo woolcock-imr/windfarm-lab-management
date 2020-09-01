@@ -76,6 +76,8 @@
                             var right=items[1].trim().replace(/ /g,'');
 console.log(left)
 console.log(right)
+
+if(right=='-') right='';
             switch(left) {
                 case 'CMS Patient ID': $('#F__ID').find("input[name='CMS Patient ID']").val(right); break;
                 case 'Date_of_Birth': $('#F__ID').find("input[name='Date_of_Birth']").val(right); break;
