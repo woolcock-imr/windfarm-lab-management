@@ -31,6 +31,17 @@
                         </div>
                     </div>
                 </div>
+                <div class='row row__ID'>
+                    <div class="col">
+                        <span>Was 24 Hour Urine Collected During this Visit?</span>
+                        <div class="form-control">
+                            <br>
+                            <input type="radio" name=urinecollect value=yes style="margin:auto;" />Yes</input>
+                            <input type="radio" name=urinecollect value=no style="margin:auto" />No</input>
+                
+                        </div>
+                    </div>
+                </div>
                 
                 <div id=dynamic_part__ID></div>
                 
@@ -53,7 +64,7 @@
         function F__ID() {
             //-------------------------------------
             //build text input fields
-            var fields = "Bloodcollect,Sodium,Potassium,Chloride,Bicarbonate,Anion_Gap,Urea,eGFR,Urate,Bilirubin,AST,ALT,GGT,Alkaline_Phosphatase,Protein,Albumin,Globulin,Calcium,Corrected_Calcium,Phosphate,Glucose,Cholesterol,Triglycerides,Hb,RCC,Hct,MCV,MCH,MCHC,RDW,PLT,WCC,Neutrophils,Lymphocytes,Monocytes,Eosinophils,Basophils,Insulin,UrineVolume,AdrenalineExcr,NoradrenalineExcr,UrCreatinine,Creatinine";
+            var fields = "Sodium,Potassium,Chloride,Bicarbonate,Anion_Gap,Urea,eGFR,Urate,Bilirubin,AST,ALT,GGT,Alkaline_Phosphatase,Protein,Albumin,Globulin,Calcium,Corrected_Calcium,Phosphate,Glucose,Cholesterol,Triglycerides,Hb,RCC,Hct,MCV,MCH,MCHC,RDW,PLT,WCC,Neutrophils,Lymphocytes,Monocytes,Eosinophils,Basophils,Insulin,UrineVolume,AdrenalineExcr,NoradrenalineExcr,UrCreatinine,Creatinine";
             var fs = fields.split(',');
             var txt = "";
             for (var i = 0; i < fs.length; i++) {
