@@ -1,0 +1,73 @@
+
+<div id=D__ID>
+    <section id=form_container__ID>
+        <div id=header__ID>
+     Karolinska Drowsiness Test (KDT)
+        </div>
+        <form id=F__ID>
+            <hr style="border-top: 1px solid #888;width: 100%;margin:10px 0">
+            <div class="container">
+                <!-- participant part for all task forms -------------------->
+                <div class="row row__ID" id=row_participant__ID>
+                    <div class="col-sm-12 col-lg-9 input__ID">
+                        <span class=label__ID>Participant</span><br>
+                        <input type=text name="Participant" class=form-control id=Participant__ID data-id="Participant" required />
+                    </div>
+                    <div class="col-sm-12 col-lg-3 input__ID">
+                        <span class=label__ID>Participant ID</span><br>
+                        <input type=text name="Participant_uid" class=form-control readonly />
+                    </div>
+                    <hr style="border-top: 1px solid #888;width: 100%;margin:10px 0">
+                </div>
+                <!---------------------------------------------------->
+                <!-- Form Inputs-------------------------------------->
+                <div id=dynamic_part__ID></div>
+
+                <!---------------------------------------------------->
+                <!-- submit button part for all tsak forms------------>
+                <br>
+                <div class="row">
+                    <div class=col>
+                        <button id=submit__ID type="submit" class="btn btn-secondary">Submit</button>
+                    </div>
+                </div>
+                <!---------------------------------------------------->
+            </div>
+        </form>
+    </section>
+    VmInclude:__COMPONENT__/m/model.01.html
+    <script>
+        function F__ID(){
+            //-------------------------------------
+            //build text input fields
+            var fields="KDT_Test_No_EDF_File_Name,EO1_ScE_i,EC_ScE_i,EO2_ScE_i,All_ScE_i,Ave_EOs_ScE_i,EO1_Delta_i,EO1_Theta_i,EO1_Alpha_i,EO1_Sigma_i,EO1_Beta_i,EC_Delta_i,EC_Theta_i,EC_Alpha_i,EC_Sigma_i,EC_Beta_i,EO2_Delta_i,EO2_Theta_i,EO2_Alpha_i,EO2_Sigma_i,EO2_Beta_i,All_Delta_i,All_Theta_i,All_Alpha_i,All_Sigma_i,All_Beta_i,Ave_EOs_Delta_i,Ave_EOs_Theta_i,Ave_EOs_Alpha_i,Ave_EOs_Sigma_i,Ave_EOs_Beta_i";
+            var fs=fields.split(',');
+            var txt="";
+            for(var i=0;i<fs.length;i++){
+                txt+="<div class='row row__ID'><div class='col'>\r\n";
+                txt+="<span>"+fs[i].replace(/_/g," ")+"</span><input type=text class=form-control name="+fs[i]+">\r\n";
+                txt+="</div></div>\r\n";
+            }
+            $('#dynamic_part__ID').html(txt);
+            //-------------------------------------
+            VmInclude:__COMPONENT__/f/form.01.js
+            VmInclude:'__CURRENT_PATH__/task-form.js'
+            //-------------------------------------
+            var load5=m.load;
+            m.load=function(){
+                load5();
+                 m.set_file_link("audiogram");
+        
+                
+            }
+            //-------------------------------------
+        }
+    </script>
+    <style>
+        #form_container__ID{
+            max-width:700px;
+        }
+        VmInclude:__COMPONENT__/f/form.01.css
+        
+    </style>
+</div>
