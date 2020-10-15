@@ -141,158 +141,24 @@
                 var old_before_submit=m.before_submit;
                 m.before_submit=function(record,dbv){
                     old_before_submit(record,dbv);
-                    /*
-                    var v1 = record['R_AC_cVEMP_p13_latency']; //parseInt($('#tb__ID').find('input[name=R_AC_cVEMP_p13_latency]:checked').val());
-                    var v2 = parseInt($('#tb__ID').find('input[name=R_AC_cVEMP_n23_latency]:checked').val());
-                    var v3 = parseInt($('#tb__ID').find('input[name=R_AC_cVEMP_pp_AMP]:checked').val());
-                    
-                    var v4 = record['R_AC_cVemp_rectified_activation']; //parseInt($('#tb__ID').find('input[name=R_AC_cVemp_rectified_activation]:checked').val());
-                    
-                    var v5 = parseInt($('#tb__ID').find('input[name=R_AC_cVEMP_Activation]:checked').val());
-                    var v6 = parseInt($('#tb__ID').find('input[name=R_AC_cVEMP_CA]:checked').val());
-                    var v7 = parseInt($('#tb__ID').find('input[name=L_AC_cVEMP_p13_latency]:checked').val());
-                    var v8 = parseInt($('#tb__ID').find('input[name=L_AC_cVEMP_n23_latency]:checked').val());
-                    var v9 = parseInt($('#tb__ID').find('input[name=L_AC_cVEMP_pp_AMP]:checked').val());
-                    var v10 = parseInt($('#tb__ID').find('input[name=L_AC_cVemp_rectified_activation]:checked').val());
-                    var v11 = parseInt($('#tb__ID').find('input[name=L_AC_cVEMP_Activation]:checked').val());
-                    var v12 = parseInt($('#tb__ID').find('input[name=L_AC_cVEMP_CA]:checked').val());
-                    var v13 = parseInt($('#tb__ID').find('input[name=AC_cVEMP_AR]:checked').val());
-                    var v14 = parseInt($('#tb__ID').find('input[name=R_BC_cVEMP_p13_latency]:checked').val());
-                    var v15 = parseInt($('#tb__ID').find('input[name=R_BC_cVEMP_n23_latency]:checked').val());
-                    var v16 = parseInt($('#tb__ID').find('input[name=R_BC_cVEMP_pp_AMP]:checked').val());
-                    var v17 = parseInt($('#tb__ID').find('input[name=R_BC_cVemp_rectified_activation]:checked').val());
-                    var v18 = parseInt($('#tb__ID').find('input[name=R_BC_cVEMP_Activation]:checked').val());
-                    var v19 = parseInt($('#tb__ID').find('input[name=R_BC_cVEMP_CA]:checked').val());
-                    var v20 = parseInt($('#tb__ID').find('input[name=L_BC_cVEMP_p13_latency]:checked').val());
-                    var v21 = parseInt($('#tb__ID').find('input[name=L_BC_cVEMP_n23_latency]:checked').val());
-                    var v22 = parseInt($('#tb__ID').find('input[name=L_BC_cVEMP_pp_AMP]:checked').val());
-                    var v23 = parseInt($('#tb__ID').find('input[name=L_BC_cVemp_rectified_activation]:checked').val());
-                    var v24 = parseInt($('#tb__ID').find('input[name=L_BC_cVEMP_Activation]:checked').val());
-                    var v25 = parseInt($('#tb__ID').find('input[name=L_BC_cVEMP_CA]:checked').val());
-                    var v26 = parseInt($('#tb__ID').find('input[name=BC_cVEMP_AR]:checked').val());
-                    var v27 = parseInt($('#tb__ID').find('input[name=R_AC_oVEMP_n10_Latency]:checked').val());
-                    var v28 = parseInt($('#tb__ID').find('input[name=R_AC_oVEMP_pp_Amp]:checked').val());
-                    var v29 = parseInt($('#tb__ID').find('input[name=L_AC_oVEMP_n10_Latency]:checked').val());
-                    var v30 = parseInt($('#tb__ID').find('input[name=L_AC_oVEMP_pp_AMP]:checked').val());
-                    var v31 = parseInt($('#tb__ID').find('input[name=AC_oVEMP_AR]:checked').val());
-                    var v32 = parseInt($('#tb__ID').find('input[name=R_BC_oVEMP_n10_Latency]:checked').val());
-                    var v33 = parseInt($('#tb__ID').find('input[name=R_BC_oVEMP_pp_Amp]:checked').val());
-                    var v34 = parseInt($('#tb__ID').find('input[name=L_BC_oVEMP_n10_Latency]:checked').val());
-                    var v35 = parseInt($('#tb__ID').find('input[name=L_BC_oVEMP_pp_Amp]:checked').val());
-                    var v36 = parseInt($('#tb__ID').find('input[name=BC_oVMEP_AR]:checked').val());
-                    */
-                    
                     record['R_AC_cVEMP_Activation']=(record['R_AC_cVemp_rectified_activation']/20).toFixed(2);
-                    
-                    /*
-                    var v38=v3/v37;
-                    _records[I].R_AC_cVEMP_CA=v38;
-                    var v11=v10/20;
-                    _records[I].L_AC_cVEMP_Activation=v11;
-                    var v12=v9/v11;
-                    _records[I].L_AC_cVEMP_CA=v12;
-                    var v13=100*((v6-v12)/(v6+v12));
-                    _records[I].AC_cVEMP_AR=v13;
-                    var v18=v17/20 ;
-                    _records[I].R_BC_cVEMP_Activation=v18;
-                    var v19=v16/v18;
-                    _records[I].R_BC_cVEMP_CA = v19;
-                    var v24=v23/20;
-                    _records[I].L_BC_cVEMP_Activation = v24;
-                    var v25=v22/v24;
-                    _records[I].L_BC_cVEMP_CA = v25;
-                    var v26=100*((v25-v19)/(v25+v19));
-                    _records[I].BC_cVEMP_AR= v26;
-                    var v27=100*((v25-v19)/(v25+v19));
-                    _records[I].R_AC_oVEMP_n10_Latency= v27;
-                    var v31=100*((v30-v28)/(v30+v28));
-                    _records[I].AC_oVEMP_AR= v31;
-                    var v36=100*((v35-v33)/(v35+v33));
-                    _records[I].BC_oVMEP_AR= v36;
-                    */
-                    
+                    record['R_AC_cVEMP_CA']=(record['R_AC_cVEMP_pp_AMP']/record['R_AC_cVEMP_Activation']).toFixed(2);
+                    record['L_AC_cVEMP_Activation']=(record['L_AC_cVemp_rectified_activation']/20).toFixed(2);
+                    record['L_AC_cVEMP_CA']=(record['L_AC_cVEMP_pp_AMP']/record['L_AC_cVEMP_Activation']).toFixed(2);
+                    record['AC_cVEMP_AR']=((record['L_AC_cVEMP_CA']-record['R_AC_cVEMP_CA'])/(record['L_AC_cVEMP_CA']+record['R_AC_cVEMP_CA'])*100).toFixed();
+                    record['R_BC_cVEMP_Activation']=(record['R_BC_cVemp_rectified_activation']/20).toFixed(2);
+                    record['R_BC_cVEMP_CA']=(record['R_BC_cVEMP_pp_AMP']/record['R_BC_cVEMP_Activation']).toFixed(2);
+                    record['L_BC_cVEMP_Activation']=(record['L_BC_cVemp_rectified_activation']/20).toFixed(2);
+                    record['L_BC_cVEMP_CA']=(record['L_BC_cVEMP_pp_AMP']/record['L_BC_cVEMP_Activation']).toFixed(2);
+                    record['BC_cVEMP_AR']=(((record['L_BC_cVEMP_CA']-record['R_BC_cVEMP_CA'])/(record['L_BC_cVEMP_CA']+record['R_BC_cVEMP_CA']))*100).toFixed(2);
+                    record['AC_oVEMP_AR']=(((record['L_AC_oVEMP_pp_AMP']-record['R_AC_oVEMP_pp_Amp'])/(record['L_AC_oVEMP_pp_AMP']+record['R_AC_oVEMP_pp_Amp']))*100).toFixed(2);
+                    record['BC_oVMEP_AR']=(((record['L_BC_oVEMP_pp_Amp']-record['R_BC_oVEMP_pp_Amp'])/(record['L_BC_oVEMP_pp_Amp']+record['R_BC_oVEMP_pp_Amp']))*100).toFixed(2);
+
                     return true;
                 };
                 //-------------------------------------
             } 
         }    
-//-------------------------------------
-          
-       
-    
-/*
-
-    _before_submit_form=function(){
-        
-    var v1 = parseInt($('#tb__ID').find('input[name=R_AC_cVEMP_p13_latency]:checked').val());
-    var v2 = parseInt($('#tb__ID').find('input[name=R_AC_cVEMP_n23_latency]:checked').val());
-    var v3 = parseInt($('#tb__ID').find('input[name=R_AC_cVEMP_pp_AMP]:checked').val());
-    var v4 = parseInt($('#tb__ID').find('input[name=R_AC_cVemp_rectified_activation]:checked').val());
-    var v5 = parseInt($('#tb__ID').find('input[name=R_AC_cVEMP_Activation]:checked').val());
-    var v6 = parseInt($('#tb__ID').find('input[name=R_AC_cVEMP_CA]:checked').val());
-    var v7 = parseInt($('#tb__ID').find('input[name=L_AC_cVEMP_p13_latency]:checked').val());
-    var v8 = parseInt($('#tb__ID').find('input[name=L_AC_cVEMP_n23_latency]:checked').val());
-    var v9 = parseInt($('#tb__ID').find('input[name=L_AC_cVEMP_pp_AMP]:checked').val());
-    var v10 = parseInt($('#tb__ID').find('input[name=L_AC_cVemp_rectified_activation]:checked').val());
-    var v11 = parseInt($('#tb__ID').find('input[name=L_AC_cVEMP_Activation]:checked').val());
-    var v12 = parseInt($('#tb__ID').find('input[name=L_AC_cVEMP_CA]:checked').val());
-    var v13 = parseInt($('#tb__ID').find('input[name=AC_cVEMP_AR]:checked').val());
-    var v14 = parseInt($('#tb__ID').find('input[name=R_BC_cVEMP_p13_latency]:checked').val());
-    var v15 = parseInt($('#tb__ID').find('input[name=R_BC_cVEMP_n23_latency]:checked').val());
-    var v16 = parseInt($('#tb__ID').find('input[name=R_BC_cVEMP_pp_AMP]:checked').val());
-    var v17 = parseInt($('#tb__ID').find('input[name=R_BC_cVemp_rectified_activation]:checked').val());
-    var v18 = parseInt($('#tb__ID').find('input[name=R_BC_cVEMP_Activation]:checked').val());
-    var v19 = parseInt($('#tb__ID').find('input[name=R_BC_cVEMP_CA]:checked').val());
-    var v20 = parseInt($('#tb__ID').find('input[name=L_BC_cVEMP_p13_latency]:checked').val());
-    var v21 = parseInt($('#tb__ID').find('input[name=L_BC_cVEMP_n23_latency]:checked').val());
-    var v22 = parseInt($('#tb__ID').find('input[name=L_BC_cVEMP_pp_AMP]:checked').val());
-    var v23 = parseInt($('#tb__ID').find('input[name=L_BC_cVemp_rectified_activation]:checked').val());
-    var v24 = parseInt($('#tb__ID').find('input[name=L_BC_cVEMP_Activation]:checked').val());
-    var v25 = parseInt($('#tb__ID').find('input[name=L_BC_cVEMP_CA]:checked').val());
-    var v26 = parseInt($('#tb__ID').find('input[name=BC_cVEMP_AR]:checked').val());
-    var v27 = parseInt($('#tb__ID').find('input[name=R_AC_oVEMP_n10_Latency]:checked').val());
-    var v28 = parseInt($('#tb__ID').find('input[name=R_AC_oVEMP_pp_Amp]:checked').val());
-    var v29 = parseInt($('#tb__ID').find('input[name=L_AC_oVEMP_n10_Latency]:checked').val());
-    var v30 = parseInt($('#tb__ID').find('input[name=L_AC_oVEMP_pp_AMP]:checked').val());
-    var v31 = parseInt($('#tb__ID').find('input[name=AC_oVEMP_AR]:checked').val());
-    var v32 = parseInt($('#tb__ID').find('input[name=R_BC_oVEMP_n10_Latency]:checked').val());
-    var v33 = parseInt($('#tb__ID').find('input[name=R_BC_oVEMP_pp_Amp]:checked').val());
-    var v34 = parseInt($('#tb__ID').find('input[name=L_BC_oVEMP_n10_Latency]:checked').val());
-    var v35 = parseInt($('#tb__ID').find('input[name=L_BC_oVEMP_pp_Amp]:checked').val());
-    var v36 = parseInt($('#tb__ID').find('input[name=BC_oVMEP_AR]:checked').val());
-
-
-    var v37=v4/20;
-    _records[I].R_AC_cVEMP_Activation=v37;
-    var v38=v3/v37;
-    _records[I].R_AC_cVEMP_CA=v38;
-    var v11=v10/20;
-    _records[I].L_AC_cVEMP_Activation=v11;
-    var v12=v9/v11;
-    _records[I].L_AC_cVEMP_CA=v12;
-    var v13=100*((v6-v12)/(v6+v12));
-    _records[I].AC_cVEMP_AR=v13;
-    var v18=v17/20 ;
-    _records[I].R_BC_cVEMP_Activation=v18;
-    var v19=v16/v18;
-    _records[I].R_BC_cVEMP_CA = v19;
-    var v24=v23/20;
-    _records[I].L_BC_cVEMP_Activation = v24;
-    var v25=v22/v24;
-    _records[I].L_BC_cVEMP_CA = v25;
-    var v26=100*((v25-v19)/(v25+v19));
-    _records[I].BC_cVEMP_AR= v26;
-    var v27=100*((v25-v19)/(v25+v19));
-    _records[I].R_AC_oVEMP_n10_Latency= v27;
-    var v31=100*((v30-v28)/(v30+v28));
-    _records[I].AC_oVEMP_AR= v31;
-    var v36=100*((v35-v33)/(v35+v33));
-    _records[I].BC_oVMEP_AR= v36;
-    return true;
-        }
-    }
-*/
-
 
     </script>
     <style>
