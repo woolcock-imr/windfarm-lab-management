@@ -141,11 +141,25 @@
                 var old_before_submit=m.before_submit;
                 m.before_submit=function(record,dbv){
                     old_before_submit(record,dbv);
+                    /*                    
                     record['R_AC_cVEMP_Activation']=(record['R_AC_cVemp_rectified_activation']/20).toFixed(2);
                     record['R_AC_cVEMP_CA']=(record['R_AC_cVEMP_pp_AMP']/record['R_AC_cVEMP_Activation']).toFixed(2);
                     record['L_AC_cVEMP_Activation']=(record['L_AC_cVemp_rectified_activation']/20).toFixed(2);
                     record['L_AC_cVEMP_CA']=(record['L_AC_cVEMP_pp_AMP']/record['L_AC_cVEMP_Activation']).toFixed(2);
                     record['AC_cVEMP_AR']=((record['L_AC_cVEMP_CA']-record['R_AC_cVEMP_CA'])/(record['L_AC_cVEMP_CA']+record['R_AC_cVEMP_CA'])*100).toFixed();
+                    record['R_BC_cVEMP_Activation']=(record['R_BC_cVemp_rectified_activation']/20).toFixed(2);
+                    record['R_BC_cVEMP_CA']=(record['R_BC_cVEMP_pp_AMP']/record['R_BC_cVEMP_Activation']).toFixed(2);
+                    record['L_BC_cVEMP_Activation']=(record['L_BC_cVemp_rectified_activation']/20).toFixed(2);
+                    record['L_BC_cVEMP_CA']=(record['L_BC_cVEMP_pp_AMP']/record['L_BC_cVEMP_Activation']).toFixed(2);
+                    record['BC_cVEMP_AR']=(((record['L_BC_cVEMP_CA']-record['R_BC_cVEMP_CA'])/(record['L_BC_cVEMP_CA']+record['R_BC_cVEMP_CA']))*100).toFixed(2);
+                    record['AC_oVEMP_AR']=(((record['L_AC_oVEMP_pp_AMP']-record['R_AC_oVEMP_pp_Amp'])/(record['L_AC_oVEMP_pp_AMP']+record['R_AC_oVEMP_pp_Amp']))*100).toFixed(2);
+                    record['BC_oVMEP_AR']=(((record['L_BC_oVEMP_pp_Amp']-record['R_BC_oVEMP_pp_Amp'])/(record['L_BC_oVEMP_pp_Amp']+record['R_BC_oVEMP_pp_Amp']))*100).toFixed(2);
+                    */
+                    record['R_AC_cVEMP_Activation']=(record['R_AC_cVemp_rectified_activation']/20).toFixed(2);
+                    record['R_AC_cVEMP_CA']=(record['R_AC_cVEMP_pp_AMP']/record['R_AC_cVEMP_Activation']).toFixed(2);
+                    record['L_AC_cVEMP_Activation']=(record['L_AC_cVemp_rectified_activation']/20).toFixed(2);
+                    record['L_AC_cVEMP_CA']=(record['L_AC_cVEMP_pp_AMP']/record['L_AC_cVEMP_Activation']).toFixed(2);
+                    record['AC_cVEMP_AR']=((parseFloat(record['L_AC_cVEMP_CA'])-parseFloat(record['R_AC_cVEMP_CA']))/(parseFloat(record['L_AC_cVEMP_CA'])+parseFloat(record['R_AC_cVEMP_CA']))*100).toFixed();
                     record['R_BC_cVEMP_Activation']=(record['R_BC_cVemp_rectified_activation']/20).toFixed(2);
                     record['R_BC_cVEMP_CA']=(record['R_BC_cVEMP_pp_AMP']/record['R_BC_cVEMP_Activation']).toFixed(2);
                     record['L_BC_cVEMP_Activation']=(record['L_BC_cVemp_rectified_activation']/20).toFixed(2);
