@@ -221,16 +221,7 @@
       "v1-sourcedocs-form": { url: '$A/modules/w/windfarm-lab-tasks/sourcedocs-form.html', Table: "1906041346" },
       "v1-postsleep": { url: '$A/modules/w/windfarm-lab-tasks/postsleep-data.html', Table: "91000876", form_module: "v1-postsleep-form" },
       "v1-postsleep-form": { url: '$A/modules/w/windfarm-lab-tasks/postsleep-form.html', Table: "91000876" },
-      "v1_psa_Cz": { url: '$A/modules/w/windfarm-lab-tasks/psg_psa_data_Cz.html', Table: "190000093", form_module: "v1_psa_Cz_form" },
-      "v1_psa_Cz_form": { url: '$A/modules/w/windfarm-lab-tasks/psg_psa_form_Cz.html', Table: "190000093" },
-      "v1_psa_C3": { url: '$A/modules/w/windfarm-lab-tasks/psg_psa_data_C3.html', Table: "190000093", form_module: "v1_psa_C3_form" },
-      "v1_psa_C3_form": { url: '$A/modules/w/windfarm-lab-tasks/psg_psa_form_C3.html', Table: "190000093" },
-      "v1_spd_Cz": { url: '$A/modules/w/windfarm-lab-tasks/psg_spd_data_Cz.html', Table: "190000093", form_module: "v1_spd_Cz_form" },
-      "v1_spd_Cz_form": { url: '$A/modules/w/windfarm-lab-tasks/psg_spd_form_Cz.html', Table: "190000093" },
-      "v1_spd_C3": { url: '$A/modules/w/windfarm-lab-tasks/psg_spd_data_C3.html', Table: "190000093", form_module: "v1_spd_C3_form" },
-      "v1_spd_C3_form": { url: '$A/modules/w/windfarm-lab-tasks/psg_spd_form_C3.html', Table: "190000093" },
-
-
+      
 
         //Visit 2
 
@@ -418,15 +409,6 @@
       "v2-sourcedocs-form": { url: '$A/modules/w/windfarm-lab-tasks/sourcedocs-form.html', Table: "1906041214" },
       "v2-postsleep": { url: '$A/modules/w/windfarm-lab-tasks/postsleep-data.html', Table: "91000877", form_module: "v2-postsleep-form" },
       "v2-postsleep-form": { url: '$A/modules/w/windfarm-lab-tasks/postsleep-form.html', Table: "91000877" },
-      "v2_psa_Cz": { url: '$A/modules/w/windfarm-lab-tasks/psg_psa_data_Cz.html', Table: "190000093", form_module: "v2_psa_Cz_form" },
-      "v2_psa_Cz_form": { url: '$A/modules/w/windfarm-lab-tasks/psg_psa_form_Cz.html', Table: "190000093" },
-      "v2_psa_C3": { url: '$A/modules/w/windfarm-lab-tasks/psg_psa_data_C3.html', Table: "190000093", form_module: "v2_psa_C3_form" },
-      "v2_psa_C3_form": { url: '$A/modules/w/windfarm-lab-tasks/psg_psa_form_C3.html', Table: "190000093" },
-      "v2_spd_Cz": { url: '$A/modules/w/windfarm-lab-tasks/psg_spd_data_Cz.html', Table: "190000093", form_module: "v2_spd_Cz_form" },
-      "v2_spd_Cz_form": { url: '$A/modules/w/windfarm-lab-tasks/psg_spd_form_Cz.html', Table: "190000093" },
-      "v2_spd_C3": { url: '$A/modules/w/windfarm-lab-tasks/psg_spd_data_C3.html', Table: "190000093", form_module: "v2_spd_C3_form" },
-      "v2_spd_C3_form": { url: '$A/modules/w/windfarm-lab-tasks/psg_spd_form_C3.html', Table: "190000093" },
-
 
       //V2-Neurotology
       "v2-neuro-clinical": { url: '$A/modules/w/windfarm-lab-tasks/neuro-clinical-data.html', Table: "91000768", form_module: "v2-neuro-clinical-form" },
@@ -598,16 +580,6 @@
         "v3-n3-researchreport-form": { url: "$A/modules/w/windfarm-lab-tasks/psgreport-form.html", Table: "20008833" },
       "v3-postsleep": { url: '$A/modules/w/windfarm-lab-tasks/postsleep-data.html', Table: "91000878", form_module: "v3-postsleep-form" },
       "v3-postsleep-form": { url: '$A/modules/w/windfarm-lab-tasks/postsleep-form.html', Table: "91000878" },
-      "v3_psa_Cz": { url: '$A/modules/w/windfarm-lab-tasks/psg_psa_data_Cz.html', Table: "190000093", form_module: "v3_psa_Cz_form" },
-      "v3_psa_Cz_form": { url: '$A/modules/w/windfarm-lab-tasks/psg_psa_form_Cz.html', Table: "190000093" },
-      "v3_psa_C3": { url: '$A/modules/w/windfarm-lab-tasks/psg_psa_data_C3.html', Table: "190000093", form_module: "v3_psa_C3_form" },
-      "v3_psa_C3_form": { url: '$A/modules/w/windfarm-lab-tasks/psg_psa_form_C3.html', Table: "190000093" },
-      "v3_spd_Cz": { url: '$A/modules/w/windfarm-lab-tasks/psg_spd_data_Cz.html', Table: "190000093", form_module: "v3_spd_Cz_form" },
-      "v3_spd_Cz_form": { url: '$A/modules/w/windfarm-lab-tasks/psg_spd_form_Cz.html', Table: "190000093" },
-      "v3_spd_C3": { url: '$A/modules/w/windfarm-lab-tasks/psg_spd_data_C3.html', Table: "190000093", form_module: "v3_spd_C3_form" },
-      "v3_spd_C3_form": { url: '$A/modules/w/windfarm-lab-tasks/psg_spd_form_C3.html', Table: "190000093" },
-
-
 
         "v3-d4-a-vas-data": { url: "$A/modules/w/windfarm-lab-tasks/vas-data.html", Table: "20009276", form_module: "v3-d4-a-vas-form" },
         "v3-d4-a-vas-form": { url: "$A/modules/w/windfarm-lab-tasks/vas-form.html", Table: "20009276" },
@@ -694,8 +666,20 @@
       "v1-outcome":              { "url": "$A/modules/o/outcome-questionnaire/outcome-quest-report-v1.html" },
       "v2-outcome":              { "url": "$A/modules/o/outcome-questionnaire/outcome-quest-report-v2.html" },
       "v3-outcome":              { "url": "$A/modules/o/outcome-questionnaire/outcome-quest-report-v3.html" },
-      "screening_complete":          { "url": "$A/modules/r/report/screening_complete.html" }
+      "screening_complete":          { "url": "$A/modules/r/report/screening_complete.html" },
 
+
+    // Power spectral and Spindles
+      "psa_cz": { url: '$A/modules/w/windfarm-lab-tasks/psg_psa_data_Cz.html', Table: "91000885", form_module: "psa_Cz_form" },
+      "psa_Cz_form": { url: '$A/modules/w/windfarm-lab-tasks/psg_psa_form_Cz.html', Table: "91000885" },
+      "psa_c3": { url: '$A/modules/w/windfarm-lab-tasks/psg_psa_data_C3.html', Table: "91000886", form_module: "psa_C3_form" },
+      "psa_C3_form": { url: '$A/modules/w/windfarm-lab-tasks/psg_psa_form_C3.html', Table: "91000886" },
+      "spd_cz": { url: '$A/modules/w/windfarm-lab-tasks/psg_spd_data_Cz.html', Table: "91000887", form_module: "spd_Cz_form" },
+      "spd_Cz_form": { url: '$A/modules/w/windfarm-lab-tasks/psg_spd_form_Cz.html', Table: "91000887" },
+      "spd_c3": { url: '$A/modules/w/windfarm-lab-tasks/psg_spd_data_C3.html', Table: "91000888", form_module: "spd_C3_form" },
+      "spd_C3_form": { url: '$A/modules/w/windfarm-lab-tasks/psg_spd_form_C3.html', Table: "91000888" },
+      "kdt_all": { url: '$A/modules/w/windfarm-lab-tasks/kdt_data.html', Table: "91000882", form_module: "kdt_all_form" },
+      "kdt_all_form": { url: '$A/modules/w/windfarm-lab-tasks/kdt_form.html', Table: "91000882" },
 
 
 
