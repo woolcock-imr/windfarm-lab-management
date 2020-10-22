@@ -25,6 +25,7 @@
         "permission-query-form":            {url:"$A/modules/p/permission/permission-query-form.html",Table:"91000618"},
 
         "data-import":  		  	    	{url:"$A/modules/data-import/data-import.html"},
+        "data-import-2":  		  	    	{url:"$A/modules/data-import/data-import-2.html"},
     }
     for(m in modules){$vm.module_list[m]=modules[m];}
 })();
