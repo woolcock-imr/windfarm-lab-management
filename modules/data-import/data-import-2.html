@@ -93,7 +93,7 @@
                 var field3_value=new_records[i][field3_name];
                 var w2="dbo.F(Information,'"+field2_name+"')='"+field2_value+"'";
                 var w3="dbo.F(Information,'"+field3_name+"')='"+field3_value+"'";
-                var sql="select ID,PUID= from [TABLE-"+$('#table_id__ID').val()+"] where PUID="+new_records[i].PUID +" and "+w2+" and "+w3;   
+                var sql="select ID,PUID from [TABLE-"+$('#table_id__ID').val()+"] where PUID="+new_records[i].PUID +" and "+w2+" and "+w3;   
                 //***********
                 var reqR={cmd:'read',qid:$vm.qid,sql:sql}
                 $VmAPI.request({data:reqR,callback:function(res){
