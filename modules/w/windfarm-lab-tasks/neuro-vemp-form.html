@@ -148,8 +148,14 @@
                     record['L_AC_cVEMP_Activation']=(record['L_AC_cVemp_rectified_activation']/20).toFixed(4);
                     record['L_AC_cVEMP_CA']=(record['L_AC_cVEMP_pp_AMP']/record['L_AC_cVEMP_Activation']).toFixed(4);
                     record['AC_cVEMP_AR']=((parseFloat(record['L_AC_cVEMP_CA'])-parseFloat(record['R_AC_cVEMP_CA']))/(parseFloat(record['L_AC_cVEMP_CA'])+parseFloat(record['R_AC_cVEMP_CA']))*100).toFixed(4);
+                    
+                    if(record['AC_cVEMP_AR']=='NaN') record['AC_cVEMP_AR']='';
+                    
                     record['R_BC_cVEMP_Activation']=(record['R_BC_cVemp_rectified_activation']/20).toFixed(4);
+
                     record['R_BC_cVEMP_CA']=(record['R_BC_cVEMP_pp_AMP']/record['R_BC_cVEMP_Activation']).toFixed(4);
+                    if(record['R_BC_cVEMP_CA']=='NaN') record['R_BC_cVEMP_CA']='';
+                    
                     record['L_BC_cVEMP_Activation']=(record['L_BC_cVemp_rectified_activation']/20).toFixed(4);
                     record['L_BC_cVEMP_CA']=(record['L_BC_cVEMP_pp_AMP']/record['L_BC_cVEMP_Activation']).toFixed(4);
                     record['BC_cVEMP_AR']=((parseFloat(record['L_BC_cVEMP_CA'])-parseFloat(record['R_BC_cVEMP_CA']))/(parseFloat(record['L_BC_cVEMP_CA'])+parseFloat(record['R_BC_cVEMP_CA']))*100).toFixed(4);
