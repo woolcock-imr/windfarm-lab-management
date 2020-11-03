@@ -45,18 +45,18 @@
                     return;
                 }
                 m.set_req=function(){
-                var sql=" select Task='Visit 2 Day 1 11:30',Information from [TABLE-20009528] where puid<>0";
-            		sql+=" union select Task='Visit 2 Day 1 15:30',Information from [TABLE-20008725] where puid<>0";
-                sql+=" union select Task='Visit 2 Day 1 19:30',Information from [TABLE-20008726] where puid<>0";
-                sql+=" union select Task='Visit 2 Day 2 07:30',Information from [TABLE-20008737] where puid<>0";
-                sql+=" union select Task='Visit 2 Day 2 11:30',Information from [TABLE-20008738] where puid<>0";
-                sql+=" union select Task='Visit 2 Day 2 15:30',Information from [TABLE-20008743] where puid<>0";
-                sql+=" union select Task='Visit 2 Day 2 19:30',Information from [TABLE-20008744] where puid<>0";
-                sql+=" union select Task='Visit 2 Day 3 07:30',Information from [TABLE-20008756] where puid<>0";
-                sql+=" union select Task='Visit 2 Day 3 11:30',Information from [TABLE-20008757] where puid<>0";
-                sql+=" union select Task='Visit 2 Day 3 15:30',Information from [TABLE-20008762] where puid<>0";
-                sql+=" union select Task='Visit 2 Day 3 19:30',Information from [TABLE-20008763] where puid<>0";
-                sql+=" union select Task='Visit 2 Day 4 07:30',Information from [TABLE-20008775] where puid<>0";
+                var sql=" select Task='Visit 2 Day 1 11:30',Information from [TABLE-20009528] where puid >2";
+            		sql+=" union select Task='Visit 2 Day 1 15:30',Information from [TABLE-20008725] where puid >2";
+                sql+=" union select Task='Visit 2 Day 1 19:30',Information from [TABLE-20008726] where puid >2";
+                sql+=" union select Task='Visit 2 Day 2 07:30',Information from [TABLE-20008737] where puid >2";
+                sql+=" union select Task='Visit 2 Day 2 11:30',Information from [TABLE-20008738] where puid >2";
+                sql+=" union select Task='Visit 2 Day 2 15:30',Information from [TABLE-20008743] where puid >2";
+                sql+=" union select Task='Visit 2 Day 2 19:30',Information from [TABLE-20008744] where puid >2";
+                sql+=" union select Task='Visit 2 Day 3 07:30',Information from [TABLE-20008756] where puid >2";
+                sql+=" union select Task='Visit 2 Day 3 11:30',Information from [TABLE-20008757] where puid >2";
+                sql+=" union select Task='Visit 2 Day 3 15:30',Information from [TABLE-20008762] where puid >2";
+                sql+=" union select Task='Visit 2 Day 3 19:30',Information from [TABLE-20008763] where puid >2";
+                sql+=" union select Task='Visit 2 Day 4 07:30',Information from [TABLE-20008775] where puid >2";
 
 
                                    m.req={cmd:'read',qid:m.qid,sql:sql,i1:i1}
@@ -70,25 +70,25 @@
                     return;
                 }
                 m.set_req_export=function(){
-                var sql=" select Task='Visit 2 Day 1 11:30',Information from [TABLE-20009528] where puid<>0";
-            		sql+=" union select Task='Visit 2 Day 1 15:30',Information from [TABLE-20008725] where puid<>0";
-                sql+=" union select Task='Visit 2 Day 1 19:30',Information from [TABLE-20008726] where puid<>0";
-                sql+=" union select Task='Visit 2 Day 2 07:30',Information from [TABLE-20008737] where puid<>0";
-                sql+=" union select Task='Visit 2 Day 2 11:30',Information from [TABLE-20008738] where puid<>0";
-                sql+=" union select Task='Visit 2 Day 2 15:30',Information from [TABLE-20008743] where puid<>0";
-                sql+=" union select Task='Visit 2 Day 2 19:30',Information from [TABLE-20008744] where puid<>0";
-                sql+=" union select Task='Visit 2 Day 3 07:30',Information from [TABLE-20008756] where puid<>0";
-                sql+=" union select Task='Visit 2 Day 3 11:30',Information from [TABLE-20008757] where puid<>0";
-                sql+=" union select Task='Visit 2 Day 3 15:30',Information from [TABLE-20008762] where puid<>0";
-                sql+=" union select Task='Visit 2 Day 3 19:30',Information from [TABLE-20008763] where puid<>0";
-                sql+=" union select Task='Visit 2 Day 4 07:30',Information from [TABLE-20008775] where puid<>0";
+                var sql=" select Task='Visit 2 Day 1 11:30',Information from [TABLE-20009528] where puid >2";
+            		sql+=" union select Task='Visit 2 Day 1 15:30',Information from [TABLE-20008725] where puid >2";
+                sql+=" union select Task='Visit 2 Day 1 19:30',Information from [TABLE-20008726] where puid >2";
+                sql+=" union select Task='Visit 2 Day 2 07:30',Information from [TABLE-20008737] where puid >2";
+                sql+=" union select Task='Visit 2 Day 2 11:30',Information from [TABLE-20008738] where puid >2";
+                sql+=" union select Task='Visit 2 Day 2 15:30',Information from [TABLE-20008743] where puid >2";
+                sql+=" union select Task='Visit 2 Day 2 19:30',Information from [TABLE-20008744] where puid >2";
+                sql+=" union select Task='Visit 2 Day 3 07:30',Information from [TABLE-20008756] where puid >2";
+                sql+=" union select Task='Visit 2 Day 3 11:30',Information from [TABLE-20008757] where puid >2";
+                sql+=" union select Task='Visit 2 Day 3 15:30',Information from [TABLE-20008762] where puid >2";
+                sql+=" union select Task='Visit 2 Day 3 19:30',Information from [TABLE-20008763] where puid >2";
+                sql+=" union select Task='Visit 2 Day 4 07:30',Information from [TABLE-20008775] where puid >2";
 
                     m.req={cmd:'read',qid:m.qid,sql:sql,i1:i1}
                 }
                 m.set_req(); m.request_data();
                 m.export_records();
             })
-            m.fields="Participant_uid,Participant,Task,Total Number Correct|NTCR,Total Number Incorrect|NTIC,Total Numbers Missed|NMIS";
+            m.fields="Participant_uid,Timepoint|Task,Total Number Correct|NTCR,Total Number Incorrect|NTIC,Total Numbers Missed|NMIS";
         }
     </script>
     <style>

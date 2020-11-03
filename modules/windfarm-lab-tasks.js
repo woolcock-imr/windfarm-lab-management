@@ -653,9 +653,9 @@
       "NBACK_V3":	          		{"url":"$A/modules/e/export_modules/NBACK_V3.html", "name_for_search":"NBack_ Visit 3 "},
       "TOL_V3":	          			{"url":"$A/modules/e/export_modules/TOL_V3.html", "name_for_search":"Tower of London_ Visit 3 "},
       "PVT_V3":	          			{"url":"$A/modules/e/export_modules/PVT_V3.html", "name_for_search":"Psychomotor Vigilance Task(PVT)_ Visit 3" },
-      "EOVQ1":                  {"url": "$A/modules/e/export_modules/v1-postquestionnaire.html"},
-      "EOVQ2":                  {"url": "$A/modules/e/export_modules/v2-postquestionnaire.html" },
-      "EOVQ3":                {"url": "$A/modules/e/export_modules/v3-postquestionnaire.html" },
+      "v1-postquestionnaire":                  {"url": "$A/modules/e/export_modules/v1-postquestionnaire.html"},
+      "v2-postquestionnaire":                  {"url": "$A/modules/e/export_modules/v2-postquestionnaire.html" },
+      "v3-postquestionnaire":                {"url": "$A/modules/e/export_modules/v3-postquestionnaire.html" },
       "NAS_All":               { "url": "$A/modules/e/export_modules/NAS_all.html" },
 
 

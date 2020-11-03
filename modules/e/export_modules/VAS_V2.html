@@ -44,18 +44,18 @@
                     return;
                 }
                 m.set_req=function(){
-                var sql=" select Task='Visit 2 Day 1 11:30',Information from [TABLE-20009524] where puid<>0";
-                   sql+=" union select Task='Visit 2 Day 1 15:30',Information from [TABLE-20009224] where puid<>0";
-                   sql+=" union select Task='Visit 2 Day 1 19:30',Information from [TABLE-20009225] where puid<>0";
-                   sql+=" union select Task='Visit 2 Day 2 07:30',Information from [TABLE-20009229] where puid<>0";
-                   sql+=" union select Task='Visit 2 Day 2 11:30',Information from [TABLE-20009230] where puid<>0";
-                   sql+=" union select Task='Visit 2 Day 2 15:30',Information from [TABLE-20009231] where puid<>0";
-                   sql+=" union select Task='Visit 2 Day 2 19:30',Information from [TABLE-20009233] where puid<>0";
-                   sql+=" union select Task='Visit 2 Day 3 07:30',Information from [TABLE-20009236] where puid<>0";
-                   sql+=" union select Task='Visit 2 Day 3 11:30',Information from [TABLE-20009237] where puid<>0";
-                   sql+=" union select Task='Visit 2 Day 3 15:30',Information from [TABLE-20009238] where puid<>0";
-                   sql+=" union select Task='Visit 2 Day 3 19:30',Information from [TABLE-20009241] where puid<>0";
-                   sql+=" union select Task='Visit 2 Day 4 07:30',Information from [TABLE-20009275] where puid<>0";
+                var sql=" select Task='Visit 2 Day 1 11:30',Information from [TABLE-20009524] where puid >2";
+                   sql+=" union select Task='Visit 2 Day 1 15:30',Information from [TABLE-20009224] where puid >2";
+                   sql+=" union select Task='Visit 2 Day 1 19:30',Information from [TABLE-20009225] where puid >2";
+                   sql+=" union select Task='Visit 2 Day 2 07:30',Information from [TABLE-20009229] where puid >2";
+                   sql+=" union select Task='Visit 2 Day 2 11:30',Information from [TABLE-20009230] where puid >2";
+                   sql+=" union select Task='Visit 2 Day 2 15:30',Information from [TABLE-20009231] where puid >2";
+                   sql+=" union select Task='Visit 2 Day 2 19:30',Information from [TABLE-20009233] where puid >2";
+                   sql+=" union select Task='Visit 2 Day 3 07:30',Information from [TABLE-20009236] where puid >2";
+                   sql+=" union select Task='Visit 2 Day 3 11:30',Information from [TABLE-20009237] where puid >2";
+                   sql+=" union select Task='Visit 2 Day 3 15:30',Information from [TABLE-20009238] where puid >2";
+                   sql+=" union select Task='Visit 2 Day 3 19:30',Information from [TABLE-20009241] where puid >2";
+                   sql+=" union select Task='Visit 2 Day 4 07:30',Information from [TABLE-20009275] where puid >2";
 
 
                     m.req={cmd:'read',qid:m.qid,sql:sql,i1:i1}
@@ -69,18 +69,18 @@
                     return;
                 }
                 m.set_req_export=function(){
-                var sql=" select Task='Visit 2 Day 1 11:30',Information from [TABLE-20009524] where puid<>0";
-                   sql+=" union select Task='Visit 2 Day 1 15:30',Information from [TABLE-20009224] where puid<>0";
-                   sql+=" union select Task='Visit 2 Day 1 19:30',Information from [TABLE-20009225] where puid<>0";
-                   sql+=" union select Task='Visit 2 Day 2 07:30',Information from [TABLE-20009229] where puid<>0";
-                   sql+=" union select Task='Visit 2 Day 2 11:30',Information from [TABLE-20009230] where puid<>0";
-                   sql+=" union select Task='Visit 2 Day 2 15:30',Information from [TABLE-20009231] where puid<>0";
-                   sql+=" union select Task='Visit 2 Day 2 19:30',Information from [TABLE-20009233] where puid<>0";
-                   sql+=" union select Task='Visit 2 Day 3 07:30',Information from [TABLE-20009236] where puid<>0";
-                   sql+=" union select Task='Visit 2 Day 3 11:30',Information from [TABLE-20009237] where puid<>0";
-                   sql+=" union select Task='Visit 2 Day 3 15:30',Information from [TABLE-20009238] where puid<>0";
-                   sql+=" union select Task='Visit 2 Day 3 19:30',Information from [TABLE-20009241] where puid<>0";
-                   sql+=" union select Task='Visit 2 Day 4 07:30',Information from [TABLE-20009275] where puid<>0";
+                var sql=" select Task='Visit 2 Day 1 11:30',Information from [TABLE-20009524] where puid >2";
+                   sql+=" union select Task='Visit 2 Day 1 15:30',Information from [TABLE-20009224] where puid >2";
+                   sql+=" union select Task='Visit 2 Day 1 19:30',Information from [TABLE-20009225] where puid >2";
+                   sql+=" union select Task='Visit 2 Day 2 07:30',Information from [TABLE-20009229] where puid >2";
+                   sql+=" union select Task='Visit 2 Day 2 11:30',Information from [TABLE-20009230] where puid >2";
+                   sql+=" union select Task='Visit 2 Day 2 15:30',Information from [TABLE-20009231] where puid >2";
+                   sql+=" union select Task='Visit 2 Day 2 19:30',Information from [TABLE-20009233] where puid >2";
+                   sql+=" union select Task='Visit 2 Day 3 07:30',Information from [TABLE-20009236] where puid >2";
+                   sql+=" union select Task='Visit 2 Day 3 11:30',Information from [TABLE-20009237] where puid >2";
+                   sql+=" union select Task='Visit 2 Day 3 15:30',Information from [TABLE-20009238] where puid >2";
+                   sql+=" union select Task='Visit 2 Day 3 19:30',Information from [TABLE-20009241] where puid >2";
+                   sql+=" union select Task='Visit 2 Day 4 07:30',Information from [TABLE-20009275] where puid >2";
 
 
                     m.req={cmd:'read',qid:m.qid,sql:sql,i1:i1}
@@ -88,7 +88,7 @@
                 m.set_req(); m.request_data();
                 m.export_records();
             })
-            m.fields="Participant_uid,Participant,Task,HEADACHES,RINGING,ITCH,BLUR,DIZZY,HEART,VERTIGO,NAUSEA,TIREDNESS,FAINT,SLEEPINESS,CONCENTRATING,MEMORY,FATIGUE,IRRITABILITY,MUSCLE,DISRUPTEDSLEEP,AWAKEN,ANXIETY";
+            m.fields="Participant_uid,Timepoint|Task,HEADACHES,RINGING,ITCH,BLUR,DIZZY,HEART,VERTIGO,NAUSEA,TIREDNESS,FAINT,SLEEPINESS,CONCENTRATING,MEMORY,FATIGUE,IRRITABILITY,MUSCLE,DISRUPTEDSLEEP,AWAKEN,ANXIETY";
         }
     </script>
     <style>
