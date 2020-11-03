@@ -41,7 +41,7 @@
         function F__ID() {
             //-------------------------------------
             //build text input fields
-            var fields = "Visit,Awake_sys_mean,Awake_dia_mean,Asleep_sys_mean,Asleep_dia_mean,Total_sys_mean,Total_dia_mean,Total_HR_mean";
+            var fields = "Visit,Exposure,Index,Reason,Sys,Dia,HR,Mean,cSys,cDia,cHR,cPP,cAP,cAIx,cAIx_75,cMAP,Hour,Minute,Month,Day,Year,EC,cEC,cQC,Tag,Comments,Var25,PP";
             var fs = fields.split(',');
             var txt = "";
             for (var i = 0; i < fs.length; i++) {
@@ -57,7 +57,7 @@
             var load5 = m.load;
             m.load = function () {
                 load5();
-                m.set_file_link("vemp_upload");
+                m.set_file_link("");
 
 
             }
